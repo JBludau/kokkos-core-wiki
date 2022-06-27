@@ -12,4 +12,5 @@ The following facilities are available:
   * [`LayoutLeft`](Kokkos%3A%3ALayoutLeft): Memory Layout matching Fortran 
   * [`LayoutRight`](Kokkos%3A%3ALayoutRight): Memory Layout matching C 
   * [`LayoutStride`](Kokkos%3A%3ALayoutStride): Memory Layout for arbitrary strides 
+  * [`Subview`](Kokkos%3A%3ASubview): Type of View a call to subview will return
 
