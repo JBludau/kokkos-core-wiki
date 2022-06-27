@@ -6,7 +6,7 @@ Alias template to deduce the type that is returned by a call to the subview func
 
 Usage:
   ```c++
-  Subview<ViewType,Args> subView;
+  Kokkos::Subview<ViewType,Args> subView;
   ```
 
 ## Description
@@ -23,10 +23,11 @@ Usage:
 
 ```c++
 
-  Kokkos::View<double***[5]> a("A",N0,N1,N2);
+  using view_type = Kokkos::View<double ***[5]>;
+  view_type a("A",N0,N1,N2);
 
   struct subViewHolder{
-  Kokkos::Subview<decltype(a),
+  Kokkos::Subview<view_type,
                   std::pair<int,int>,
                   int,
                   Kokkos::ALL,int> s;
