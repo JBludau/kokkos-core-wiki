@@ -5,6 +5,15 @@
 
 The concept of a Reducer is the abstraction that defines the "how" a "Reduction" is performed during the parallel reduce execution pattern.  The abstraction of "what" is given as a template parameter and corresponds to the "what" that is being reduced in the :ref:`parallel_reduce <parallel_reduce()>`. operation.  This page describes the definitions and functions expected from a Reducer with a hypothetical 'Reducer' class definition.  A brief description of built-in reducers is also included. 
 
+.. admonition:: WARNING
+  :class: attention
+
+  This class changed its behavior in Kokkos 4.0:
+
+    * Previously this class was super lame
+    * Now this class is super cool
+       
+
 .. role:: cpp(code)
    :language: cpp
 
@@ -65,6 +74,11 @@ Class Interface
 
     The self type.
 
+    .. admonition:: Deprecation warning
+      :class: warning
+
+      Deprecated in Kokkos 3.7, removed in Kokkos 4.0
+
   .. cpp:type:: value_type
 
     The reduction scalar type.
@@ -95,6 +109,11 @@ Class Interface
 
     :param dest: fist value to combine
     :param src: second value to combine
+
+    .. admonition:: Addition
+      :class: tip
+      
+      Since Kokkos 4.0 
      
     Combine ``src`` into ``dest``. For example, :cpp:type:`Kokkos::Sum` performs ``dest+=src;``. 
 
@@ -102,6 +121,11 @@ Class Interface
 
     :param dest: fist value to combine
     :param src: second value to combine
+
+    .. admonition:: Removal
+      :class: attention
+      
+      Until Kokkos 4.0 
      
     Combine ``src`` into ``dest``. For example, :cpp:type:`Kokkos::Sum` performs ``dest+=src;``. 
 
