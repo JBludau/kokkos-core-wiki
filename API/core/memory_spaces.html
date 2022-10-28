@@ -355,7 +355,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../algorithms/std-algorithms/StdNonModSeq.html">NonModifying Sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../algorithms/std-algorithms/StdNonModSeq.html">NonModifyingSequenceOperation</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
@@ -392,6 +392,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/Tasking.html">Kokkos Tasking Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/Kokkos-Fortran-Interoperability.html">Fortran Interop Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/SoA-and-AoSoA-with-Cabana.html">Array of Structures and Structure of Arrays with Cabana</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usecases/WindowsHeader.html">Kokkos and <code class="docutils literal notranslate"><span class="pre">Windows.h</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -490,6 +491,30 @@
 <section id="kokkos-hostspace">
 <span id="hostspace"></span><h2><code class="docutils literal notranslate"><span class="pre">Kokkos::HostSpace</span></code><a class="headerlink" href="#kokkos-hostspace" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Kokkos::HostSpace</span></code> is a <a class="reference internal" href="#memoryspaceconcept"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">MemorySpace</span></code> type</span></a> representing traditional random access memory accessible from the CPU.  Except in rare instances, it should not be used directly, but instead should be used generically as an memory space.  For details, see <a class="reference internal" href="#memoryspaceconcept"><span class="std std-ref">the documentation on the <code class="docutils literal notranslate"><span class="pre">MemorySpace</span></code> concept</span></a>.</p>
+</section>
+<section id="kokkos-sharedspace">
+<span id="sharedspace"></span><h2><code class="docutils literal notranslate"><span class="pre">Kokkos::SharedSpace</span></code><a class="headerlink" href="#kokkos-sharedspace" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Kokkos::SharedSpace</span></code> <sup>since 4.0</sup> is a <a class="reference internal" href="#memoryspaceconcept"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">MemorySpace</span></code> type</span></a> alias representing memory that can be accessed by any enabled <a class="reference internal" href="execution_spaces.html#executionspaceconcept"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ExecutionSpace</span></code> type</span></a>. To achieve this, the memory can be moved to and from the local memory of the processing units represented by the <code class="docutils literal notranslate"><span class="pre">ExecutionSpaces</span></code>. The movement is done automatically by the OS and driver at the moment of access. If not currently located in the local memory of the accessing processing unit, the memory is moved in chunks (size is backend dependent). These chunks can be moved independently (e.g. only the part that is accessed on the GPU is moved to the GPU) and are treated like local memory while residing on the processing unit. For details, see <a class="reference internal" href="#memoryspaceconcept"><span class="std std-ref">the documentation on the <code class="docutils literal notranslate"><span class="pre">MemorySpace</span></code> concept</span></a>.
+Availability can be checked with the preprocessor define <code class="docutils literal notranslate"><span class="pre">KOKKOS_HAS_SHARED_SPACE</span></code> or the <code class="docutils literal notranslate"><span class="pre">constexpr</span> <span class="pre">bool</span> <span class="pre">Kokkos::has_shared_space</span></code>.
+For the following backends <code class="docutils literal notranslate"><span class="pre">Kokkos::SharedSpace</span></code> is pointing to the correspoinding <a class="reference internal" href="#memoryspaceconcept"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">MemorySpace</span></code> type</span></a>:</p>
+<ul class="simple">
+<li><p>Cuda -&gt; <code class="docutils literal notranslate"><span class="pre">CudaUVMSpace</span></code></p></li>
+<li><p>HIP -&gt; <code class="docutils literal notranslate"><span class="pre">HIPManagedSpace</span></code></p></li>
+<li><p>SYCL -&gt; <code class="docutils literal notranslate"><span class="pre">SYCLSharedUSMSpace</span></code></p></li>
+<li><p>Only backends running on host -&gt; <code class="docutils literal notranslate"><span class="pre">HostSpace</span></code></p></li>
+</ul>
+</section>
+<section id="kokkos-sharedhostpinnedspace">
+<span id="sharedhostpinnedspace"></span><h2><code class="docutils literal notranslate"><span class="pre">Kokkos::SharedHostPinnedSpace</span></code><a class="headerlink" href="#kokkos-sharedhostpinnedspace" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Kokkos::SharedHostPinnedSpace</span></code> <sup>since 4.0</sup> is a <a class="reference internal" href="#memoryspaceconcept"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">MemorySpace</span></code> type</span></a> alias which is accessible by all enabled <a class="reference internal" href="execution_spaces.html#executionspaceconcept"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">ExecutionSpace</span></code> types</span></a>. The memory stays pinned on the host and is availabe on the device via zero copy access in small chunks (cache lines, memory pages, etc. depending on the backend). Writes to the memory in one <code class="docutils literal notranslate"><span class="pre">ExecutionSpace</span></code> become visible in other <code class="docutils literal notranslate"><span class="pre">ExecutionSpaces</span></code> at synchronization events. Which events trigger a synchronization depend on the backend specifics. Nevertheless, fences are synchronization events on all backends.
+Availability can be checked with the preprocessor define <code class="docutils literal notranslate"><span class="pre">KOKKOS_HAS_SHARED_HOST_PINNED_SPACE</span></code> or the <code class="docutils literal notranslate"><span class="pre">constexpr</span> <span class="pre">bool</span> <span class="pre">Kokkos::has_shared_host_pinned_space</span></code>.
+For the following backends <code class="docutils literal notranslate"><span class="pre">Kokkos::SharedHostPinnedSpace</span></code> is pointing to the correspoinding <a class="reference internal" href="#memoryspaceconcept"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">MemorySpace</span></code> type</span></a>:</p>
+<ul class="simple">
+<li><p>Cuda -&gt; <code class="docutils literal notranslate"><span class="pre">CudaHostPinnedSpace</span></code></p></li>
+<li><p>HIP -&gt; <code class="docutils literal notranslate"><span class="pre">HipHostPinnedSpace</span></code></p></li>
+<li><p>SYCL -&gt; <code class="docutils literal notranslate"><span class="pre">SYCLHostUSMSpace</span></code></p></li>
+<li><p>Only backends running on host -&gt; <code class="docutils literal notranslate"><span class="pre">HostSpace</span></code></p></li>
+</ul>
 </section>
 <section id="kokkos-memoryspaceconcept">
 <span id="memoryspaceconcept"></span><h2><code class="docutils literal notranslate"><span class="pre">Kokkos::MemorySpaceConcept</span></code><a class="headerlink" href="#kokkos-memoryspaceconcept" title="Permalink to this heading">#</a></h2>
@@ -626,6 +651,8 @@ Kokkos guarantees that <code class="docutils literal notranslate"><span class="p
 <li><a class="reference internal" href="#kokkos-hiphostpinnedspace"><code class="docutils literal notranslate"><span class="pre">Kokkos::HIPHostPinnedSpace</span></code></a></li>
 <li><a class="reference internal" href="#kokkos-hipmanagedspace"><code class="docutils literal notranslate"><span class="pre">Kokkos::HIPManagedSpace</span></code></a></li>
 <li><a class="reference internal" href="#kokkos-hostspace"><code class="docutils literal notranslate"><span class="pre">Kokkos::HostSpace</span></code></a></li>
+<li><a class="reference internal" href="#kokkos-sharedspace"><code class="docutils literal notranslate"><span class="pre">Kokkos::SharedSpace</span></code></a></li>
+<li><a class="reference internal" href="#kokkos-sharedhostpinnedspace"><code class="docutils literal notranslate"><span class="pre">Kokkos::SharedHostPinnedSpace</span></code></a></li>
 <li><a class="reference internal" href="#kokkos-memoryspaceconcept"><code class="docutils literal notranslate"><span class="pre">Kokkos::MemorySpaceConcept</span></code></a><ul>
 <li><a class="reference internal" href="#synopsis">Synopsis</a></li>
 <li><a class="reference internal" href="#typedefs">Typedefs</a></li>
