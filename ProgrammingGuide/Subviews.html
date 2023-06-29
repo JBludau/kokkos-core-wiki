@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Compatibility.html">12 Backwards &amp; Future Compatibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Interoperability.html">13. Interoperability and Legacy Codes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Kokkos-and-Virtual-Functions.html">14. Kokkos and Virtual Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SIMD.html">15. SIMD Types</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
@@ -184,16 +185,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../keywords.html">CMake Keywords</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../API/core-index.html">API: Core</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/Initialize-and-Finalize.html">Initialize and Finalize</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/initialize.html">initialize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/finalize.html">finalize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/ScopeGuard.html">ScopeGuard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/InitializationSettings.html">InitializationSettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/initialize.html"><code class="docutils literal notranslate"><span class="pre">initialize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/finalize.html"><code class="docutils literal notranslate"><span class="pre">finalize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/ScopeGuard.html"><code class="docutils literal notranslate"><span class="pre">ScopeGuard</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/InitializationSettings.html"><code class="docutils literal notranslate"><span class="pre">InitializationSettings</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/InitArguments.html">InitArguments</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/View.html">View and related</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/create_mirror.html"><code class="docutils literal notranslate"><span class="pre">create_mirror[_view]</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/layoutLeft.html"><code class="docutils literal notranslate"><span class="pre">LayoutLeft</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/layoutRight.html"><code class="docutils literal notranslate"><span class="pre">LayoutRight</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/layoutStride.html"><code class="docutils literal notranslate"><span class="pre">LayoutStride</span></code></a></li>
@@ -202,18 +203,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/subview.html"><code class="docutils literal notranslate"><span class="pre">subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/Subview_type.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/view.html"><code class="docutils literal notranslate"><span class="pre">View</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/view_like.html">View-like Types</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/ParallelDispatch.html">Parallel Execution/Dispatch</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/builtin_reducers.html">Built-in Reducers</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -245,14 +246,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/RangePolicy.html"><code class="docutils literal notranslate"><span class="pre">RangePolicy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamHandleConcept.html"><code class="docutils literal notranslate"><span class="pre">TeamHandleConcept</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamPolicy.html"><code class="docutils literal notranslate"><span class="pre">TeamPolicy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamThreadMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamThreadRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamVectorRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/policies/ThreadVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/ThreadVectorRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorRange</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/Spaces.html">Spaces</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/execution_spaces.html">Execution Spaces</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/spaces/partition_space.html">Kokkos::partition_space()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/spaces/partition_space.html"><code class="docutils literal notranslate"><span class="pre">partition_space</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/memory_spaces.html">Memory Spaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/SpaceAccessibility.html">Space Accessibility</a></li>
 </ul>
@@ -273,6 +277,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../API/core/numerics/mathematical-constants.html">Mathematical constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/numerics/mathematical-functions.html">Common math functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/numerics/numeric-traits.html">Numeric traits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/numerics/bit-manipulation.html">Bit manipulation</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/c_style_memory_management.html">C-style memory management</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -292,6 +297,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/all.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/complex.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::complex</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/timer.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Timer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/device_id.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::device_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/num_threads.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_threads</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/experimental.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental</span></code></a></li>
 </ul>
 </li>
@@ -316,6 +323,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Random-Number.html">Random-Number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Random-Number.html#generator">Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Sort.html">Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Sort.html#sorting-with-nested-policies-team-and-thread-level">Sorting with nested policies (team- and thread-level)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../API/algorithms/std-algorithms/Iterators.html">Iterators</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -355,8 +363,28 @@
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNonModSeq.html">NonModifyingSequenceOperation</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAdjacentFind.html"><code class="docutils literal notranslate"><span class="pre">adjacent_find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdCount.html"><code class="docutils literal notranslate"><span class="pre">count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdCountIf.html"><code class="docutils literal notranslate"><span class="pre">count_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdEqual.html"><code class="docutils literal notranslate"><span class="pre">equal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAllOf.html"><code class="docutils literal notranslate"><span class="pre">all_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAnyOf.html"><code class="docutils literal notranslate"><span class="pre">any_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdNoneOf.html"><code class="docutils literal notranslate"><span class="pre">none_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFind.html"><code class="docutils literal notranslate"><span class="pre">find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFindIf.html"><code class="docutils literal notranslate"><span class="pre">find_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFindIfNot.html"><code class="docutils literal notranslate"><span class="pre">find_if_not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFindEnd.html"><code class="docutils literal notranslate"><span class="pre">find_end</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFindFirstOf.html"><code class="docutils literal notranslate"><span class="pre">find_first_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdForEach.html"><code class="docutils literal notranslate"><span class="pre">for_each</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdForEachN.html"><code class="docutils literal notranslate"><span class="pre">for_each_n</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdLexicographicalCompare.html"><code class="docutils literal notranslate"><span class="pre">lexicographical_compare</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdMismatch.html"><code class="docutils literal notranslate"><span class="pre">mismatch</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdSearch.html"><code class="docutils literal notranslate"><span class="pre">search</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdSearchN.html"><code class="docutils literal notranslate"><span class="pre">search_n</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdExclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">exclusive_scan</span></code></a></li>
@@ -366,13 +394,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsSorted.html"><code class="docutils literal notranslate"><span class="pre">is_sorted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsSortedUntil.html"><code class="docutils literal notranslate"><span class="pre">is_sorted_until</span></code></a></li>
 </ul>
@@ -381,8 +409,16 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../API/simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../API/simd/simd.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/simd/simd_mask.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd_mask</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/simd/where_expression.html"><code class="docutils literal notranslate"><span class="pre">Experimental::where_expression</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../API/alphabetical.html">API in Alphabetical Order</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecation_page.html">Deprecation for Kokkos-3.x</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known issues</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/MPI-Halo-Exchange.html">MPI Halo Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/Average-To-Nodes.html">ScatterView averaging elements to nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/MDRangePolicy.html">MDRangePolicy Use Case</a></li>
@@ -393,9 +429,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../usecases/Kokkos-Fortran-Interoperability.html">Fortran Interop Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/SoA-and-AoSoA-with-Cabana.html">Array of Structures and Structure of Arrays with Cabana</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/WindowsHeader.html">Kokkos and <code class="docutils literal notranslate"><span class="pre">Windows.h</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usecases/Moving_from_EnableUVM_to_SharedSpace.html">Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Requirements-Issues-and-Feedback.html">Requirements, Issues and Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Testing-Process-Details.html">Attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Testing-Processes.html">Kokkos Testing Processes and Change Process</a></li>
@@ -403,7 +440,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos-tutorials">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=rUIcWtFU5qM">1. Intro, Build, Parallel dispatch</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=O-asHTtO7O4">2. Views and Spaces</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=nGyJS8u-6GY">3. Multidim loops and Data Structures</a></li>
@@ -462,7 +499,7 @@
           </label>
         </div>
         <article role="main">
-          <section id="subviews">
+          <section class="tex2jax_ignore mathjax_ignore" id="subviews">
 <h1>11: Subviews<a class="headerlink" href="#subviews" title="Permalink to this heading">#</a></h1>
 <p>After reading this chapter, you should understand the following:</p>
 <ul class="simple">
@@ -474,9 +511,9 @@
 <section id="a-subview-is-a-slice-of-a-view">
 <h2>11.1 A subview is a slice of a View<a class="headerlink" href="#a-subview-is-a-slice-of-a-view" title="Permalink to this heading">#</a></h2>
 <p>In Kokkos, a <em>subview</em> is a slice of a View. A <em>slice</em> of a multidimensional array behaves as an array, and is a view of a
-structured subset of the original array. “Behaves as an array” means that the slice has the same syntax as an array does; one can access its entries using array indexing notation. “View” means that the slice and the original array point to the same data, i.e, the slice sees changes to the original array and vice versa. “Structured subset” means a cross product of indices along each dimension, as for example a plane or face of a cube. If the original array has dimensions <code class="docutils literal notranslate"><span class="pre">(N_0,</span> <span class="pre">N_1,</span> <span class="pre">...,</span> <span class="pre">N_{k-1})</span></code>, then a slice views all entries whose indices are <code class="docutils literal notranslate"><span class="pre">(a_0,</span> <span class="pre">a_1,</span> <span class="pre">...,</span> <span class="pre">a_{k-1})</span></code>, where <code class="docutils literal notranslate"><span class="pre">a_j</span></code> is an ordered subset of <code class="docutils literal notranslate"><span class="pre">{N_0,</span> <span class="pre">N_1,</span> <span class="pre">...,</span> <span class="pre">N_j-1}</span></code>.</p>
+structured subset of the original array. “Behaves as an array” means that the slice has the same syntax as an array does; one can access its entries using array indexing notation. “View” means that the slice and the original array point to the same data, i.e, the slice sees changes to the original array and vice versa. “Structured subset” means a cross product of indices along each dimension, as for example a plane or face of a cube. If the original array has dimensions <span class="math notranslate nohighlight">\(\left(N_0, N_1, ..., N_{k-1}\right)\)</span>, then a slice views all entries whose indices are <span class="math notranslate nohighlight">\(\left(a_0, a_1, ..., a_{k-1}\right)\)</span>, where <span class="math notranslate nohighlight">\(a_j\)</span> is an ordered subset of <span class="math notranslate nohighlight">\(\left\{N_0, N_1, ..., N_j-1\right\}\)</span>.</p>
 <p>Array slices are handy for encapsulation. A slice looks and acts like an array, so you can pass it into functions that expect an array. For example, you can write a function for processing boundaries (as slices) of a structured grid without needing to tell that function properties of the entire grid.</p>
-<p>Programming languages like Fortran 90, Matlab, and Python have a special “colon” notation for representing slices. For example, if <code class="docutils literal notranslate"><span class="pre">A</span></code> is an <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">x</span> <span class="pre">N</span></code> array, then</p>
+<p>Programming languages like Fortran 90, Matlab, and Python have a special “colon” notation for representing slices. For example, if <code class="docutils literal notranslate"><span class="pre">A</span></code> is an <span class="math notranslate nohighlight">\(M \times N\)</span> array, then</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">A(:,</span> <span class="pre">:)</span></code> represents the whole array,</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">A(:,</span> <span class="pre">3)</span></code> represents the fourth column (if the language has zero-based indices,
@@ -493,11 +530,11 @@ in the fourth row and fifth column of the matrix.</p></li>
 <section id="how-to-take-a-subview">
 <h2>11.2 How to take a subview<a class="headerlink" href="#how-to-take-a-subview" title="Permalink to this heading">#</a></h2>
 <p>To take a subview of a View, you can use the <a class="reference internal" href="../API/core/view/subview.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">Kokkos::subview</span></code></span></a> function. This function is overloaded for all different kinds of Views and index ranges. For example, the following code is equivalent to the above example <code class="docutils literal notranslate"><span class="pre">A(2:4,</span> <span class="pre">3:7)</span></code>:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">N0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">N1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
-<span class="n">View</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">**&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">N0</span><span class="p">,</span><span class="w"> </span><span class="n">N1</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">N0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">N1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="n">Kokkos</span><span class="o">::</span><span class="n">View</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">**&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">N0</span><span class="p">,</span><span class="w"> </span><span class="n">N1</span><span class="p">);</span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">A_sub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subview</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">make_pair</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">),</span><span class="w"> </span><span class="n">make_pair</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">));</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">A_sub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">subview</span><span class="w"> </span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">make_pair</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">),</span><span class="w"> </span><span class="n">make_pair</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>In the above example and those that follow in this chapter, we assume that <a class="reference internal" href="../API/core/view/view.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">Kokkos::View</span></code></span></a>, <a class="reference internal" href="../API/core/view/subview.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">Kokkos::subview</span></code></span></a>, <code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code>, <code class="docutils literal notranslate"><span class="pre">std::make_pair</span></code>, and <code class="docutils literal notranslate"><span class="pre">std::pair</span></code> have been imported into the working C++ namespace.</p>
@@ -505,11 +542,11 @@ in the fourth row and fifth column of the matrix.</p></li>
 <code class="docutils literal notranslate"><span class="pre">:</span></code> (a colon by itself; the whole index range for that dimension) is <code class="docutils literal notranslate"><span class="pre">ALL()</span></code> (an instance of the <code class="docutils literal notranslate"><span class="pre">ALL</span></code> class, which Kokkos uses only for this purpose). Kokkos does not currently have equivalents of the strided or arbitrary index sets.</p>
 <p>A subview has the same reference count as its parent <a class="reference internal" href="../API/core/view/view.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">View</span></code></span></a>, so the parent <a class="reference internal" href="../API/core/view/view.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">View</span></code></span></a> won’t be deallocated before all subviews go away. Every subview is also a <a class="reference internal" href="../API/core/view/view.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">View</span></code></span></a>. This means that you may take a subview of a subview.</p>
 <p>Another way of getting a subview is through the appropriate <a class="reference internal" href="../API/core/view/view.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">View</span></code></span></a> constructor.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">N0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
-<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">N1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span><span class="w"></span>
-<span class="n">View</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">**&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">N0</span><span class="p">,</span><span class="w"> </span><span class="n">N1</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">N0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">N1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="n">Kokkos</span><span class="o">::</span><span class="n">View</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">**&gt;</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">N0</span><span class="p">,</span><span class="w"> </span><span class="n">N1</span><span class="p">);</span>
 
-<span class="n">View</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">**</span><span class="p">,</span><span class="n">LayoutStride</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A_sub</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">));</span><span class="w"></span>
+<span class="n">Kokkos</span><span class="o">::</span><span class="n">View</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">**</span><span class="p">,</span><span class="n">LayoutStride</span><span class="o">&gt;</span><span class="w"> </span><span class="n">A_sub</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>For this usage you must know the layout type of the subview. On the positive side, such a direct construction is generally a bit cheaper than through the <code class="docutils literal notranslate"><span class="pre">Kokkos::subview</span></code> function.</p>
@@ -525,6 +562,20 @@ in the fourth row and fifth column of the matrix.</p></li>
 <h3>11.2.3 Degenerate Views<a class="headerlink" href="#degenerate-views" title="Permalink to this heading">#</a></h3>
 <p>Given a View with <code class="docutils literal notranslate"><span class="pre">k</span></code> dimensions, we call that View <em>degenerate</em> if any of its dimensions is zero. Degenerate Views are useful for keeping code simple by avoiding special cases. For example, consider a MPI (Message-Passing Interface) distributed-memory parallel code that uses Kokkos to represent local (per-process) data structures. Suppose that the code distributes a dense matrix (2-D array) in block row fashion over the MPI processes in a communicator. It could be that some processes own zero rows of the matrix. This may not be efficient, since those processes do no work yet participate in collectives, but it might be possible. In this case, allowing Views with zero rows would reduce the number of special cases in the code.</p>
 </section>
+</section>
+<section id="obtaining-the-type-of-a-subview">
+<h2>11.3 Obtaining the type of a subview<a class="headerlink" href="#obtaining-the-type-of-a-subview" title="Permalink to this heading">#</a></h2>
+<p>For some applications, it is useful to know the type of a subview, given the arguments. In these cases, using <code class="docutils literal notranslate"><span class="pre">auto</span></code> type deduction can be inconvenient. While it is possible to use <code class="docutils literal notranslate"><span class="pre">decltype()</span></code> and <code class="docutils literal notranslate"><span class="pre">std::declval</span></code> to obtain this from the <code class="docutils literal notranslate"><span class="pre">subview</span></code> function, Kokkos provides a convenient type alias:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">my_view_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">View</span><span class="o">&lt;</span><span class="kt">double</span><span class="w"> </span><span class="o">**&gt;</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">my_subview_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">Subview</span><span class="o">&lt;</span><span class="n">my_view_type</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">std</span><span class="o">::</span><span class="n">remove_const_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">Kokkos</span><span class="o">::</span><span class="n">ALL</span><span class="p">)</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="w">                                        </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">my_subview_type_deduced</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">subview</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">my_view_type</span><span class="o">&gt;</span><span class="p">(),</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">ALL</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="mi">1u</span><span class="p">,</span><span class="w"> </span><span class="mi">1u</span><span class="p">)));</span>
+
+<span class="k">static_assert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">my_subview_type</span><span class="p">,</span><span class="w"> </span><span class="n">my_subview_type_deduced</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">);</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -593,6 +644,7 @@ in the fourth row and fifth column of the matrix.</p></li>
 <li><a class="reference internal" href="#degenerate-views">11.2.3 Degenerate Views</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#obtaining-the-type-of-a-subview">11.3 Obtaining the type of a subview</a></li>
 </ul>
 </li>
 </ul>
@@ -612,5 +664,7 @@ in the fourth row and fifth column of the matrix.</p></li>
     <script src="../_static/scripts/furo.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     </body>
 </html>

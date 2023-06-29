@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Compatibility.html">12 Backwards &amp; Future Compatibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Interoperability.html">13. Interoperability and Legacy Codes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Kokkos-and-Virtual-Functions.html">14. Kokkos and Virtual Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SIMD.html">15. SIMD Types</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
@@ -184,16 +185,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../keywords.html">CMake Keywords</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../API/core-index.html">API: Core</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/Initialize-and-Finalize.html">Initialize and Finalize</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/initialize.html">initialize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/finalize.html">finalize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/ScopeGuard.html">ScopeGuard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/InitializationSettings.html">InitializationSettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/initialize.html"><code class="docutils literal notranslate"><span class="pre">initialize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/finalize.html"><code class="docutils literal notranslate"><span class="pre">finalize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/ScopeGuard.html"><code class="docutils literal notranslate"><span class="pre">ScopeGuard</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/InitializationSettings.html"><code class="docutils literal notranslate"><span class="pre">InitializationSettings</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/InitArguments.html">InitArguments</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/View.html">View and related</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/create_mirror.html"><code class="docutils literal notranslate"><span class="pre">create_mirror[_view]</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/layoutLeft.html"><code class="docutils literal notranslate"><span class="pre">LayoutLeft</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/layoutRight.html"><code class="docutils literal notranslate"><span class="pre">LayoutRight</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/layoutStride.html"><code class="docutils literal notranslate"><span class="pre">LayoutStride</span></code></a></li>
@@ -202,18 +203,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/subview.html"><code class="docutils literal notranslate"><span class="pre">subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/Subview_type.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/view.html"><code class="docutils literal notranslate"><span class="pre">View</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/view/view_like.html">View-like Types</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/ParallelDispatch.html">Parallel Execution/Dispatch</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/builtin_reducers.html">Built-in Reducers</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -245,14 +246,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/RangePolicy.html"><code class="docutils literal notranslate"><span class="pre">RangePolicy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamHandleConcept.html"><code class="docutils literal notranslate"><span class="pre">TeamHandleConcept</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamPolicy.html"><code class="docutils literal notranslate"><span class="pre">TeamPolicy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamThreadMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamThreadRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/TeamVectorRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/policies/ThreadVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/policies/ThreadVectorRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorRange</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/Spaces.html">Spaces</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/execution_spaces.html">Execution Spaces</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../API/core/spaces/partition_space.html">Kokkos::partition_space()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/spaces/partition_space.html"><code class="docutils literal notranslate"><span class="pre">partition_space</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/memory_spaces.html">Memory Spaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/SpaceAccessibility.html">Space Accessibility</a></li>
 </ul>
@@ -273,6 +277,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../API/core/numerics/mathematical-constants.html">Mathematical constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/numerics/mathematical-functions.html">Common math functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/numerics/numeric-traits.html">Numeric traits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/numerics/bit-manipulation.html">Bit manipulation</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/c_style_memory_management.html">C-style memory management</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -292,6 +297,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/all.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/complex.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::complex</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/timer.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Timer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/device_id.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::device_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/num_threads.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_threads</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/experimental.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental</span></code></a></li>
 </ul>
 </li>
@@ -316,6 +323,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Random-Number.html">Random-Number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Random-Number.html#generator">Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Sort.html">Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Sort.html#sorting-with-nested-policies-team-and-thread-level">Sorting with nested policies (team- and thread-level)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../API/algorithms/std-algorithms/Iterators.html">Iterators</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -355,8 +363,28 @@
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNonModSeq.html">NonModifyingSequenceOperation</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAdjacentFind.html"><code class="docutils literal notranslate"><span class="pre">adjacent_find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdCount.html"><code class="docutils literal notranslate"><span class="pre">count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdCountIf.html"><code class="docutils literal notranslate"><span class="pre">count_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdEqual.html"><code class="docutils literal notranslate"><span class="pre">equal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAllOf.html"><code class="docutils literal notranslate"><span class="pre">all_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAnyOf.html"><code class="docutils literal notranslate"><span class="pre">any_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdNoneOf.html"><code class="docutils literal notranslate"><span class="pre">none_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFind.html"><code class="docutils literal notranslate"><span class="pre">find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFindIf.html"><code class="docutils literal notranslate"><span class="pre">find_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFindIfNot.html"><code class="docutils literal notranslate"><span class="pre">find_if_not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFindEnd.html"><code class="docutils literal notranslate"><span class="pre">find_end</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdFindFirstOf.html"><code class="docutils literal notranslate"><span class="pre">find_first_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdForEach.html"><code class="docutils literal notranslate"><span class="pre">for_each</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdForEachN.html"><code class="docutils literal notranslate"><span class="pre">for_each_n</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdLexicographicalCompare.html"><code class="docutils literal notranslate"><span class="pre">lexicographical_compare</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdMismatch.html"><code class="docutils literal notranslate"><span class="pre">mismatch</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdSearch.html"><code class="docutils literal notranslate"><span class="pre">search</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdSearchN.html"><code class="docutils literal notranslate"><span class="pre">search_n</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdExclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">exclusive_scan</span></code></a></li>
@@ -366,13 +394,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsSorted.html"><code class="docutils literal notranslate"><span class="pre">is_sorted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsSortedUntil.html"><code class="docutils literal notranslate"><span class="pre">is_sorted_until</span></code></a></li>
 </ul>
@@ -381,8 +409,16 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../API/simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../API/simd/simd.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/simd/simd_mask.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd_mask</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/simd/where_expression.html"><code class="docutils literal notranslate"><span class="pre">Experimental::where_expression</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../API/alphabetical.html">API in Alphabetical Order</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../deprecation_page.html">Deprecation for Kokkos-3.x</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known issues</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/MPI-Halo-Exchange.html">MPI Halo Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/Average-To-Nodes.html">ScatterView averaging elements to nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/MDRangePolicy.html">MDRangePolicy Use Case</a></li>
@@ -393,9 +429,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../usecases/Kokkos-Fortran-Interoperability.html">Fortran Interop Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/SoA-and-AoSoA-with-Cabana.html">Array of Structures and Structure of Arrays with Cabana</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usecases/WindowsHeader.html">Kokkos and <code class="docutils literal notranslate"><span class="pre">Windows.h</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usecases/Moving_from_EnableUVM_to_SharedSpace.html">Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Requirements-Issues-and-Feedback.html">Requirements, Issues and Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Testing-Process-Details.html">Attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Testing-Processes.html">Kokkos Testing Processes and Change Process</a></li>
@@ -403,7 +440,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos-tutorials">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=rUIcWtFU5qM">1. Intro, Build, Parallel dispatch</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=O-asHTtO7O4">2. Views and Spaces</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=nGyJS8u-6GY">3. Multidim loops and Data Structures</a></li>
@@ -462,7 +499,7 @@
           </label>
         </div>
         <article role="main">
-          <section id="compiling">
+          <section class="tex2jax_ignore mathjax_ignore" id="compiling">
 <h1>4. Compiling<a class="headerlink" href="#compiling" title="Permalink to this heading">#</a></h1>
 <p>This chapter explains how to compile Kokkos and how to link your application against Kokkos. Kokkos supports three methods to build:</p>
 <ul class="simple">
@@ -600,31 +637,31 @@ Using this method, the Kokkos options necessary to specify the devices, arch and
 <section id="configuring-kokkos-with-cmake">
 <h2>Configuring Kokkos with CMake<a class="headerlink" href="#configuring-kokkos-with-cmake" title="Permalink to this heading">#</a></h2>
 <p>A very basic installation is done with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; mkdir build
-&gt; <span class="nb">cd</span> build
-&gt; cmake <span class="si">${</span><span class="nv">srcdir</span><span class="si">}</span> <span class="se">\</span>
- -DCMAKE_CXX_COMPILER<span class="o">=</span>g++ <span class="se">\</span>
- -DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="si">${</span><span class="nv">my_install_folder</span><span class="si">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>mkdir<span class="w"> </span>build
+&gt;<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+&gt;<span class="w"> </span>cmake<span class="w"> </span><span class="si">${</span><span class="nv">srcdir</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>-DCMAKE_CXX_COMPILER<span class="o">=</span>g++<span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="si">${</span><span class="nv">my_install_folder</span><span class="si">}</span>
 </pre></div>
 </div>
 <p>which builds and installed a default Kokkos when you run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>.
 There are numerous device backends, options, and architecture-specific optimizations that can be configured, e.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; cmake <span class="si">${</span><span class="nv">srcdir</span><span class="si">}</span> <span class="se">\</span>
- -DCMAKE_CXX_COMPILER<span class="o">=</span>g++ <span class="se">\</span>
- -DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="si">${</span><span class="nv">my_install_folder</span><span class="si">}</span> <span class="se">\</span>
- -DKokkos_ENABLE_OPENMP<span class="o">=</span>On
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>cmake<span class="w"> </span><span class="si">${</span><span class="nv">srcdir</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>-DCMAKE_CXX_COMPILER<span class="o">=</span>g++<span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span><span class="si">${</span><span class="nv">my_install_folder</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>-DKokkos_ENABLE_OPENMP<span class="o">=</span>On
 </pre></div>
 </div>
 <p>which activates the OpenMP backend. All the options controlling device backends, options, architectures, and third-party libraries (TPLs) are given below under the keywords listing.</p>
 <section id="using-generate-makefile-bash">
 <h3>Using generate_makefile.bash<a class="headerlink" href="#using-generate-makefile-bash" title="Permalink to this heading">#</a></h3>
 <p>As an alternative to calling the cmake command directly, the generate_makefile.bash command can be used to configure the CMake build environment.  The generate_makefile.bash equivalent to the above OpenMP example is as follows:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; <span class="si">${</span><span class="nv">srcdir</span><span class="si">}</span>/generate_makefile.bash --compiler<span class="o">=</span>g++ <span class="se">\</span>
-  --with-openmp --prefix<span class="o">=</span><span class="si">${</span><span class="nv">my_install_folder</span><span class="si">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">srcdir</span><span class="si">}</span>/generate_makefile.bash<span class="w"> </span>--compiler<span class="o">=</span>g++<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--with-openmp<span class="w"> </span>--prefix<span class="o">=</span><span class="si">${</span><span class="nv">my_install_folder</span><span class="si">}</span>
 </pre></div>
 </div>
 <p>For a full list of generate_makefile.bash options use the command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; <span class="si">${</span><span class="nv">srcdir</span><span class="si">}</span>/generate_makefile.bash --help
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">srcdir</span><span class="si">}</span>/generate_makefile.bash<span class="w"> </span>--help
 </pre></div>
 </div>
 </section>
@@ -632,15 +669,15 @@ There are numerous device backends, options, and architecture-specific optimizat
 <h3>Spack<a class="headerlink" href="#spack" title="Permalink to this heading">#</a></h3>
 <p>An alternative to manually building with CMake is to use the Spack package manager.
 To do so, download <a class="reference external" href="https://github.com/spack/spack">Spack</a> and add it to your path by sourcing the appropriate env file in the share folder, e.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; <span class="nb">source</span> spack/share/spack/setup-env.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span><span class="nb">source</span><span class="w"> </span>spack/share/spack/setup-env.sh
 </pre></div>
 </div>
 <p>A basic installation would be done as:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; spack install kokkos
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>spack<span class="w"> </span>install<span class="w"> </span>kokkos
 </pre></div>
 </div>
 <p>Spack allows options and compilers to be tuned in the install command.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; spack install kokkos@3.0 %gcc@7.3.0 +openmp
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>spack<span class="w"> </span>install<span class="w"> </span>kokkos@3.0<span class="w"> </span>%gcc@7.3.0<span class="w"> </span>+openmp
 </pre></div>
 </div>
 <p>This example illustrates the three most common parameters to Spack:</p>
@@ -650,7 +687,7 @@ To do so, download <a class="reference external" href="https://github.com/spack/
 <li><p>Compiler: a default compiler will be chosen if not specified, but an exact compiler version can be given with the <code class="docutils literal notranslate"><span class="pre">%</span></code>option.</p></li>
 </ul>
 <p>For a complete list of Kokkos options, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; spack info kokkos
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>spack<span class="w"> </span>info<span class="w"> </span>kokkos
 </pre></div>
 </div>
 <section id="spack-development">
@@ -658,25 +695,25 @@ To do so, download <a class="reference external" href="https://github.com/spack/
 <p>Spack currently installs packages to a location determined by a unique hash. This hash name is not really “human readable”.
 Generally, Spack usage should never really require you to reference the computer-generated unique install folder.
 If you must know, you can locate Spack Kokkos installations with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; spack find -p kokkos ...
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>spack<span class="w"> </span>find<span class="w"> </span>-p<span class="w"> </span>kokkos<span class="w"> </span>...
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">...</span></code> is the unique spec identifying the particular Kokkos configuration and version.</p>
 <p>A better way to use Spack for doing Kokkos development is the DIY feature of Spack.
 If you wish to develop Kokkos itself, go to the Kokkos source folder:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; spack diy -u cmake kokkos@diy ...
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>spack<span class="w"> </span>diy<span class="w"> </span>-u<span class="w"> </span>cmake<span class="w"> </span>kokkos@diy<span class="w"> </span>...
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">...</span></code> is a Spack spec identifying the exact Kokkos configuration.
 This then creates a <code class="docutils literal notranslate"><span class="pre">spack-build</span></code> directory where you can run <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
 <p>If doing development on a downstream project, you can do almost the same thing.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; spack diy -u cmake <span class="si">${</span><span class="nv">myproject</span><span class="si">}</span>@<span class="si">${</span><span class="nv">myversion</span><span class="si">}</span> ... ^kokkos...
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>spack<span class="w"> </span>diy<span class="w"> </span>-u<span class="w"> </span>cmake<span class="w"> </span><span class="si">${</span><span class="nv">myproject</span><span class="si">}</span>@<span class="si">${</span><span class="nv">myversion</span><span class="si">}</span><span class="w"> </span>...<span class="w"> </span>^kokkos...
 </pre></div>
 </div>
 <p>where the <code class="docutils literal notranslate"><span class="pre">...</span></code> are the specs for your project and the desired Kokkos configuration.
 Again, a <code class="docutils literal notranslate"><span class="pre">spack-build</span></code> directory will be created where you can run <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p>
 <p>Spack has a few idiosyncrasies that make building outside of Spack annoying related to Spack forcing the use of a compiler wrapper. This can be worked around by having a <code class="docutils literal notranslate"><span class="pre">-DSpack_WORKAROUND=On</span></code> given your CMake. Then add the block of code to your CMakeLists.txt:</p>
-<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">if</span> <span class="p">(</span><span class="s">Spack_WORKAROUND</span><span class="p">)</span>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">if</span><span class="w"> </span><span class="p">(</span><span class="s">Spack_WORKAROUND</span><span class="p">)</span>
 <span class="w"> </span><span class="nb">set</span><span class="p">(</span><span class="s">SPACK_CXX</span><span class="w"> </span><span class="o">$ENV{</span><span class="nv">SPACK_CXX</span><span class="o">}</span><span class="p">)</span>
 <span class="w"> </span><span class="nb">if</span><span class="p">(</span><span class="s">SPACK_CXX</span><span class="p">)</span>
 <span class="w">   </span><span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER</span><span class="w"> </span><span class="o">${</span><span class="nv">SPACK_CXX</span><span class="o">}</span><span class="w"> </span><span class="s">CACHE</span><span class="w"> </span><span class="s">STRING</span><span class="w"> </span><span class="s2">&quot;the C++ compiler&quot;</span><span class="w"> </span><span class="s">FORCE</span><span class="p">)</span>

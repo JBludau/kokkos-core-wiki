@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/Compatibility.html">12 Backwards &amp; Future Compatibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/Interoperability.html">13. Interoperability and Legacy Codes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/Kokkos-and-Virtual-Functions.html">14. Kokkos and Virtual Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/SIMD.html">15. SIMD Types</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../requirements.html">Requirements</a></li>
@@ -184,16 +185,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../keywords.html">CMake Keywords</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../core-index.html">API: Core</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/Initialize-and-Finalize.html">Initialize and Finalize</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/initialize.html">initialize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/finalize.html">finalize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/ScopeGuard.html">ScopeGuard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/InitializationSettings.html">InitializationSettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/initialize.html"><code class="docutils literal notranslate"><span class="pre">initialize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/finalize.html"><code class="docutils literal notranslate"><span class="pre">finalize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/ScopeGuard.html"><code class="docutils literal notranslate"><span class="pre">ScopeGuard</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/InitializationSettings.html"><code class="docutils literal notranslate"><span class="pre">InitializationSettings</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/InitArguments.html">InitArguments</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/View.html">View and related</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/create_mirror.html"><code class="docutils literal notranslate"><span class="pre">create_mirror[_view]</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/layoutLeft.html"><code class="docutils literal notranslate"><span class="pre">LayoutLeft</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/layoutRight.html"><code class="docutils literal notranslate"><span class="pre">LayoutRight</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/layoutStride.html"><code class="docutils literal notranslate"><span class="pre">LayoutStride</span></code></a></li>
@@ -202,18 +203,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../core/view/subview.html"><code class="docutils literal notranslate"><span class="pre">subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/Subview_type.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/view.html"><code class="docutils literal notranslate"><span class="pre">View</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/view_like.html">View-like Types</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/ParallelDispatch.html">Parallel Execution/Dispatch</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/builtin_reducers.html">Built-in Reducers</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -245,14 +246,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/RangePolicy.html"><code class="docutils literal notranslate"><span class="pre">RangePolicy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamHandleConcept.html"><code class="docutils literal notranslate"><span class="pre">TeamHandleConcept</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamPolicy.html"><code class="docutils literal notranslate"><span class="pre">TeamPolicy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamThreadMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamThreadRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamVectorRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/policies/ThreadVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/ThreadVectorRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorRange</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/Spaces.html">Spaces</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../core/execution_spaces.html">Execution Spaces</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/spaces/partition_space.html">Kokkos::partition_space()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/spaces/partition_space.html"><code class="docutils literal notranslate"><span class="pre">partition_space</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/memory_spaces.html">Memory Spaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/SpaceAccessibility.html">Space Accessibility</a></li>
 </ul>
@@ -273,6 +277,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../core/numerics/mathematical-constants.html">Mathematical constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/numerics/mathematical-functions.html">Common math functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/numerics/numeric-traits.html">Numeric traits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/numerics/bit-manipulation.html">Bit manipulation</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/c_style_memory_management.html">C-style memory management</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -292,6 +297,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../core/utilities/all.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/utilities/complex.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::complex</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/utilities/timer.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Timer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/utilities/device_id.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::device_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/utilities/num_threads.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_threads</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/utilities/experimental.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental</span></code></a></li>
 </ul>
 </li>
@@ -316,6 +323,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../algorithms/Random-Number.html">Random-Number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../algorithms/Random-Number.html#generator">Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../algorithms/Sort.html">Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/Sort.html#sorting-with-nested-policies-team-and-thread-level">Sorting with nested policies (team- and thread-level)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../algorithms/std-algorithms/Iterators.html">Iterators</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -355,8 +363,28 @@
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../algorithms/std-algorithms/StdNonModSeq.html">NonModifyingSequenceOperation</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdAdjacentFind.html"><code class="docutils literal notranslate"><span class="pre">adjacent_find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdCount.html"><code class="docutils literal notranslate"><span class="pre">count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdCountIf.html"><code class="docutils literal notranslate"><span class="pre">count_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdEqual.html"><code class="docutils literal notranslate"><span class="pre">equal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdAllOf.html"><code class="docutils literal notranslate"><span class="pre">all_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdAnyOf.html"><code class="docutils literal notranslate"><span class="pre">any_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdNoneOf.html"><code class="docutils literal notranslate"><span class="pre">none_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFind.html"><code class="docutils literal notranslate"><span class="pre">find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFindIf.html"><code class="docutils literal notranslate"><span class="pre">find_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFindIfNot.html"><code class="docutils literal notranslate"><span class="pre">find_if_not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFindEnd.html"><code class="docutils literal notranslate"><span class="pre">find_end</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFindFirstOf.html"><code class="docutils literal notranslate"><span class="pre">find_first_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdForEach.html"><code class="docutils literal notranslate"><span class="pre">for_each</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdForEachN.html"><code class="docutils literal notranslate"><span class="pre">for_each_n</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdLexicographicalCompare.html"><code class="docutils literal notranslate"><span class="pre">lexicographical_compare</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdMismatch.html"><code class="docutils literal notranslate"><span class="pre">mismatch</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdSearch.html"><code class="docutils literal notranslate"><span class="pre">search</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdSearchN.html"><code class="docutils literal notranslate"><span class="pre">search_n</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdExclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">exclusive_scan</span></code></a></li>
@@ -366,13 +394,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdIsSorted.html"><code class="docutils literal notranslate"><span class="pre">is_sorted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdIsSortedUntil.html"><code class="docutils literal notranslate"><span class="pre">is_sorted_until</span></code></a></li>
 </ul>
@@ -381,8 +409,16 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simd/simd.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simd/simd_mask.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd_mask</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simd/where_expression.html"><code class="docutils literal notranslate"><span class="pre">Experimental::where_expression</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../alphabetical.html">API in Alphabetical Order</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecation_page.html">Deprecation for Kokkos-3.x</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../known-issues.html">Known issues</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/MPI-Halo-Exchange.html">MPI Halo Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/Average-To-Nodes.html">ScatterView averaging elements to nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/MDRangePolicy.html">MDRangePolicy Use Case</a></li>
@@ -393,9 +429,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/Kokkos-Fortran-Interoperability.html">Fortran Interop Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/SoA-and-AoSoA-with-Cabana.html">Array of Structures and Structure of Arrays with Cabana</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/WindowsHeader.html">Kokkos and <code class="docutils literal notranslate"><span class="pre">Windows.h</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usecases/Moving_from_EnableUVM_to_SharedSpace.html">Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../testing-and-issue-tracking/Requirements-Issues-and-Feedback.html">Requirements, Issues and Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../testing-and-issue-tracking/Testing-Process-Details.html">Attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../testing-and-issue-tracking/Testing-Processes.html">Kokkos Testing Processes and Change Process</a></li>
@@ -403,7 +440,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos-tutorials">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=rUIcWtFU5qM">1. Intro, Build, Parallel dispatch</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=O-asHTtO7O4">2. Views and Spaces</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=nGyJS8u-6GY">3. Multidim loops and Data Structures</a></li>
@@ -438,7 +475,7 @@
         </a>
         <div class="content-icon-container">
 <div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/kokkos/kokkos-core-wiki/blob/main/docs/source/API/containers/Unordered-Map.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/kokkos/kokkos-core-wiki/blob/main/docs/source/API/containers/Unordered-Map.rst" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
@@ -464,108 +501,188 @@
         <article role="main">
           <section id="unorderedmap">
 <h1><code class="docutils literal notranslate"><span class="pre">UnorderedMap</span></code><a class="headerlink" href="#unorderedmap" title="Permalink to this heading">#</a></h1>
-<p>Kokkos’s unordered map is designed to efficiently handle tens of thousands of concurrent insertions.  Consequently, the API is significantly different from the standard unordered_map.  The two key differences are <em>fixed capacity</em> and <em>index based</em>.</p>
-<p><em>Fixed capacity</em>:  The capacity of the unordered_map is fix when inside a parallel algorithm.  This means that an insert can fail when the capacity of the map is exceeded.  The capacity of the map can be changed (rehash) from the host.</p>
-<p><em>Index based</em>:  Instead of returning pointers or iterators (which would not work when moving between memory spaces) the map uses integer indexes.  This also allows the map to store data in cache friendly ways.  The availability of indexes is managed by an internal atomic bitset based on <code class="docutils literal notranslate"><span class="pre">uint32_t</span></code>.</p>
-<p>An <code class="docutils literal notranslate"><span class="pre">UnorderedMap</span></code> behaves like an unordered set if the template parameter <code class="docutils literal notranslate"><span class="pre">Value</span></code> is void.</p>
-<section id="kokkos-unorderedmap-api">
-<h2>Kokkos::UnorderedMap API<a class="headerlink" href="#kokkos-unorderedmap-api" title="Permalink to this heading">#</a></h2>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UnorderedMapInsertResult</span><span class="p">;</span><span class="w"></span>
-
-<span class="k">template</span><span class="o">&lt;</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Key</span><span class="w">    </span><span class="c1">// Must be a POD</span>
-<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Value</span><span class="w">  </span><span class="c1">// void indicates an unordered set, otherwise </span>
-<span class="w">                          </span><span class="c1">// must be trivially copyable</span>
-<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">Device</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">DefaultExecutionSpace</span><span class="w"></span>
-<span class="w">                          </span><span class="c1">// Device is any class or struct with the </span>
-<span class="w">                          </span><span class="c1">// following typedefs or type aliases</span>
-<span class="w">                          </span><span class="c1">// execution_space, memory_space, and device_type</span>
-<span class="w">        </span><span class="o">&gt;</span><span class="w"></span>
-<span class="k">class</span><span class="w"> </span><span class="nc">UnorderedMap</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Host: create map with enough space for at least</span>
-<span class="w">  </span><span class="c1">// capacity_hint number of objects</span>
-<span class="w">  </span><span class="n">UnorderedMap</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">capacity_hint</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Host: clear the map</span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">clear</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Host: rehash map to given capacity,</span>
-<span class="w">  </span><span class="c1">// the current size is used as a lower bound</span>
-<span class="w">  </span><span class="c1">// O(capacity)</span>
-<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">rehash</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">requested_capacity</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Host: current size of the map, O(capacity)</span>
-<span class="w">  </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">size</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Host/Device: capacity of the map, O(1)</span>
-<span class="w">  </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">capacity</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Device: insert the given key into the map with a </span>
-<span class="w">  </span><span class="c1">// default constructed value</span>
-<span class="w">  </span><span class="n">UnorderedMapInsertResult</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Device: insert the given key/value pair into the map</span>
-<span class="w">  </span><span class="n">UnorderedMapInsertResult</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">Key</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="n">Value</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Device: return the index of the key if it exist, otherwise </span>
-<span class="w">  </span><span class="c1">// return invalid_index</span>
-<span class="w">  </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">find</span><span class="p">(</span><span class="n">Key</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Device: Does the key exist in the map </span>
-<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">exists</span><span class="p">(</span><span class="n">Key</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Device: is the current index a valid key/value pair</span>
-<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">valid_at</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Device: return the current key at the index</span>
-<span class="w">  </span><span class="n">Key</span><span class="w"> </span><span class="nf">key_at</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Device: return the current value at the index</span>
-<span class="w">  </span><span class="n">Value</span><span class="w"> </span><span class="nf">value_at</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">index</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Host/Device: return true if the internal views (keys, values, </span>
-<span class="w">  </span><span class="c1">// hashmap) are allocated</span>
-<span class="w">  </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nf">is_allocated</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w"> </span>
-<span class="p">};</span><span class="w"></span>
-
-
-<span class="k">class</span><span class="w"> </span><span class="nc">UnorderedMapInsertResult</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Was the key/value pair successfully inserted into the map</span>
-<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Is the key already present in the map</span>
-<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">existing</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Did the insert fail?</span>
-<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">failed</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span>
-<span class="w">  </span><span class="c1">// Index where the key exists in the map</span>
-<span class="w">  </span><span class="c1">// as long as failed() == false</span>
-<span class="w">  </span><span class="kt">uint32_t</span><span class="w"> </span><span class="nf">index</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-</pre></div>
+<p>Header file: <code class="docutils literal notranslate"><span class="pre">&lt;Kokkos_UnorderedMap.hpp&gt;</span></code></p>
+<p>Kokkos’s unordered map is designed to efficiently handle tens of thousands of concurrent insertions.
+Consequently, the API is significantly different from the standard unordered_map.
+The two key differences are <em>fixed capacity</em> and <em>index based</em>.</p>
+<ul class="simple">
+<li><p><em>Fixed capacity</em>: The capacity of the unordered_map is fixed when inside a parallel algorithm.
+This means that an insert can fail when the capacity of the map is exceeded.
+The capacity of the map can be changed (rehash) from the host.</p></li>
+<li><p><em>Index based</em>: Instead of returning pointers or iterators (which would not work when moving
+between memory spaces) the map uses integer indexes. This also allows the map to store data
+in cache friendly ways. The availability of indexes is managed by an internal atomic bitset based on <code class="docutils literal notranslate"><span class="pre">uint32_t</span></code>.</p></li>
+</ul>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<dl class="cppkokkos class">
+<dt class="sig sig-object cppkokkos" id="_CPPv4I000E12UnorderedMap">
+<span id="_CPPv3I000E12UnorderedMap"></span><span id="_CPPv2I000E12UnorderedMap"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Key</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Value</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Device</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">Kokkos</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">DefaultExecutionSpace</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UnorderedMap</span></span></span><a class="headerlink" href="#_CPPv4I000E12UnorderedMap" title="Permalink to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Key</strong> – Must be a POD (Plain Old Data type)</p></li>
+<li><p><strong>Value</strong> – <cite>void</cite> indicates an unordered set, otherwise must be trivially copyable</p></li>
+<li><p><strong>Device</strong> – Device is any class or struct with the following public typedefs or type aliases: <cite>execution_space</cite>, <cite>memory_space</cite>, and <cite>device_type</cite></p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Constructor</p>
+<dl class="cppkokkos function">
+<dt class="sig sig-object cppkokkos" id="_CPPv4N12UnorderedMap12UnorderedMapE8uint32_t">
+<span id="_CPPv3N12UnorderedMap12UnorderedMapE8uint32_t"></span><span id="_CPPv2N12UnorderedMap12UnorderedMapE8uint32_t"></span><span id="UnorderedMap::UnorderedMap__uint32_t"></span><span class="sig-name descname"><span class="n"><span class="pre">UnorderedMap</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">capacity_hint</span></span><span class="sig-paren">)</span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4N12UnorderedMap12UnorderedMapE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Create map with enough space for at least capacity_hint number of objects</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Host Only</p>
 </div>
+</dd></dl>
+
+<p class="rubric">Public Member Functions</p>
+<dl class="cppkokkos function">
+<dt class="sig sig-object cppkokkos" id="_CPPv4N12UnorderedMap5clearEv">
+<span id="_CPPv3N12UnorderedMap5clearEv"></span><span id="_CPPv2N12UnorderedMap5clearEv"></span><span id="UnorderedMap::clear"></span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4N12UnorderedMap5clearEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Clear the map</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Host Only</p>
+</div>
+</dd></dl>
+
+<dl class="cppkokkos function">
+<dt class="sig sig-object cppkokkos" id="_CPPv4N12UnorderedMap6rehashE8uint32_t">
+<span id="_CPPv3N12UnorderedMap6rehashE8uint32_t"></span><span id="_CPPv2N12UnorderedMap6rehashE8uint32_t"></span><span id="UnorderedMap::rehash__uint32_t"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rehash</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">requested_capacity</span></span><span class="sig-paren">)</span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4N12UnorderedMap6rehashE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Rehash map to given capacity, the current size is used as a lower bound O(capacity)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Host Only</p>
+</div>
+</dd></dl>
+
+<dl class="cppkokkos function">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap4sizeEv">
+<span id="_CPPv3NK12UnorderedMap4sizeEv"></span><span id="_CPPv2NK12UnorderedMap4sizeEv"></span><span id="UnorderedMap::sizeC"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap4sizeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Current size of the map, O(capacity)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Host Only</p>
+</div>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap8capacityEv">
+<span id="_CPPv3NK12UnorderedMap8capacityEv"></span><span id="_CPPv2NK12UnorderedMap8capacityEv"></span><span id="UnorderedMap::capacityC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">capacity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap8capacityEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Capacity of the map, O(1)</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap6insertE3key">
+<span id="_CPPv3NK12UnorderedMap6insertE3key"></span><span id="_CPPv2NK12UnorderedMap6insertE3key"></span><span id="UnorderedMap::insert__keyC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv424UnorderedMapInsertResult" title="UnorderedMapInsertResult"><span class="n"><span class="pre">UnorderedMapInsertResult</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insert</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">key</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap6insertE3key" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Insert the given key into the map with a default constructed value</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap6insertE3Key5Value">
+<span id="_CPPv3NK12UnorderedMap6insertE3Key5Value"></span><span id="_CPPv2NK12UnorderedMap6insertE3Key5Value"></span><span id="UnorderedMap::insert__Key.ValueC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv424UnorderedMapInsertResult" title="UnorderedMapInsertResult"><span class="n"><span class="pre">UnorderedMapInsertResult</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insert</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000E12UnorderedMap" title="UnorderedMap::Key"><span class="n"><span class="pre">Key</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span>, <a class="reference internal" href="#_CPPv4I000E12UnorderedMap" title="UnorderedMap::Value"><span class="n"><span class="pre">Value</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap6insertE3Key5Value" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Insert the given key/value pair into the map</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap4findE3Key">
+<span id="_CPPv3NK12UnorderedMap4findE3Key"></span><span id="_CPPv2NK12UnorderedMap4findE3Key"></span><span id="UnorderedMap::find__KeyC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000E12UnorderedMap" title="UnorderedMap::Key"><span class="n"><span class="pre">Key</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap4findE3Key" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Return the index of the key if it exist, otherwise return invalid_index</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap6existsE3Key">
+<span id="_CPPv3NK12UnorderedMap6existsE3Key"></span><span id="_CPPv2NK12UnorderedMap6existsE3Key"></span><span id="UnorderedMap::exists__KeyC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exists</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000E12UnorderedMap" title="UnorderedMap::Key"><span class="n"><span class="pre">Key</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap6existsE3Key" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Does the key exist in the map</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap8valid_atE8uint32_t">
+<span id="_CPPv3NK12UnorderedMap8valid_atE8uint32_t"></span><span id="_CPPv2NK12UnorderedMap8valid_atE8uint32_t"></span><span id="UnorderedMap::valid_at__uint32_tC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid_at</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap8valid_atE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Is the current index a valid key/value pair</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap6key_atE8uint32_t">
+<span id="_CPPv3NK12UnorderedMap6key_atE8uint32_t"></span><span id="_CPPv2NK12UnorderedMap6key_atE8uint32_t"></span><span id="UnorderedMap::key_at__uint32_tC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000E12UnorderedMap" title="UnorderedMap::Key"><span class="n"><span class="pre">Key</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">key_at</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap6key_atE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Return the current key at the index</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap8value_atE8uint32_t">
+<span id="_CPPv3NK12UnorderedMap8value_atE8uint32_t"></span><span id="_CPPv2NK12UnorderedMap8value_atE8uint32_t"></span><span id="UnorderedMap::value_at__uint32_tC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000E12UnorderedMap" title="UnorderedMap::Value"><span class="n"><span class="pre">Value</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value_at</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap8value_atE8uint32_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Return the current value at the index</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK12UnorderedMap12is_allocatedEv">
+<span id="_CPPv3NK12UnorderedMap12is_allocatedEv"></span><span id="_CPPv2NK12UnorderedMap12is_allocatedEv"></span><span id="UnorderedMap::is_allocatedCCE"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_allocated</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK12UnorderedMap12is_allocatedEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Return true if the internal views (keys, values, hashmap) are allocated</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cppkokkos class">
+<dt class="sig sig-object cppkokkos" id="_CPPv424UnorderedMapInsertResult">
+<span id="_CPPv324UnorderedMapInsertResult"></span><span id="_CPPv224UnorderedMapInsertResult"></span><span id="UnorderedMapInsertResult"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UnorderedMapInsertResult</span></span></span><a class="headerlink" href="#_CPPv424UnorderedMapInsertResult" title="Permalink to this definition">#</a><br /></dt>
+<dd><p class="rubric">Public Methods</p>
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK24UnorderedMapInsertResult7successEv">
+<span id="_CPPv3NK24UnorderedMapInsertResult7successEv"></span><span id="_CPPv2NK24UnorderedMapInsertResult7successEv"></span><span id="UnorderedMapInsertResult::successC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">success</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK24UnorderedMapInsertResult7successEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Was the key/value pair successfully inserted into the map</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK24UnorderedMapInsertResult8existingEv">
+<span id="_CPPv3NK24UnorderedMapInsertResult8existingEv"></span><span id="_CPPv2NK24UnorderedMapInsertResult8existingEv"></span><span id="UnorderedMapInsertResult::existingC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">existing</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK24UnorderedMapInsertResult8existingEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Is the key already present in the map</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK24UnorderedMapInsertResult6failedEv">
+<span id="_CPPv3NK24UnorderedMapInsertResult6failedEv"></span><span id="_CPPv2NK24UnorderedMapInsertResult6failedEv"></span><span id="UnorderedMapInsertResult::failedC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">failed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK24UnorderedMapInsertResult6failedEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Did the insert fail?</p>
+</dd></dl>
+
+<dl class="cppkokkos kokkosinlinefunction">
+<dt class="sig sig-object cppkokkos" id="_CPPv4NK24UnorderedMapInsertResult5indexEv">
+<span id="_CPPv3NK24UnorderedMapInsertResult5indexEv"></span><span id="_CPPv2NK24UnorderedMapInsertResult5indexEv"></span><span id="UnorderedMapInsertResult::indexC"></span><span class="k"><span class="pre">KOKKOS_INLINE_FUNCTION</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">index</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4NK24UnorderedMapInsertResult5indexEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Index where the key exists in the map as long as failed() == false</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 <section id="insertion">
 <h2>Insertion<a class="headerlink" href="#insertion" title="Permalink to this heading">#</a></h2>
-<p>There are 3 potential states for every insertion which are reported by the <code class="docutils literal notranslate"><span class="pre">UnorderedMapInsertResult</span></code>: success, existing, and failed.  <code class="docutils literal notranslate"><span class="pre">success</span></code> implies that the current thread has successfully inserted its key/value pair.  <code class="docutils literal notranslate"><span class="pre">existing</span></code> implies that the key is already in the map and its current value is unchanged.  <code class="docutils literal notranslate"><span class="pre">failed</span></code> means that either the capacity of the map was exhausted or that a free index was not found with a bounded search of the internal atomic bitset.  A <code class="docutils literal notranslate"><span class="pre">failed</span></code> insertion requires the user to increase the capacity (<code class="docutils literal notranslate"><span class="pre">rehash</span></code>) and restart the algoritm.</p>
+<p>There are 3 potential states for every insertion which are reported by the <code class="docutils literal notranslate"><span class="pre">UnorderedMapInsertResult</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">success</span></code>: implies that the current thread has successfully inserted its key/value pair</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">existing</span></code>: implies that the key is already in the map and its current value is unchanged</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failed</span></code> means that either the capacity of the map was exhausted or that a free index was not found
+with a bounded search of the internal atomic bitset. A <code class="docutils literal notranslate"><span class="pre">failed</span></code> insertion requires the user to increase
+the capacity (<code class="docutils literal notranslate"><span class="pre">rehash</span></code>) and restart the algoritm.</p></li>
+</ul>
 </section>
 <section id="iteration">
 <h2>Iteration<a class="headerlink" href="#iteration" title="Permalink to this heading">#</a></h2>
-<p>Iterating over Kokkos’ <code class="docutils literal notranslate"><span class="pre">UnorderedMap</span></code> is different from iterating over a standard container.  The pattern is to iterate over the capacity of the map and check if the current index is valid.</p>
-<p>Example:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// assume umap is an existing Kokkos::UnorderedMap</span>
-<span class="n">parallel_for</span><span class="p">(</span><span class="n">umap</span><span class="p">.</span><span class="n">capacity</span><span class="p">(),</span><span class="w"> </span><span class="n">KOKKOS_LAMBDA</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">umap</span><span class="p">.</span><span class="n">valid_at</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">key</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">umap</span><span class="p">.</span><span class="n">key_at</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">umap</span><span class="p">.</span><span class="n">value_at</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<p>Iterating over Kokkos’ <code class="docutils literal notranslate"><span class="pre">UnorderedMap</span></code> is different from iterating over a standard container. The pattern is to iterate over the capacity of the map and check if the current index is valid.</p>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// assume umap is an existing Kokkos::UnorderedMap</span>
+<span class="n">parallel_for</span><span class="p">(</span><span class="n">umap</span><span class="p">.</span><span class="n">capacity</span><span class="p">(),</span><span class="w"> </span><span class="n">KOKKOS_LAMBDA</span><span class="w"> </span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">umap</span><span class="p">.</span><span class="n">valid_at</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">key</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">umap</span><span class="p">.</span><span class="n">key_at</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">umap</span><span class="p">.</span><span class="n">value_at</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 
@@ -627,9 +744,12 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">UnorderedMap</span></code></a><ul>
-<li><a class="reference internal" href="#kokkos-unorderedmap-api">Kokkos::UnorderedMap API</a></li>
+<li><a class="reference internal" href="#description">Description</a></li>
 <li><a class="reference internal" href="#insertion">Insertion</a></li>
-<li><a class="reference internal" href="#iteration">Iteration</a></li>
+<li><a class="reference internal" href="#iteration">Iteration</a><ul>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

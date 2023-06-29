@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/Compatibility.html">12 Backwards &amp; Future Compatibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/Interoperability.html">13. Interoperability and Legacy Codes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/Kokkos-and-Virtual-Functions.html">14. Kokkos and Virtual Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/SIMD.html">15. SIMD Types</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../requirements.html">Requirements</a></li>
@@ -184,16 +185,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../keywords.html">CMake Keywords</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../core-index.html">API: Core</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/Initialize-and-Finalize.html">Initialize and Finalize</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/initialize.html">initialize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/finalize.html">finalize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/ScopeGuard.html">ScopeGuard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/InitializationSettings.html">InitializationSettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/initialize.html"><code class="docutils literal notranslate"><span class="pre">initialize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/finalize.html"><code class="docutils literal notranslate"><span class="pre">finalize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/ScopeGuard.html"><code class="docutils literal notranslate"><span class="pre">ScopeGuard</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/InitializationSettings.html"><code class="docutils literal notranslate"><span class="pre">InitializationSettings</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/initialize_finalize/InitArguments.html">InitArguments</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/View.html">View and related</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/create_mirror.html"><code class="docutils literal notranslate"><span class="pre">create_mirror[_view]</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/layoutLeft.html"><code class="docutils literal notranslate"><span class="pre">LayoutLeft</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/layoutRight.html"><code class="docutils literal notranslate"><span class="pre">LayoutRight</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/layoutStride.html"><code class="docutils literal notranslate"><span class="pre">LayoutStride</span></code></a></li>
@@ -202,18 +203,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../core/view/subview.html"><code class="docutils literal notranslate"><span class="pre">subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/Subview_type.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/view.html"><code class="docutils literal notranslate"><span class="pre">View</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/view/view_like.html">View-like Types</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/ParallelDispatch.html">Parallel Execution/Dispatch</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/builtin_reducers.html">Built-in Reducers</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -245,14 +246,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/RangePolicy.html"><code class="docutils literal notranslate"><span class="pre">RangePolicy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamHandleConcept.html"><code class="docutils literal notranslate"><span class="pre">TeamHandleConcept</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamPolicy.html"><code class="docutils literal notranslate"><span class="pre">TeamPolicy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamThreadMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamThreadRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/TeamVectorRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/policies/ThreadVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/policies/ThreadVectorRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorRange</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/Spaces.html">Spaces</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../core/execution_spaces.html">Execution Spaces</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../core/spaces/partition_space.html">Kokkos::partition_space()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/spaces/partition_space.html"><code class="docutils literal notranslate"><span class="pre">partition_space</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/memory_spaces.html">Memory Spaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/SpaceAccessibility.html">Space Accessibility</a></li>
 </ul>
@@ -273,6 +277,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../core/numerics/mathematical-constants.html">Mathematical constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/numerics/mathematical-functions.html">Common math functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/numerics/numeric-traits.html">Numeric traits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/numerics/bit-manipulation.html">Bit manipulation</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../core/c_style_memory_management.html">C-style memory management</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -292,6 +297,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../core/utilities/all.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/utilities/complex.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::complex</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/utilities/timer.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Timer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/utilities/device_id.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::device_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core/utilities/num_threads.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_threads</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../core/utilities/experimental.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental</span></code></a></li>
 </ul>
 </li>
@@ -316,6 +323,7 @@
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Random-Number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generator">Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Sort.html">Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sort.html#sorting-with-nested-policies-team-and-thread-level">Sorting with nested policies (team- and thread-level)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="std-algorithms/Iterators.html">Iterators</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -355,8 +363,28 @@
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="std-algorithms/StdNonModSeq.html">NonModifyingSequenceOperation</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdAdjacentFind.html"><code class="docutils literal notranslate"><span class="pre">adjacent_find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdCount.html"><code class="docutils literal notranslate"><span class="pre">count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdCountIf.html"><code class="docutils literal notranslate"><span class="pre">count_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdEqual.html"><code class="docutils literal notranslate"><span class="pre">equal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdAllOf.html"><code class="docutils literal notranslate"><span class="pre">all_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdAnyOf.html"><code class="docutils literal notranslate"><span class="pre">any_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdNoneOf.html"><code class="docutils literal notranslate"><span class="pre">none_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdFind.html"><code class="docutils literal notranslate"><span class="pre">find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdFindIf.html"><code class="docutils literal notranslate"><span class="pre">find_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdFindIfNot.html"><code class="docutils literal notranslate"><span class="pre">find_if_not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdFindEnd.html"><code class="docutils literal notranslate"><span class="pre">find_end</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdFindFirstOf.html"><code class="docutils literal notranslate"><span class="pre">find_first_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdForEach.html"><code class="docutils literal notranslate"><span class="pre">for_each</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdForEachN.html"><code class="docutils literal notranslate"><span class="pre">for_each_n</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdLexicographicalCompare.html"><code class="docutils literal notranslate"><span class="pre">lexicographical_compare</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdMismatch.html"><code class="docutils literal notranslate"><span class="pre">mismatch</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdSearch.html"><code class="docutils literal notranslate"><span class="pre">search</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdSearchN.html"><code class="docutils literal notranslate"><span class="pre">search_n</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdExclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">exclusive_scan</span></code></a></li>
@@ -366,13 +394,13 @@
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdIsSorted.html"><code class="docutils literal notranslate"><span class="pre">is_sorted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="std-algorithms/all/StdIsSortedUntil.html"><code class="docutils literal notranslate"><span class="pre">is_sorted_until</span></code></a></li>
 </ul>
@@ -381,8 +409,16 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simd/simd.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simd/simd_mask.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd_mask</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simd/where_expression.html"><code class="docutils literal notranslate"><span class="pre">Experimental::where_expression</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../alphabetical.html">API in Alphabetical Order</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecation_page.html">Deprecation for Kokkos-3.x</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../known-issues.html">Known issues</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/MPI-Halo-Exchange.html">MPI Halo Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/Average-To-Nodes.html">ScatterView averaging elements to nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/MDRangePolicy.html">MDRangePolicy Use Case</a></li>
@@ -393,9 +429,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/Kokkos-Fortran-Interoperability.html">Fortran Interop Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/SoA-and-AoSoA-with-Cabana.html">Array of Structures and Structure of Arrays with Cabana</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/WindowsHeader.html">Kokkos and <code class="docutils literal notranslate"><span class="pre">Windows.h</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usecases/Moving_from_EnableUVM_to_SharedSpace.html">Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../testing-and-issue-tracking/Requirements-Issues-and-Feedback.html">Requirements, Issues and Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../testing-and-issue-tracking/Testing-Process-Details.html">Attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../testing-and-issue-tracking/Testing-Processes.html">Kokkos Testing Processes and Change Process</a></li>
@@ -403,7 +440,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos-tutorials">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=rUIcWtFU5qM">1. Intro, Build, Parallel dispatch</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=O-asHTtO7O4">2. Views and Spaces</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=nGyJS8u-6GY">3. Multidim loops and Data Structures</a></li>
@@ -438,7 +475,7 @@
         </a>
         <div class="content-icon-container">
 <div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/kokkos/kokkos-core-wiki/blob/main/docs/source/API/algorithms/Random-Number.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/kokkos/kokkos-core-wiki/blob/main/docs/source/API/algorithms/Random-Number.rst" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
@@ -464,92 +501,107 @@
         <article role="main">
           <section id="random-number">
 <h1>Random-Number<a class="headerlink" href="#random-number" title="Permalink to this heading">#</a></h1>
-<section id="headers-kokkos-core-hpp-kokkos-complex-hpp">
-<h2>headers:  Kokkos_Core.hpp, Kokkos_Complex.hpp<a class="headerlink" href="#headers-kokkos-core-hpp-kokkos-complex-hpp" title="Permalink to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">template&lt;class</span> <span class="pre">Generator&gt;</span></code>
-<code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">rand&lt;Generator,</span> <span class="pre">gen_data_type&gt;</span></code></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_INLINE_FUNCTION</span>&#160; <span class="pre">static</span> <span class="pre">gen_func_type</span> <span class="pre">max(){return</span> <span class="pre">type_value}</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_INLINE_FUNCTION</span>&#160; <span class="pre">static</span> <span class="pre">gen_func_type</span> <span class="pre">draw(Generator&amp;</span> <span class="pre">gen)</span>&#160; <span class="pre">{return</span> <span class="pre">gen_data_type((gen.rand()&amp;gen_return_value)}</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_INLINE_FUNCTION</span>&#160; <span class="pre">static</span> <span class="pre">gen_func_type</span> <span class="pre">draw(Generator&amp;</span> <span class="pre">gen,</span> <span class="pre">const</span> <span class="pre">gen_data_type&amp;</span> <span class="pre">range)</span>&#160; <span class="pre">{return</span> <span class="pre">gen_data_type((gen.rand(range));}</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_INLINE_FUNCTION</span>&#160; <span class="pre">static</span> <span class="pre">gen_func_type</span> <span class="pre">draw(Generator&amp;</span> <span class="pre">gen,</span> <span class="pre">const</span> <span class="pre">gen_data_type&amp;</span> <span class="pre">start,</span> <span class="pre">const</span> <span class="pre">gen_data_type&amp;</span> <span class="pre">end)</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">{return</span> <span class="pre">gen_data_type(gen.rand(start,end));}</span></code></p></li>
-</ul>
-<p>Function specializations for <em>gen_data_type</em>, <em>gen_func_type</em> and <em>type_value</em></p>
-<p>All functions and classes listed here are part of the <code class="docutils literal notranslate"><span class="pre">Kokkos::</span></code> namespace.</p>
-<div class="table-wrapper colwidths-auto docutils container">
+<section id="rand">
+<h2>Rand<a class="headerlink" href="#rand" title="Permalink to this heading">#</a></h2>
+<p>Header Files: <code class="docutils literal notranslate"><span class="pre">&lt;Kokkos_core.hpp&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;Kokkos_Complex.hpp&gt;</span></code></p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Generator</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">rand</span><span class="o">&lt;</span><span class="n">Generator</span><span class="p">,</span><span class="w"> </span><span class="n">gen_data_type</span><span class="o">&gt;</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">gen_func_type</span><span class="w"> </span><span class="n">max</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">type_value</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">gen_func_type</span><span class="w"> </span><span class="n">draw</span><span class="p">(</span><span class="n">Generator</span><span class="o">&amp;</span><span class="w"> </span><span class="n">gen</span><span class="p">){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">gen_data_type</span><span class="p">((</span><span class="n">gen</span><span class="p">.</span><span class="n">rand</span><span class="p">()</span><span class="o">&amp;</span><span class="n">gen_return_value</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">gen_func_type</span><span class="w"> </span><span class="n">draw</span><span class="p">(</span><span class="n">Generator</span><span class="o">&amp;</span><span class="w"> </span><span class="n">gen</span><span class="p">,</span>
+<span class="w">                            </span><span class="k">const</span><span class="w"> </span><span class="n">gen_data_type</span><span class="o">&amp;</span><span class="w"> </span><span class="n">range</span><span class="p">){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">gen_data_type</span><span class="p">((</span><span class="n">gen</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="n">range</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">gen_func_type</span><span class="w"> </span><span class="n">draw</span><span class="p">(</span><span class="n">Generator</span><span class="o">&amp;</span><span class="w"> </span><span class="n">gen</span><span class="p">,</span>
+<span class="w">                            </span><span class="k">const</span><span class="w"> </span><span class="n">gen_data_type</span><span class="o">&amp;</span><span class="w"> </span><span class="n">start</span><span class="p">,</span>
+<span class="w">                            </span><span class="k">const</span><span class="w"> </span><span class="n">gen_data_type</span><span class="o">&amp;</span><span class="w"> </span><span class="n">end</span><span class="p">){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">gen_data_type</span><span class="p">(</span><span class="n">gen</span><span class="p">.</span><span class="n">rand</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Function specializations for <code class="docutils literal notranslate"><span class="pre">gen_data_type</span></code>, <code class="docutils literal notranslate"><span class="pre">gen_func_type</span></code> and <code class="docutils literal notranslate"><span class="pre">type_value</span></code>.
+All functions and classes listed here are part of the <code class="docutils literal notranslate"><span class="pre">Kokkos::</span></code> namespace.</p>
+<div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>gen_data_type</p></th>
-<th class="head text-left"><p>gen_func_type</p></th>
-<th class="head text-left"><p>type_value</p></th>
-<th class="head text-left"><p>gen_return_value</p></th>
+<tr class="row-odd"><th class="head"><p>gen_data_type</p></th>
+<th class="head"><p>gen_func_type</p></th>
+<th class="head"><p>type_value</p></th>
+<th class="head"><p>gen_return_value</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>char</p></td>
-<td class="text-left"><p>short</p></td>
-<td class="text-left"><p>127</p></td>
-<td class="text-left"><p>(&amp;0xff+256)%256</p></td>
+<tr class="row-even"><td><p>char</p></td>
+<td><p>short</p></td>
+<td><p>127</p></td>
+<td><p>(&amp;0xff+256)%256</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>short</p></td>
-<td class="text-left"><p>short</p></td>
-<td class="text-left"><p>32767</p></td>
-<td class="text-left"><p>(&amp;0xffff+65536)%32768</p></td>
+<tr class="row-odd"><td><p>short</p></td>
+<td><p>short</p></td>
+<td><p>32767</p></td>
+<td><p>(&amp;0xffff+65536)%32768</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>int</p></td>
-<td class="text-left"><p>int</p></td>
-<td class="text-left"><p>MAX_RAND</p></td>
-<td class="text-left"><p>?</p></td>
+<tr class="row-even"><td><p>int</p></td>
+<td><p>int</p></td>
+<td><p>MAX_RAND</p></td>
+<td><p>?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>uint</p></td>
-<td class="text-left"><p>uint</p></td>
-<td class="text-left"><p>MAX_URAND</p></td>
-<td class="text-left"><p>?</p></td>
+<tr class="row-odd"><td><p>uint</p></td>
+<td><p>uint</p></td>
+<td><p>MAX_URAND</p></td>
+<td><p>?</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>long</p></td>
-<td class="text-left"><p>long</p></td>
-<td class="text-left"><p>MAX_RAND or MAX_RAND64</p></td>
-<td class="text-left"><p>?</p></td>
+<tr class="row-even"><td><p>long</p></td>
+<td><p>long</p></td>
+<td><p>MAX_RAND or MAX_RAND64</p></td>
+<td><p>?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>ulong</p></td>
-<td class="text-left"><p>ulong</p></td>
-<td class="text-left"><p>MAX_RAND or MAX_RAND64</p></td>
-<td class="text-left"><p>?</p></td>
+<tr class="row-odd"><td><p>ulong</p></td>
+<td><p>ulong</p></td>
+<td><p>MAX_RAND or MAX_RAND64</p></td>
+<td><p>?</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>long long</p></td>
-<td class="text-left"><p>long long</p></td>
-<td class="text-left"><p>MAX_RAND64</p></td>
-<td class="text-left"><p>?</p></td>
+<tr class="row-even"><td><p>long long</p></td>
+<td><p>long long</p></td>
+<td><p>MAX_RAND64</p></td>
+<td><p>?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>ulong long</p></td>
-<td class="text-left"><p>ulong long</p></td>
-<td class="text-left"><p>MAX_URAND64</p></td>
-<td class="text-left"><p>?</p></td>
+<tr class="row-odd"><td><p>ulong long</p></td>
+<td><p>ulong long</p></td>
+<td><p>MAX_URAND64</p></td>
+<td><p>?</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>float</p></td>
-<td class="text-left"><p>float</p></td>
-<td class="text-left"><p>1.0f</p></td>
-<td class="text-left"><p>?</p></td>
+<tr class="row-even"><td><p>float</p></td>
+<td><p>float</p></td>
+<td><p>1.0f</p></td>
+<td><p>?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>double</p></td>
-<td class="text-left"><p>double</p></td>
-<td class="text-left"><p>1.0</p></td>
-<td class="text-left"><p>?</p></td>
+<tr class="row-odd"><td><p>double</p></td>
+<td><p>double</p></td>
+<td><p>1.0</p></td>
+<td><p>?</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>complex<float></p></td>
-<td class="text-left"><p>complex<float></p></td>
-<td class="text-left"><p>1.0,1.0</p></td>
-<td class="text-left"><p>?</p></td>
+<tr class="row-even"><td><p>complex&lt;float&gt;</p></td>
+<td><p>complex&lt;float&gt;</p></td>
+<td><p>1.0,1.0</p></td>
+<td><p>?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>complex<double></p></td>
-<td class="text-left"><p>complex<double></p></td>
-<td class="text-left"><p>1.0,1.0</p></td>
-<td class="text-left"><p>?</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
-<td class="text-left"><p></p></td>
+<tr class="row-odd"><td><p>complex&lt;double&gt;</p></td>
+<td><p>complex&lt;double&gt;</p></td>
+<td><p>1.0,1.0</p></td>
+<td><p>?</p></td>
 </tr>
 </tbody>
 </table>
@@ -558,22 +610,17 @@
 <ul class="simple">
 <li><p>enum {MAX_URAND = 0xffffffffU};</p></li>
 <li><p>enum {MAX_URAND64 = 0xffffffffffffffffULL-1};</p></li>
-<li><p>enum {MAX_RAND = static_cast<int>(0xffffffffU/2)};</p></li>
+<li><p>enum {MAX_RAND = static_cast&lt;int&gt;(0xffffffffU/2)};</p></li>
 <li><p>enum {MAX_RAND64 = static_cast&lt;int64_t&gt;(0xffffffffffffffffULL/2-1)};</p></li>
 </ul>
 </section>
 </section>
 <section id="generator">
 <h1>Generator<a class="headerlink" href="#generator" title="Permalink to this heading">#</a></h1>
-<p>Header Files:  <code class="docutils literal notranslate"><span class="pre">Kokkos_core.hpp</span></code>
-<code class="docutils literal notranslate"><span class="pre">Kokkos_Complex.hpp</span></code></p>
+<p>Header Files: <code class="docutils literal notranslate"><span class="pre">&lt;Kokkos_core.hpp&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;Kokkos_Complex.hpp&gt;</span></code></p>
 <section id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this heading">#</a></h2>
-<p>Kokkos_Random provides the structure necessary for
-pseudorandom number generators. These generators are
-based on Vigna, Sebastiano (2014). [”<em>An</em>
-<em>experimental exploration of Marsaglia’s xorshift generators,</em>
-<em>scrambled.”  See: http://arxiv.org/abs/1402.6246</em>] .</p>
+<p>Kokkos_Random provides the structure necessary for pseudorandom number generators. These generators are based on Vigna, Sebastiano (2014). [<em>“An experimental exploration of Marsaglia’s xorshift generators, scrambled.” See: http://arxiv.org/abs/1402.6246</em>].</p>
 <p>The Random number generators themselves have two components:
 a state-pool and the actual generator. A state-pool manages
 a number of generators so that each active thread is able
@@ -581,19 +628,20 @@ to grab its own. This allows the generation of random numbers
 which are independent between threads. Note that in contrast
 to <strong>CuRAND</strong>, none of the functions of the pool (or the generator)
 are collectives, i.e. all functions can be called inside conditionals.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Device</span><span class="o">&gt;</span><span class="w"></span>
-<span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Pool</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
-<span class="w">   </span><span class="k">typedef</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">Device_Type</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="k">typedef</span><span class="w"> </span><span class="n">Generator</span><span class="o">&lt;</span><span class="n">Device</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Generator_Type</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Device</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Pool</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span>
 
-<span class="w">   </span><span class="n">Pool</span><span class="p">();</span><span class="w"></span>
-<span class="w">   </span><span class="n">Pool</span><span class="p">(</span><span class="n">RanNum_type</span><span class="w"> </span><span class="n">seed</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="n">Device</span><span class="w"> </span><span class="n">Device_Type</span><span class="p">;</span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="n">Generator</span><span class="o">&lt;</span><span class="n">Device</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Generator_Type</span><span class="p">;</span>
 
-<span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">RanNum_type</span><span class="w"> </span><span class="n">seed</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_states</span><span class="p">);</span><span class="w"></span>
-<span class="w">   </span><span class="n">Generator_Type</span><span class="w"> </span><span class="nf">get_state</span><span class="p">();</span><span class="w"></span>
-<span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">free_state</span><span class="p">(</span><span class="n">Generator_Type</span><span class="w"> </span><span class="n">Gen</span><span class="p">);</span><span class="w"></span>
-<span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">Pool</span><span class="p">();</span>
+<span class="w">  </span><span class="n">Pool</span><span class="p">(</span><span class="n">RanNum_type</span><span class="w"> </span><span class="n">seed</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">RanNum_type</span><span class="w"> </span><span class="n">seed</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num_states</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Generator_Type</span><span class="w"> </span><span class="nf">get_state</span><span class="p">();</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">free_state</span><span class="p">(</span><span class="n">Generator_Type</span><span class="w"> </span><span class="n">Gen</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>A Pool of Generators are intialized using a starting seed and establishing
@@ -608,40 +656,75 @@ within the pool.</p>
 <p>Given a pool and selection of a generator from within that pool,
 the next step is development of a functor that will draw random
 numbers, of the desired type, using the generator.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="w">    </span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Device</span><span class="o">&gt;</span><span class="w"></span>
-<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Generator</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">     </span><span class="k">public</span><span class="o">:</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Device</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Generator</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">public</span><span class="o">:</span>
 
-<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="n">DeviceType</span><span class="w"> </span><span class="n">device_type</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">typedef</span><span class="w"> </span><span class="n">DeviceType</span><span class="w"> </span><span class="n">device_type</span><span class="p">;</span>
 
-<span class="w">    </span><span class="c1">//Max return values of respective [X]rand[S]() functions (XorShift).</span>
-<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="n">MAX_URAND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xffffffffU</span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="n">MAX_URAND64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xffffffffffffffffULL</span><span class="mi">-1</span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="n">MAX_RAND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mh">0xffffffffU</span><span class="o">/</span><span class="mi">2</span><span class="p">)};</span><span class="w"></span>
-<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="n">MAX_RAND64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="p">(</span><span class="mh">0xffffffffffffffffULL</span><span class="o">/</span><span class="mi">2-1</span><span class="p">)};</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//Max return values of respective [X]rand[S]() functions (XorShift).</span>
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="n">MAX_URAND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xffffffffU</span><span class="p">};</span>
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="n">MAX_URAND64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xffffffffffffffffULL</span><span class="mi">-1</span><span class="p">};</span>
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="n">MAX_RAND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mh">0xffffffffU</span><span class="o">/</span><span class="mi">2</span><span class="p">)};</span>
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="p">{</span><span class="n">MAX_RAND64</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="p">(</span><span class="mh">0xffffffffffffffffULL</span><span class="o">/</span><span class="mi">2-1</span><span class="p">)};</span>
 
-<span class="w">    </span><span class="c1">//Init with a state and the idx with respect to pool. Note: in serial the</span>
-<span class="w">    </span><span class="c1">//Generator can be used by just giving it the necessary state arguments</span>
-<span class="w">    </span><span class="n">KOKKOS_INLINE_FUNCTION</span><span class="w"></span>
-<span class="w">    </span><span class="nf">Generator</span><span class="w"> </span><span class="p">(</span><span class="n">STATE_ARGUMENTS</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">state_idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//Init with a state and the idx with respect to pool. Note: in serial the</span>
+<span class="w">  </span><span class="c1">//Generator can be used by just giving it the necessary state arguments</span>
+<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">  </span><span class="nf">Generator</span><span class="w"> </span><span class="p">(</span><span class="n">STATE_ARGUMENTS</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">state_idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
 
-<span class="w">    </span><span class="c1">//Draw a equidistributed uint32_t in the range [0,MAX_URAND)</span>
-<span class="w">    </span><span class="n">KOKKOS_INLINE_FUNCTION</span><span class="w"></span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">urand</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//Draw a equidistributed uint32_t in the range [0,MAX_URAND)</span>
+<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">  </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">urand</span><span class="p">();</span>
 
-<span class="w">    </span><span class="c1">//Draw a equidistributed uint32_t in the range [0,range)</span>
-<span class="w">    </span><span class="n">KOKKOS_INLINE_FUNCTION</span><span class="w"></span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">urand</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="o">&amp;</span><span class="w"> </span><span class="n">range</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//Draw a equidistributed uint32_t in the range [0,range)</span>
+<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">  </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">urand</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="o">&amp;</span><span class="w"> </span><span class="n">range</span><span class="p">);</span>
 
-<span class="w">    </span><span class="c1">//Draw a equidistributed uint32_t in the range [start,end)</span>
-<span class="w">    </span><span class="n">KOKKOS_INLINE_FUNCTION</span><span class="w"></span>
-<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">urand</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="o">&amp;</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="o">&amp;</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//Draw a equidistributed uint32_t in the range [start,end)</span>
+<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">  </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">urand</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="o">&amp;</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="o">&amp;</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>For the selected 32-bit unsigned integer type, three range options are shown: [0,MAX_URAND), [0,range) and [start,end).
 The first, and default, option selects unsigned integers over max possible range for that data type. The defined value of MAX_URAND is shown above as an enum. (And also shown is maX_URAND for a 64-bit unsigned integer.) The latter two options cover a user-defined range of integers.</p>
 <p>More for other data types: Scalar, uint64_t, int, int32_t, int64_t, float, double; also normal distribution and a View-fill option for the [0, range) and [start, end) options.</p>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kokkos_Core.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kokkos_Random.hpp&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">ScopeGuarg</span><span class="w"> </span><span class="n">guard</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">Random_XorShift64_Pool</span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">random_pool</span><span class="p">(</span><span class="cm">/*seed=*/</span><span class="mi">12345</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000000</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">parallel_reduce</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;approximate_pi&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">,</span>
+<span class="w">        </span><span class="n">KOKKOS_LAMBDA</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">local_count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// acquire the state of the random number generator engine</span>
+<span class="w">            </span><span class="k">auto</span><span class="w"> </span><span class="n">generator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random_pool</span><span class="p">.</span><span class="n">get_state</span><span class="p">();</span>
+
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generator</span><span class="p">.</span><span class="n">drand</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">1.</span><span class="p">);</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generator</span><span class="p">.</span><span class="n">drand</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="w"> </span><span class="mf">1.</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// do not forget to release the state of the engine</span>
+<span class="w">            </span><span class="n">random_pool</span><span class="p">.</span><span class="n">free_state</span><span class="p">(</span><span class="n">generator</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">1.</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="o">++</span><span class="n">local_count</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="n">count</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;pi = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">4.</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">total</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -703,11 +786,12 @@ The first, and default, option selects unsigned integers over max possible range
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Random-Number</a><ul>
-<li><a class="reference internal" href="#headers-kokkos-core-hpp-kokkos-complex-hpp">headers:  Kokkos_Core.hpp, Kokkos_Complex.hpp</a></li>
+<li><a class="reference internal" href="#rand">Rand</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#generator">Generator</a><ul>
 <li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>

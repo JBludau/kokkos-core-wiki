@@ -12,6 +12,7 @@
 #
 import os
 import sys
+sys.path.append(os.path.abspath("./_ext"))
 sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -36,7 +37,8 @@ extensions = ["myst_parser",
               "sphinx.ext.autodoc",
               "sphinx.ext.viewcode",
               "sphinx.ext.intersphinx",
-              "sphinx_copybutton"]
+              "sphinx_copybutton",
+              "cppkokkos"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -70,6 +72,11 @@ source_suffix = {
 }
 
 myst_heading_anchors = 4
+
+myst_enable_extensions = [
+    "dollarmath",
+    "amsmath"
+    ]
 # need to figure out why this does not work
 # rst_prolog = """
 # .. include:: special.rst

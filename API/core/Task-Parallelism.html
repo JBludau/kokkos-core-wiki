@@ -177,6 +177,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/Compatibility.html">12 Backwards &amp; Future Compatibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/Interoperability.html">13. Interoperability and Legacy Codes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/Kokkos-and-Virtual-Functions.html">14. Kokkos and Virtual Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../ProgrammingGuide/SIMD.html">15. SIMD Types</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../requirements.html">Requirements</a></li>
@@ -184,16 +185,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../keywords.html">CMake Keywords</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../core-index.html">API: Core</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="Initialize-and-Finalize.html">Initialize and Finalize</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="initialize_finalize/initialize.html">initialize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="initialize_finalize/finalize.html">finalize</a></li>
-<li class="toctree-l3"><a class="reference internal" href="initialize_finalize/ScopeGuard.html">ScopeGuard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="initialize_finalize/InitializationSettings.html">InitializationSettings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="initialize_finalize/initialize.html"><code class="docutils literal notranslate"><span class="pre">initialize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="initialize_finalize/finalize.html"><code class="docutils literal notranslate"><span class="pre">finalize</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="initialize_finalize/ScopeGuard.html"><code class="docutils literal notranslate"><span class="pre">ScopeGuard</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="initialize_finalize/InitializationSettings.html"><code class="docutils literal notranslate"><span class="pre">InitializationSettings</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="initialize_finalize/InitArguments.html">InitArguments</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="View.html">View and related</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="view/create_mirror.html"><code class="docutils literal notranslate"><span class="pre">create_mirror[_view]</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="view/deep_copy.html"><code class="docutils literal notranslate"><span class="pre">deep_copy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="view/layoutLeft.html"><code class="docutils literal notranslate"><span class="pre">LayoutLeft</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="view/layoutRight.html"><code class="docutils literal notranslate"><span class="pre">LayoutRight</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="view/layoutStride.html"><code class="docutils literal notranslate"><span class="pre">LayoutStride</span></code></a></li>
@@ -202,18 +203,18 @@
 <li class="toctree-l3"><a class="reference internal" href="view/subview.html"><code class="docutils literal notranslate"><span class="pre">subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="view/Subview_type.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Subview</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="view/view.html"><code class="docutils literal notranslate"><span class="pre">View</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="view/view_alloc.html"><code class="docutils literal notranslate"><span class="pre">view_alloc</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="view/view_like.html">View-like Types</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="ParallelDispatch.html">Parallel Execution/Dispatch</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/parallel_for.html"><code class="docutils literal notranslate"><span class="pre">parallel_for</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/parallel_reduce.html"><code class="docutils literal notranslate"><span class="pre">parallel_reduce</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/parallel_scan.html"><code class="docutils literal notranslate"><span class="pre">parallel_scan</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/fence.html"><code class="docutils literal notranslate"><span class="pre">fence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/ParallelForTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelForTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/ParallelReduceTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelReduceTag</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="parallel-dispatch/ParallelScanTag.html"><code class="docutils literal notranslate"><span class="pre">ParallelScanTag</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="builtin_reducers.html">Built-in Reducers</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -245,14 +246,17 @@
 <li class="toctree-l3"><a class="reference internal" href="policies/RangePolicy.html"><code class="docutils literal notranslate"><span class="pre">RangePolicy</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="policies/TeamHandleConcept.html"><code class="docutils literal notranslate"><span class="pre">TeamHandleConcept</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="policies/TeamPolicy.html"><code class="docutils literal notranslate"><span class="pre">TeamPolicy</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="policies/TeamThreadMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="policies/TeamThreadRange.html"><code class="docutils literal notranslate"><span class="pre">TeamThreadRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="policies/TeamVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="policies/TeamVectorRange.html"><code class="docutils literal notranslate"><span class="pre">TeamVectorRange</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="policies/ThreadVectorMDRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorMDRange</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="policies/ThreadVectorRange.html"><code class="docutils literal notranslate"><span class="pre">ThreadVectorRange</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="Spaces.html">Spaces</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="execution_spaces.html">Execution Spaces</a></li>
-<li class="toctree-l3"><a class="reference internal" href="spaces/partition_space.html">Kokkos::partition_space()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spaces/partition_space.html"><code class="docutils literal notranslate"><span class="pre">partition_space</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="memory_spaces.html">Memory Spaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="SpaceAccessibility.html">Space Accessibility</a></li>
 </ul>
@@ -273,6 +277,7 @@
 <li class="toctree-l3"><a class="reference internal" href="numerics/mathematical-constants.html">Mathematical constants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numerics/mathematical-functions.html">Common math functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="numerics/numeric-traits.html">Numeric traits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numerics/bit-manipulation.html">Bit manipulation</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="c_style_memory_management.html">C-style memory management</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -292,6 +297,8 @@
 <li class="toctree-l3"><a class="reference internal" href="utilities/all.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="utilities/complex.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::complex</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="utilities/timer.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Timer</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utilities/device_id.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::device_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="utilities/num_threads.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_threads</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="utilities/experimental.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental</span></code></a></li>
 </ul>
 </li>
@@ -316,6 +323,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../algorithms/Random-Number.html">Random-Number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../algorithms/Random-Number.html#generator">Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../algorithms/Sort.html">Sort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/Sort.html#sorting-with-nested-policies-team-and-thread-level">Sorting with nested policies (team- and thread-level)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../algorithms/std-algorithms/Iterators.html">Iterators</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -355,8 +363,28 @@
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../algorithms/std-algorithms/StdNonModSeq.html">NonModifyingSequenceOperation</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdAdjacentFind.html"><code class="docutils literal notranslate"><span class="pre">adjacent_find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdCount.html"><code class="docutils literal notranslate"><span class="pre">count</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdCountIf.html"><code class="docutils literal notranslate"><span class="pre">count_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdEqual.html"><code class="docutils literal notranslate"><span class="pre">equal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdAllOf.html"><code class="docutils literal notranslate"><span class="pre">all_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdAnyOf.html"><code class="docutils literal notranslate"><span class="pre">any_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdNoneOf.html"><code class="docutils literal notranslate"><span class="pre">none_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFind.html"><code class="docutils literal notranslate"><span class="pre">find</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFindIf.html"><code class="docutils literal notranslate"><span class="pre">find_if</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFindIfNot.html"><code class="docutils literal notranslate"><span class="pre">find_if_not</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFindEnd.html"><code class="docutils literal notranslate"><span class="pre">find_end</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdFindFirstOf.html"><code class="docutils literal notranslate"><span class="pre">find_first_of</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdForEach.html"><code class="docutils literal notranslate"><span class="pre">for_each</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdForEachN.html"><code class="docutils literal notranslate"><span class="pre">for_each_n</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdLexicographicalCompare.html"><code class="docutils literal notranslate"><span class="pre">lexicographical_compare</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdMismatch.html"><code class="docutils literal notranslate"><span class="pre">mismatch</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdSearch.html"><code class="docutils literal notranslate"><span class="pre">search</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdSearchN.html"><code class="docutils literal notranslate"><span class="pre">search_n</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdExclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">exclusive_scan</span></code></a></li>
@@ -366,13 +394,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdIsSorted.html"><code class="docutils literal notranslate"><span class="pre">is_sorted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdIsSortedUntil.html"><code class="docutils literal notranslate"><span class="pre">is_sorted_until</span></code></a></li>
 </ul>
@@ -381,8 +409,16 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simd/simd.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simd/simd_mask.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd_mask</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simd/where_expression.html"><code class="docutils literal notranslate"><span class="pre">Experimental::where_expression</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../alphabetical.html">API in Alphabetical Order</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../deprecation_page.html">Deprecation for Kokkos-3.x</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../known-issues.html">Known issues</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/MPI-Halo-Exchange.html">MPI Halo Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/Average-To-Nodes.html">ScatterView averaging elements to nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/MDRangePolicy.html">MDRangePolicy Use Case</a></li>
@@ -393,9 +429,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/Kokkos-Fortran-Interoperability.html">Fortran Interop Use Case</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/SoA-and-AoSoA-with-Cabana.html">Array of Structures and Structure of Arrays with Cabana</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usecases/WindowsHeader.html">Kokkos and <code class="docutils literal notranslate"><span class="pre">Windows.h</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usecases/Moving_from_EnableUVM_to_SharedSpace.html">Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../testing-and-issue-tracking/Requirements-Issues-and-Feedback.html">Requirements, Issues and Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../testing-and-issue-tracking/Testing-Process-Details.html">Attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../testing-and-issue-tracking/Testing-Processes.html">Kokkos Testing Processes and Change Process</a></li>
@@ -403,7 +440,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos-tutorials">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=rUIcWtFU5qM">1. Intro, Build, Parallel dispatch</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=O-asHTtO7O4">2. Views and Spaces</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=nGyJS8u-6GY">3. Multidim loops and Data Structures</a></li>
@@ -438,7 +475,7 @@
         </a>
         <div class="content-icon-container">
 <div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/kokkos/kokkos-core-wiki/blob/main/docs/source/API/core/Task-Parallelism.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/kokkos/kokkos-core-wiki/blob/main/docs/source/API/core/Task-Parallelism.rst" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
@@ -467,116 +504,116 @@
 <p>Kokkos has support for lightweight task-based programming, which is currently pretty limited but we plan to substantially expand in the future.</p>
 <section id="will-kokkos-tasking-work-for-my-problem">
 <h2>Will Kokkos Tasking work for my problem?<a class="headerlink" href="#will-kokkos-tasking-work-for-my-problem" title="Permalink to this heading">#</a></h2>
-<p>Not all task-based problems are a good fit for the current Kokkos approach to tasking.  Currently, the tasking interface in Kokkos is  targetted at problems with kernels far too small to overcome the inherent overhead of top-level Kokkos data parallel launches—that is, small but plentiful data parallel tasks with a non-trivial dependency structure.  For tasks that fit this general scale model but have (very) trivial dependency structures, it may be easier to use <a class="reference internal" href="../../ProgrammingGuide/HierarchicalParallelism.html"><span class="doc std std-doc">hierarchical parallelism</span></a>, potentially with a <code class="docutils literal notranslate"><span class="pre">Kokkos::Schedule&lt;Dynamic&gt;</span></code> scheduling policy (see, for instance, <a class="reference internal" href="policies/RangePolicy.html"><span class="doc std std-doc">this page</span></a>) for load balancing if necessary.</p>
+<p>Not all task-based problems are a good fit for the current Kokkos approach to tasking. Currently, the tasking interface in Kokkos is targetted at problems with kernels far too small to overcome the inherent overhead of top-level Kokkos data parallel launches—that is, small but plentiful data parallel tasks with a non-trivial dependency structure. For tasks that fit this general scale model but have (very) trivial dependency structures, it may be easier to use <a class="reference external" href="../../ProgrammingGuide/HierarchicalParallelism.html">hierarchical parallelism</a>, potentially with a <code class="docutils literal notranslate"><span class="pre">Kokkos::Schedule&lt;Dynamic&gt;</span></code> scheduling policy (see, for instance, <a class="reference external" href="policies/RangePolicy.html">this page</a>) for load balancing if necessary.</p>
 </section>
 <section id="basic-usage">
 <h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading">#</a></h2>
-<p>Fundamentally, task parallelism is just another form of parallelism in Kokkos.  The same general idiom of pattern, policy, and functor applies as for ordinary <a class="reference internal" href="../../ProgrammingGuide/ParallelDispatch.html"><span class="doc std std-doc">parallel dispatch</span></a>:</p>
-<p><img alt="parallel-dispatch" src="../../_images/parallel-dispatch.png" /></p>
+<p>Fundamentally, task parallelism is just another form of parallelism in Kokkos. The same general idiom of pattern, policy, and functor applies as for ordinary <a class="reference external" href="../../ProgrammingGuide/ParallelDispatch.html">parallel dispatch</a>:</p>
+<img alt="../../_images/parallel-dispatch.png" src="../../_images/parallel-dispatch.png" />
 <p>Similarly, for tasking, we have:</p>
-<p><img alt="task-dispatch" src="../../_images/task-dispatch.png" /></p>
+<img alt="../../_images/task-dispatch.png" src="../../_images/task-dispatch.png" />
 </section>
 <section id="task-functor">
 <h2>Task Functor<a class="headerlink" href="#task-functor" title="Permalink to this heading">#</a></h2>
 <p>In most ways, the functor portion of the task parallelism idiom in Kokkos is similar to that for data parallelism.  Task functors haeve the additional requirement that the task output type needs to be provided by the user by giving a nested type (a.k.a. “typedef”) named <code class="docutils literal notranslate"><span class="pre">value_type</span></code>:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">MyTask</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TeamMember</span><span class="o">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span><span class="w"></span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="k">operator</span><span class="p">()(</span><span class="n">TeamMember</span><span class="o">&amp;</span><span class="w"> </span><span class="n">member</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">MyTask</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">;</span>
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TeamMember</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="k">operator</span><span class="p">()(</span><span class="n">TeamMember</span><span class="o">&amp;</span><span class="w"> </span><span class="n">member</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&amp;</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="p">};</span>
 </pre></div>
 </div>
-<p>Similar to <a class="reference internal" href="../../ProgrammingGuide/HierarchicalParallelism.html"><span class="doc std std-doc">team parallelism</span></a>, the first parameter is the team handle, which has all of the same functionality as the one produced by a <code class="docutils literal notranslate"><span class="pre">Kokkos::TeamPolicy</span></code>, with a few extras.  Like with <code class="docutils literal notranslate"><span class="pre">Kokkos::parallel_reduce()</span></code>, the output is expressed through the second parameter.  Note that there is currently no lambda interface to Kokkos Tasking.</p>
+<p>Similar to <a class="reference external" href="../../ProgrammingGuide/HierarchicalParallelism.html">team parallelism</a>, the first parameter is the team handle, which has all of the same functionality as the one produced by a <code class="docutils literal notranslate"><span class="pre">Kokkos::TeamPolicy</span></code>, with a few extras. Like with <code class="docutils literal notranslate"><span class="pre">Kokkos::parallel_reduce()</span></code>, the output is expressed through the second parameter. Note that there is currently no lambda interface to Kokkos Tasking.</p>
 </section>
 <section id="task-patterns">
 <h2>Task Patterns<a class="headerlink" href="#task-patterns" title="Permalink to this heading">#</a></h2>
-<p>The primary analogs of <code class="docutils literal notranslate"><span class="pre">Kokkos::parallel_for()</span></code> and friends for tasking are <code class="docutils literal notranslate"><span class="pre">Kokkos::task_spawn()</span></code> and <code class="docutils literal notranslate"><span class="pre">Kokkos::host_spawn()</span></code>.  They both return a <code class="docutils literal notranslate"><span class="pre">Kokkos::Future</span></code> associated with the appropriate <code class="docutils literal notranslate"><span class="pre">Scheduler</span></code>, but <code class="docutils literal notranslate"><span class="pre">host_spawn</span></code> can only be called from <em>outside</em> of a task functor, while <code class="docutils literal notranslate"><span class="pre">task_spawn</span></code> can only be called from <em>inside</em> of one.</p>
+<p>The primary analogs of <code class="docutils literal notranslate"><span class="pre">Kokkos::parallel_for()</span></code> and friends for tasking are <code class="docutils literal notranslate"><span class="pre">Kokkos::task_spawn()</span></code> and <code class="docutils literal notranslate"><span class="pre">Kokkos::host_spawn()</span></code>. They both return a <code class="docutils literal notranslate"><span class="pre">Kokkos::Future</span></code> associated with the appropriate <code class="docutils literal notranslate"><span class="pre">Scheduler</span></code>, but <code class="docutils literal notranslate"><span class="pre">host_spawn</span></code> can only be called from <em>outside</em> of a task functor, while <code class="docutils literal notranslate"><span class="pre">task_spawn</span></code> can only be called from <em>inside</em> of one.</p>
 </section>
 <section id="task-policies">
 <h2>Task Policies<a class="headerlink" href="#task-policies" title="Permalink to this heading">#</a></h2>
-<p>There are currently two task policies in Kokkos Tasking: <code class="docutils literal notranslate"><span class="pre">TaskSingle</span></code> and <code class="docutils literal notranslate"><span class="pre">TaskTeam</span></code>.  The former tells Kokkos to launch the associated task functor with a single worker when its predecessors are done (more on this below), while the latter tells Kokkos to launch with a team of workers, similar to a single team from a <code class="docutils literal notranslate"><span class="pre">Kokkos::TeamPolicy</span></code> launch in data parallelism.  In a task spawned with <code class="docutils literal notranslate"><span class="pre">TaskTeam</span></code>, users are only allowed to call <code class="docutils literal notranslate"><span class="pre">task_spawn</span></code> from a single worker; use <code class="docutils literal notranslate"><span class="pre">Kokkos::single</span></code> for this purpose.</p>
+<p>There are currently two task policies in Kokkos Tasking: <code class="docutils literal notranslate"><span class="pre">TaskSingle</span></code> and <code class="docutils literal notranslate"><span class="pre">TaskTeam</span></code>. The former tells Kokkos to launch the associated task functor with a single worker when its predecessors are done (more on this below), while the latter tells Kokkos to launch with a team of workers, similar to a single team from a <code class="docutils literal notranslate"><span class="pre">Kokkos::TeamPolicy</span></code> launch in data parallelism. In a task spawned with <code class="docutils literal notranslate"><span class="pre">TaskTeam</span></code>, users are only allowed to call <code class="docutils literal notranslate"><span class="pre">task_spawn</span></code> from a single worker; use <code class="docutils literal notranslate"><span class="pre">Kokkos::single</span></code> for this purpose.</p>
 </section>
 <section id="predecessors-and-schedulers">
 <h2>Predecessors and Schedulers<a class="headerlink" href="#predecessors-and-schedulers" title="Permalink to this heading">#</a></h2>
-<p>Dependency relationships in Kokkos are represented by instances of the <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> class template.  Each task (created with the <code class="docutils literal notranslate"><span class="pre">task_spawn</span></code> or <code class="docutils literal notranslate"><span class="pre">host_spawn</span></code> patterns) can have zero or one predecessors (to create task graphs with more predecessors, use <code class="docutils literal notranslate"><span class="pre">Kokkos::when_all</span></code>, described below).  Predecessors are given to a pattern as an argument to the policy:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">scheduler_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... discussed below ... */</span><span class="p">;</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">scheduler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scheduler_type</span><span class="p">(</span><span class="cm">/* ... discussed below ... */</span><span class="p">);</span><span class="w"></span>
+<p>Dependency relationships in Kokkos are represented by instances of the <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> class template. Each task (created with the <code class="docutils literal notranslate"><span class="pre">task_spawn</span></code> or <code class="docutils literal notranslate"><span class="pre">host_spawn</span></code> patterns) can have zero or one predecessors (to create task graphs with more predecessors, use <code class="docutils literal notranslate"><span class="pre">Kokkos::when_all</span></code>, described below). Predecessors are given to a pattern as an argument to the policy:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">scheduler_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* ... discussed below ... */</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">scheduler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scheduler_type</span><span class="p">(</span><span class="cm">/* ... discussed below ... */</span><span class="p">);</span>
 <span class="c1">// Launch with no predecessor:</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">fut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">host_spawn</span><span class="p">(</span><span class="w"></span>
-<span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">scheduler</span><span class="p">),</span><span class="w"></span>
-<span class="w">  </span><span class="n">MyTaskFunctor</span><span class="p">()</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">fut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">host_spawn</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">scheduler</span><span class="p">),</span>
+<span class="w">    </span><span class="n">MyTaskFunctor</span><span class="p">()</span>
+<span class="p">);</span>
 <span class="c1">// Launch when `fut` is ready, at the earliest:</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">fut2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">host_spawn</span><span class="p">(</span><span class="w"></span>
-<span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span><span class="w"> </span><span class="n">fut</span><span class="p">),</span><span class="w"></span>
-<span class="w">  </span><span class="n">MyOtherTaskFunctor</span><span class="p">()</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
-<span class="cm">/* ... */</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">fut2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">host_spawn</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">scheduler</span><span class="p">,</span><span class="w"> </span><span class="n">fut</span><span class="p">),</span>
+<span class="w">    </span><span class="n">MyOtherTaskFunctor</span><span class="p">()</span>
+<span class="p">);</span>
+<span class="cm">/* ... */</span>
 </pre></div>
 </div>
-<p>The Kokkos <code class="docutils literal notranslate"><span class="pre">TaskScheduler</span></code> concept is an abstraction that generalizes over the many possible strategies for scheduling tasks in a task-based system.  Like other concepts in Kokkos, users should not write code that depends directly on a specific <code class="docutils literal notranslate"><span class="pre">TaskScheduler</span></code>, but rather to the generic model that all <code class="docutils literal notranslate"><span class="pre">TaskScheduler</span></code> types guarantee.</p>
+<p>The Kokkos <code class="docutils literal notranslate"><span class="pre">TaskScheduler</span></code> concept is an abstraction that generalizes over the many possible strategies for scheduling tasks in a task-based system. Like other concepts in Kokkos, users should not write code that depends directly on a specific <code class="docutils literal notranslate"><span class="pre">TaskScheduler</span></code>, but rather to the generic model that all <code class="docutils literal notranslate"><span class="pre">TaskScheduler</span></code> types guarantee.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> class template, used for representing dependency relationships, is templated on the return type of the task it represents and on the type of the scheduler that was used to execute that task:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Scheduler</span><span class="o">&gt;</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="n">my_function</span><span class="p">(</span><span class="n">Scheduler</span><span class="w"> </span><span class="n">sched</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// use auto until you need to name the type for some reason</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">fut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">host_spawn</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">sched</span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="n">MyTaskFunctor</span><span class="p">()</span><span class="w"></span>
-<span class="w">  </span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="cm">/* ... */</span><span class="w"></span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">my_result_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyTaskFunctor</span><span class="o">::</span><span class="n">value_type</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// convertibility is guaranteed:</span>
-<span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">BasicFuture</span><span class="o">&lt;</span><span class="n">my_task_result</span><span class="p">,</span><span class="w"> </span><span class="n">Scheduler</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fut</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Scheduler</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">my_function</span><span class="p">(</span><span class="n">Scheduler</span><span class="w"> </span><span class="n">sched</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// use auto until you need to name the type for some reason</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">fut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">host_spawn</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">sched</span><span class="p">),</span>
+<span class="w">        </span><span class="n">MyTaskFunctor</span><span class="p">()</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/* ... */</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">my_result_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MyTaskFunctor</span><span class="o">::</span><span class="n">value_type</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// convertibility is guaranteed:</span>
+<span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">BasicFuture</span><span class="o">&lt;</span><span class="n">my_task_result</span><span class="p">,</span><span class="w"> </span><span class="n">Scheduler</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fut</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>(Note: Kokkos does not guarantee the specific return type of task parallel patterns, only that they will be convertible to the appropriate <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> type.  Use <code class="docutils literal notranslate"><span class="pre">auto</span></code> until you need to name the type for some reason—like storing it in a container, for instance.  Otherwise, Kokkos may be able to provide better performance if the future type is never required to be converted to a specific <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> type.)</p>
+<p>(Note: Kokkos does not guarantee the specific return type of task parallel patterns, only that they will be convertible to the appropriate <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> type. Use <code class="docutils literal notranslate"><span class="pre">auto</span></code> until you need to name the type for some reason—like storing it in a container, for instance. Otherwise, Kokkos may be able to provide better performance if the future type is never required to be converted to a specific <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> type.)</p>
 <p><code class="docutils literal notranslate"><span class="pre">TaskScheduler</span></code> types in Kokkos have shared reference semantics; a copy of a given scheduler represents the same underlying entity and strategy as the scheduler it was copied from. Inside of a task functor, users should retrieve the scheduler instance from the team member handle passed in as the first argument rather than storing the scheduler themselves.  Use <code class="docutils literal notranslate"><span class="pre">auto</span></code> for this as well until you need to store it for some reason.</p>
-<p>When a future is ready, the result of the task that a future represents as a predecessor can be retrieved using the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method.  However, this can <strong>only</strong> be called from a context where the future is guaranteed to be ready—that is, in a task that was spawned with the future as a predecessor, or a task that transitively depends on that future via another task, or after a <code class="docutils literal notranslate"><span class="pre">Kokkos::wait</span></code> on the scheduler that spawned the task associated with the future (see below).  <strong>Calling the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method of a future in any other context results in undefined behavior</strong> (and the worst kind of bug, at that: it may not even result in a segfault or anything until hours of execution!).  Note that this is different from <code class="docutils literal notranslate"><span class="pre">std::future</span></code>, where the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method blocks until it’s ready.</p>
+<p>When a future is ready, the result of the task that a future represents as a predecessor can be retrieved using the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method.  However, this can <strong>only</strong> be called from a context where the future is guaranteed to be ready—that is, in a task that was spawned with the future as a predecessor, or a task that transitively depends on that future via another task, or after a <code class="docutils literal notranslate"><span class="pre">Kokkos::wait</span></code> on the scheduler that spawned the task associated with the future (see below).  <strong>Calling the</strong> <code class="docutils literal notranslate"><span class="pre">get()</span></code> <strong>method of a future in any other context results in undefined behavior</strong> (and the worst kind of bug, at that: it may not even result in a segfault or anything until hours of execution!).  Note that this is different from <code class="docutils literal notranslate"><span class="pre">std::future</span></code>, where the <code class="docutils literal notranslate"><span class="pre">get()</span></code> method blocks until it’s ready.</p>
 <p>Future types in Kokkos have shared reference semantics; a copy of a given future represents the same underlying dependency as the future it was copied from.  A default-constructed <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> represents an always-ready dependency with no value (that is, retrieving the value is undefined behavior—practically speaking, probably a segfault).  A default-constructed future will return <code class="docutils literal notranslate"><span class="pre">true</span></code> for the <code class="docutils literal notranslate"><span class="pre">is_null()</span></code> method.  In addition to convertibility to a <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> of the appropriate value type and scheduler type, all Kokkos futures are convertible to a <code class="docutils literal notranslate"><span class="pre">Kokkos::BasicFuture</span></code> of <code class="docutils literal notranslate"><span class="pre">void</span></code> and the appropriate scheduler type.</p>
 </section>
 <section id="waiting-in-kokkos-tasking">
 <h2>Waiting in Kokkos Tasking<a class="headerlink" href="#waiting-in-kokkos-tasking" title="Permalink to this heading">#</a></h2>
 <p>Kokkos generally provides no way to block a thread of execution to wait on an individual future, and it provides no guarantee of correct execution if the user attempts to do so via external means (for instance, polling on the <code class="docutils literal notranslate"><span class="pre">is_ready()</span></code> method in a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is forbidden).  <em>Outside of</em> a Kokkos task functor (that is, anywhere that <code class="docutils literal notranslate"><span class="pre">host_spawn</span></code> would be allowed), Kokkos provides the ability to wait on <em>all</em> of the futures created on a given scheduler (including those created, transitively, by tasks spawned not yet completed, or potentially not even started).  This is done using the <code class="docutils literal notranslate"><span class="pre">Kokkos::wait</span></code> function on the scheduler:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Scheduler</span><span class="o">&gt;</span><span class="w"></span>
-<span class="kt">void</span><span class="w"> </span><span class="n">my_function</span><span class="p">(</span><span class="n">Scheduler</span><span class="w"> </span><span class="n">sched</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// use auto until you need to name the type for some reason</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">fut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">host_spawn</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">sched</span><span class="p">),</span><span class="w"></span>
-<span class="w">    </span><span class="n">MyTaskFunctor</span><span class="p">()</span><span class="w"></span>
-<span class="w">  </span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">wait</span><span class="p">(</span><span class="n">sched</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fut</span><span class="p">.</span><span class="n">get</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="cm">/* ... */</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Scheduler</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">my_function</span><span class="p">(</span><span class="n">Scheduler</span><span class="w"> </span><span class="n">sched</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// use auto until you need to name the type for some reason</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">fut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">host_spawn</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">sched</span><span class="p">),</span>
+<span class="w">        </span><span class="n">MyTaskFunctor</span><span class="p">()</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">wait</span><span class="p">(</span><span class="n">sched</span><span class="p">);</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fut</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+<span class="w">    </span><span class="cm">/* ... */</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Users should think of <code class="docutils literal notranslate"><span class="pre">Kokkos::wait</span></code> as an <em>extremely</em> expensive operation (a “sledgehammer”) and use it as sparingly as possible.</p>
 <section id="waiting-in-a-task-functor">
 <h3>“Waiting” in a task functor<a class="headerlink" href="#waiting-in-a-task-functor" title="Permalink to this heading">#</a></h3>
 <p>In Kokkos tasking, all task functors must be able to run to completion without blocking once they are started (the Kokkos scheduler <em>can</em> run other tasks at any point that the functor calls back into the Kokkos tasking system, such as any <code class="docutils literal notranslate"><span class="pre">task_spawn</span></code>, but it is allowed to assume user functors will run to completion if left alone).  This means that there is no way to block a task pending the result of another task.  Other tasking systems that make this kind of design decision require the user to spawn a new task for each new piece of predicated work, which is an option in Kokkos as well, but Kokkos also provides another option.  To help reduce the allocation cost associated with the traditional approach to never-blocking task systems, Kokkos allows users to “reuse” the current task as a successor to some future.  Kokkos provides the <code class="docutils literal notranslate"><span class="pre">Kokkos::respawn()</span></code> function.  For example:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Scheduler</span><span class="o">&gt;</span><span class="w"></span>
-<span class="k">struct</span><span class="w"> </span><span class="nc">MyTaskFunctor</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">void</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">future_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">BasicFuture</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="n">Scheduler</span><span class="o">&gt;</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">future_type</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TeamMember</span><span class="o">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="n">KOKKOS_INLINE_FUNCTION</span><span class="w"></span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="k">operator</span><span class="p">()(</span><span class="n">TeamMember</span><span class="o">&amp;</span><span class="w"> </span><span class="n">member</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">is_null</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">task_spawn</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">member</span><span class="p">.</span><span class="n">scheduler</span><span class="p">()),</span><span class="w"></span>
-<span class="w">        </span><span class="n">MyOtherTaskFunctor</span><span class="p">()</span><span class="w"></span>
-<span class="w">      </span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">respawn</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="c1">// This is after the respawn so we&#39;re guaranteed that f is ready</span>
-<span class="w">      </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Got result %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">get</span><span class="p">());</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Scheduler</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">MyTaskFunctor</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">void</span><span class="p">;</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">future_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">BasicFuture</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="n">Scheduler</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="n">future_type</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TeamMember</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="n">KOKKOS_INLINE_FUNCTION</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="k">operator</span><span class="p">()(</span><span class="n">TeamMember</span><span class="o">&amp;</span><span class="w"> </span><span class="n">member</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">is_null</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">task_spawn</span><span class="p">(</span>
+<span class="w">            </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">TaskSingle</span><span class="p">(</span><span class="n">member</span><span class="p">.</span><span class="n">scheduler</span><span class="p">()),</span>
+<span class="w">            </span><span class="n">MyOtherTaskFunctor</span><span class="p">()</span>
+<span class="w">        </span><span class="p">);</span>
+<span class="w">        </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">respawn</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// This is after the respawn so we&#39;re guaranteed that f is ready</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Got result %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">get</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <p>A task functor can only be respawned up to once <em>per execution of</em> <code class="docutils literal notranslate"><span class="pre">operator()</span></code> (that is, once per time it is spawned or respawned).  Multiple calls to <code class="docutils literal notranslate"><span class="pre">respawn</span></code> in the same execution of <code class="docutils literal notranslate"><span class="pre">operator()</span></code> are redundant and lead to undefined behavior.  Calls to <code class="docutils literal notranslate"><span class="pre">respawn</span></code> are always lazy—the subsequent call to <code class="docutils literal notranslate"><span class="pre">operator()</span></code> by Kokkos will only happen after the currently executing one returns (and after the predecessors, if any, are ready) at the earliest.</p>
@@ -590,12 +627,6 @@
 <section id="task-priorities">
 <h2>Task Priorities<a class="headerlink" href="#task-priorities" title="Permalink to this heading">#</a></h2>
 <p>Kokkos allows users to provide a priority hint to task parallel execution policies as an optional third argument, or as an optional third argument to <code class="docutils literal notranslate"><span class="pre">Kokkos::respawn</span></code>.  This has no observable effect on the programming model—only on the performance.  A scheduler may ignore these priorities.  The allowed task priorities are <code class="docutils literal notranslate"><span class="pre">Kokkos::TaskPriority::High</span></code>, <code class="docutils literal notranslate"><span class="pre">Kokkos::TaskPriority::Regular</span></code>, and <code class="docutils literal notranslate"><span class="pre">Kokkos::TaskPriority::Low</span></code>, which the second being the default if the argument isn’t given.</p>
-<!--
-Invariants in the Kokkos Tasking Programming Model
-==================================================
-
-TODO
--->
 </section>
 </section>
 
