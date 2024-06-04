@@ -3,13 +3,14 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Testing and Issue Tracking" href="../testing-and-issue-tracking.html" /><link rel="prev" title="Kokkos and Windows.h" href="WindowsHeader.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Kokkos Planning and Testing" href="../testing-and-issue-tracking.html" /><link rel="prev" title="Kokkos and Windows.h" href="WindowsHeader.html" />
 
     <meta name="generator" content="sphinx-5.0.1, furo 2022.06.04.1"/>
         <title>Moving code from requiring Kokkos_ENABLE_CUDA_UVM to using SharedSpace - Kokkos documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     <link rel="stylesheet" type="text/css" href="../_static/hacks.css" />
     
@@ -157,6 +158,7 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Quick Start</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../programmingguide.html">Programming Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ProgrammingGuide/Introduction.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ProgrammingGuide/Machine-Model.html">2. Machine Model</a></li>
@@ -190,6 +192,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/ScopeGuard.html"><code class="docutils literal notranslate"><span class="pre">ScopeGuard</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/InitializationSettings.html"><code class="docutils literal notranslate"><span class="pre">InitializationSettings</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/InitArguments.html">InitArguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/initialize_finalize/push_finalize_hook.html"><code class="docutils literal notranslate"><span class="pre">push_finalize_hook</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/View.html">View and related</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -295,18 +298,28 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/Utilities.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/abort.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::abort</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/all.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/assert.html"><code class="docutils literal notranslate"><span class="pre">KOKKOS_ASSERT</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/complex.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::complex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/min_max_clamp.html">Minimum/maximum operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/printf.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::printf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/swap.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::kokkos_swap</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/timer.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Timer</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/device_id.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::device_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/num_devices.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_devices</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/num_threads.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_threads</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../API/core/utilities/experimental.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../API/core/Detection-Idiom.html">Detection Idiom</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/core/Macros.html">Macros</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../API/core/Profiling.html">Profiling</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/profiling/scoped_region.html"><code class="docutils literal notranslate"><span class="pre">Profiling::ScopedRegion</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../API/core/profiling/profiling_section.html"><code class="docutils literal notranslate"><span class="pre">Profiling::ProfilingSection</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../API/containers-index.html">API: Containers</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../API/containers-index.html">API: Containers</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../API/containers/Bitset.html"><code class="docutils literal notranslate"><span class="pre">Bitset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/containers/Bitset.html#constbitset"><code class="docutils literal notranslate"><span class="pre">ConstBitset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/containers/DualView.html"><code class="docutils literal notranslate"><span class="pre">DualView</span></code></a></li>
@@ -316,23 +329,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../API/containers/ScatterView.html"><code class="docutils literal notranslate"><span class="pre">ScatterView</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/containers/StaticCrsGraph.html"><code class="docutils literal notranslate"><span class="pre">StaticCrsGraph</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/containers/Unordered-Map.html"><code class="docutils literal notranslate"><span class="pre">UnorderedMap</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../API/containers/vector.html"><code class="docutils literal notranslate"><span class="pre">vector</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../API/containers/vector.html"><code class="docutils literal notranslate"><span class="pre">vector</span></code> [DEPRECATED]</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../API/algorithms-index.html">API: Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../API/algorithms-index.html">API: Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Random-Number.html">Random-Number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Random-Number.html#generator">Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Sort.html">Sort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/algorithms/Sort.html#sorting-with-nested-policies-team-and-thread-level">Sorting with nested policies (team- and thread-level)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../API/algorithms/std-algorithms/Iterators.html">Iterators</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdMinElement.html"><code class="docutils literal notranslate"><span class="pre">min_element</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdMaxElement.html"><code class="docutils literal notranslate"><span class="pre">max_element</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdMinMaxElement.html"><code class="docutils literal notranslate"><span class="pre">minmax_element</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdModSeq.html">Modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdModSeq.html">Modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdCopy.html"><code class="docutils literal notranslate"><span class="pre">copy</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdCopyIf.html"><code class="docutils literal notranslate"><span class="pre">copy_if</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdCopy_n.html"><code class="docutils literal notranslate"><span class="pre">copy_n</span></code></a></li>
@@ -363,7 +376,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAdjacentFind.html"><code class="docutils literal notranslate"><span class="pre">adjacent_find</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdCount.html"><code class="docutils literal notranslate"><span class="pre">count</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdCountIf.html"><code class="docutils literal notranslate"><span class="pre">count_if</span></code></a></li>
@@ -384,7 +397,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdSearchN.html"><code class="docutils literal notranslate"><span class="pre">search_n</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdExclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">exclusive_scan</span></code></a></li>
@@ -394,13 +407,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsSorted.html"><code class="docutils literal notranslate"><span class="pre">is_sorted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsSortedUntil.html"><code class="docutils literal notranslate"><span class="pre">is_sorted_until</span></code></a></li>
 </ul>
@@ -409,7 +422,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../API/simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../API/simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../API/simd/simd.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/simd/simd_mask.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd_mask</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../API/simd/where_expression.html"><code class="docutils literal notranslate"><span class="pre">Experimental::where_expression</span></code></a></li>
@@ -418,7 +431,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../API/alphabetical.html">API in Alphabetical Order</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../deprecation_page.html">Deprecation for Kokkos-3.x</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../known-issues.html">Known issues</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../usecases.html">Use Cases and Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../usecases.html">Use Cases and Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="MPI-Halo-Exchange.html">MPI Halo Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Average-To-Nodes.html">ScatterView averaging elements to nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MDRangePolicy.html">MDRangePolicy Use Case</a></li>
@@ -432,7 +445,8 @@
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../testing-and-issue-tracking.html">Kokkos Planning and Testing</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Kokkos-Project-Planning.html">Kokkos Project Planning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Requirements-Issues-and-Feedback.html">Requirements, Issues and Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Testing-Process-Details.html">Attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../testing-and-issue-tracking/Testing-Processes.html">Kokkos Testing Processes and Change Process</a></li>
@@ -440,7 +454,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos-tutorials">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=rUIcWtFU5qM">1. Intro, Build, Parallel dispatch</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=O-asHTtO7O4">2. Views and Spaces</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=nGyJS8u-6GY">3. Multidim loops and Data Structures</a></li>
@@ -452,7 +466,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos">GitHub Repo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contributing.html">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../templates/index.html">Documentation Templates</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../templates/class_api.html">Class API Template</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../developer-guides/index.html">Developer Guides</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer-guides/prs-and-reviews.html">PRs and Reviews</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../citation.html">Citing Kokkos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
 </ul>
@@ -475,7 +500,7 @@
         </a>
         <div class="content-icon-container">
 <div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/kokkos/kokkos-core-wiki/blob/main/docs/source/usecases/Moving_from_EnableUVM_to_SharedSpace.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/kokkos/kokkos-core-wiki/blob/main/docs/source/usecases/Moving_from_EnableUVM_to_SharedSpace.rst" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
@@ -499,24 +524,24 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="moving-code-from-requiring-kokkos-enable-cuda-uvm-to-using-sharedspace">
+          <section id="moving-code-from-requiring-kokkos-enable-cuda-uvm-to-using-sharedspace">
 <h1>Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code><a class="headerlink" href="#moving-code-from-requiring-kokkos-enable-cuda-uvm-to-using-sharedspace" title="Permalink to this heading">#</a></h1>
 <p>With Kokkos 4.0 <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> is deprecated and can only be used with <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEPRECATED_CODE_4</span></code>. The main reason for the deprecation was, that using the option changed the <code class="docutils literal notranslate"><span class="pre">memory_space</span></code> of the <code class="docutils literal notranslate"><span class="pre">Cuda</span></code> <code class="docutils literal notranslate"><span class="pre">ExecutionSpace</span></code>. This lead to several problems. For example: The driver is allowed to move chunks of this memory to the device or host depending on the access at any time without notice.
 The accesses in <code class="docutils literal notranslate"><span class="pre">parallel_for</span></code>, <code class="docutils literal notranslate"><span class="pre">parallel_reduce</span></code>, or <code class="docutils literal notranslate"><span class="pre">parallel_scan</span></code> do not occur in any guaranteed order and furthermore depend on other kernels running on the same GPU. This makes debugging tedious. Especially, if the memory an allocation resides in is not apparent but dependent on the options when running <code class="docutils literal notranslate"><span class="pre">cmake</span></code>.</p>
 <section id="the-alternative">
 <h2>The alternative<a class="headerlink" href="#the-alternative" title="Permalink to this heading">#</a></h2>
-<p>We introduced a new alias named <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></span> in Kokkos 4.0. This always points to memory that is accessible by every <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ExecutionSpace</span></code></span> and is migrated without user interaction to the acessing <code class="docutils literal notranslate"><span class="pre">ExecutionSpace</span></code> on demand. After migration the memory is accessed locally.
+<p>We introduced a new alias named <a class="reference external" href="../API/core/memory_spaces.html#kokkos-sharedspace"><code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a> in Kokkos 4.0. This always points to memory that is accessible by every <a class="reference external" href="../API/core/execution_spaces.html#kokkos-executionspaceconcept"><code class="docutils literal notranslate"><span class="pre">ExecutionSpace</span></code></a> and is migrated without user interaction to the acessing <code class="docutils literal notranslate"><span class="pre">ExecutionSpace</span></code> on demand. After migration the memory is accessed locally.
 Using the alias e.g. in <code class="docutils literal notranslate"><span class="pre">Views</span></code> is expressive and thus easier to read. Furthermore, it is portable to every backend that can automatically migrate memory between <code class="docutils literal notranslate"><span class="pre">ExecutionSpaces</span></code>.
-Furthermore, we introduced the alias <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">SharedHostPinnedSpace</span></code></span> which points to memory that is accessible by all enabled <code class="docutils literal notranslate"><span class="pre">ExecutionSpaces</span></code> but always resides in the memory of the host.</p>
+Furthermore, we introduced the alias <a class="reference external" href="../API/core/memory_spaces.html#kokkos-sharedhostpinnedspace"><code class="docutils literal notranslate"><span class="pre">SharedHostPinnedSpace</span></code></a> which points to memory that is accessible by all enabled <code class="docutils literal notranslate"><span class="pre">ExecutionSpaces</span></code> but always resides in the memory of the host.</p>
 </section>
 <section id="the-transition">
 <h2>The transition<a class="headerlink" href="#the-transition" title="Permalink to this heading">#</a></h2>
-<p>Basically it comes down to spelling <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Kokkos::SharedSpace</span></code></span> as a template argument in all allocations.
+<p>Basically it comes down to spelling <a class="reference external" href="../API/core/memory_spaces.html#kokkos-sharedspace"><code class="docutils literal notranslate"><span class="pre">Kokkos::SharedSpace</span></code></a> as a template argument in all allocations.
 Below is an example of a transition:</p>
 <ul class="simple">
 <li><p>Code requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> at configure time (until 4.0)</p></li>
 </ul>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kokkos_Core.hpp&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kokkos_Core.hpp&gt;</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(){</span>
 <span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">initialize</span><span class="p">();</span>
@@ -528,7 +553,7 @@ Below is an example of a transition:</p>
 <span class="w">    </span><span class="p">...</span>
 
 <span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">kokkos_free</span><span class="p">(</span><span class="n">c_style_memory</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">finalize</span><span class="p">();</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -537,13 +562,13 @@ Below is an example of a transition:</p>
 <ul class="simple">
 <li><p>Code using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code> (since 4.0)</p></li>
 </ul>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kokkos_Core.hpp&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kokkos_Core.hpp&gt;</span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(){</span>
 <span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">initialize</span><span class="p">();</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="n">Kokkos</span><span class="o">::</span><span class="n">has_shared_space</span><span class="p">(),</span><span class="s">&quot;code only works on backends with SharedSpace&quot;</span><span class="p">);</span>
-<span class="w">      </span>
+
 <span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 <span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">View</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*</span><span class="p">,</span><span class="n">Kokkos</span><span class="o">::</span><span class="n">SharedSpace</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myView</span><span class="p">(</span><span class="s">&quot;myView&quot;</span><span class="p">,</span><span class="n">N</span><span class="p">);</span>
 <span class="w">    </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">c_style_memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">kokkos_malloc</span><span class="o">&lt;</span><span class="n">Kokkos</span><span class="o">::</span><span class="n">SharedSpace</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;c_style_alloc&quot;</span><span class="p">,</span><span class="n">N</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span>
@@ -551,7 +576,7 @@ Below is an example of a transition:</p>
 <span class="w">    </span><span class="p">...</span>
 
 <span class="w">    </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">kokkos_free</span><span class="o">&lt;</span><span class="n">Kokkos</span><span class="o">::</span><span class="n">SharedSpace</span><span class="o">&gt;</span><span class="p">(</span><span class="n">c_style_memory</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="n">Kokkos</span><span class="o">::</span><span class="n">finalize</span><span class="p">();</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
@@ -570,7 +595,7 @@ Below is an example of a transition:</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Testing and Issue Tracking</div>
+                <div class="title">Kokkos Planning and Testing</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -639,5 +664,6 @@ Below is an example of a transition:</p>
     <script src="../_static/scripts/furo.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     </body>
 </html>

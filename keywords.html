@@ -10,6 +10,7 @@
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     <link rel="stylesheet" type="text/css" href="_static/hacks.css" />
     
@@ -157,6 +158,7 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="programmingguide.html">Programming Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="ProgrammingGuide/Introduction.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ProgrammingGuide/Machine-Model.html">2. Machine Model</a></li>
@@ -190,6 +192,7 @@
 <li class="toctree-l3"><a class="reference internal" href="API/core/initialize_finalize/ScopeGuard.html"><code class="docutils literal notranslate"><span class="pre">ScopeGuard</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/initialize_finalize/InitializationSettings.html"><code class="docutils literal notranslate"><span class="pre">InitializationSettings</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/initialize_finalize/InitArguments.html">InitArguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/initialize_finalize/push_finalize_hook.html"><code class="docutils literal notranslate"><span class="pre">push_finalize_hook</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="API/core/View.html">View and related</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -295,18 +298,28 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="API/core/Utilities.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/abort.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::abort</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/all.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/assert.html"><code class="docutils literal notranslate"><span class="pre">KOKKOS_ASSERT</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/complex.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::complex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/min_max_clamp.html">Minimum/maximum operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/printf.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::printf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/swap.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::kokkos_swap</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/timer.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Timer</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/device_id.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::device_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/num_devices.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_devices</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/num_threads.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_threads</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/experimental.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="API/core/Detection-Idiom.html">Detection Idiom</a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/core/Macros.html">Macros</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="API/core/Profiling.html">Profiling</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/core/profiling/scoped_region.html"><code class="docutils literal notranslate"><span class="pre">Profiling::ScopedRegion</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/profiling/profiling_section.html"><code class="docutils literal notranslate"><span class="pre">Profiling::ProfilingSection</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="API/containers-index.html">API: Containers</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="API/containers-index.html">API: Containers</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/Bitset.html"><code class="docutils literal notranslate"><span class="pre">Bitset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/Bitset.html#constbitset"><code class="docutils literal notranslate"><span class="pre">ConstBitset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/DualView.html"><code class="docutils literal notranslate"><span class="pre">DualView</span></code></a></li>
@@ -316,23 +329,23 @@
 <li class="toctree-l2"><a class="reference internal" href="API/containers/ScatterView.html"><code class="docutils literal notranslate"><span class="pre">ScatterView</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/StaticCrsGraph.html"><code class="docutils literal notranslate"><span class="pre">StaticCrsGraph</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/Unordered-Map.html"><code class="docutils literal notranslate"><span class="pre">UnorderedMap</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="API/containers/vector.html"><code class="docutils literal notranslate"><span class="pre">vector</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="API/containers/vector.html"><code class="docutils literal notranslate"><span class="pre">vector</span></code> [DEPRECATED]</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="API/algorithms-index.html">API: Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="API/algorithms-index.html">API: Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="API/algorithms/Random-Number.html">Random-Number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/algorithms/Random-Number.html#generator">Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/algorithms/Sort.html">Sort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/algorithms/Sort.html#sorting-with-nested-policies-team-and-thread-level">Sorting with nested policies (team- and thread-level)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="API/algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="API/algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="API/algorithms/std-algorithms/Iterators.html">Iterators</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdMinElement.html"><code class="docutils literal notranslate"><span class="pre">min_element</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdMaxElement.html"><code class="docutils literal notranslate"><span class="pre">max_element</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdMinMaxElement.html"><code class="docutils literal notranslate"><span class="pre">minmax_element</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdModSeq.html">Modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdModSeq.html">Modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCopy.html"><code class="docutils literal notranslate"><span class="pre">copy</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCopyIf.html"><code class="docutils literal notranslate"><span class="pre">copy_if</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCopy_n.html"><code class="docutils literal notranslate"><span class="pre">copy_n</span></code></a></li>
@@ -363,7 +376,7 @@
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdAdjacentFind.html"><code class="docutils literal notranslate"><span class="pre">adjacent_find</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCount.html"><code class="docutils literal notranslate"><span class="pre">count</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCountIf.html"><code class="docutils literal notranslate"><span class="pre">count_if</span></code></a></li>
@@ -384,7 +397,7 @@
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdSearchN.html"><code class="docutils literal notranslate"><span class="pre">search_n</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdExclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">exclusive_scan</span></code></a></li>
@@ -394,13 +407,13 @@
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdIsSorted.html"><code class="docutils literal notranslate"><span class="pre">is_sorted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdIsSortedUntil.html"><code class="docutils literal notranslate"><span class="pre">is_sorted_until</span></code></a></li>
 </ul>
@@ -409,7 +422,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="API/simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="API/simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="API/simd/simd.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/simd/simd_mask.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd_mask</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/simd/where_expression.html"><code class="docutils literal notranslate"><span class="pre">Experimental::where_expression</span></code></a></li>
@@ -418,7 +431,7 @@
 <li class="toctree-l1"><a class="reference internal" href="API/alphabetical.html">API in Alphabetical Order</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deprecation_page.html">Deprecation for Kokkos-3.x</a></li>
 <li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known issues</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="usecases/MPI-Halo-Exchange.html">MPI Halo Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecases/Average-To-Nodes.html">ScatterView averaging elements to nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecases/MDRangePolicy.html">MDRangePolicy Use Case</a></li>
@@ -432,7 +445,8 @@
 <li class="toctree-l2"><a class="reference internal" href="usecases/Moving_from_EnableUVM_to_SharedSpace.html">Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="testing-and-issue-tracking.html">Kokkos Planning and Testing</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing-and-issue-tracking/Kokkos-Project-Planning.html">Kokkos Project Planning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testing-and-issue-tracking/Requirements-Issues-and-Feedback.html">Requirements, Issues and Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testing-and-issue-tracking/Testing-Process-Details.html">Attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testing-and-issue-tracking/Testing-Processes.html">Kokkos Testing Processes and Change Process</a></li>
@@ -440,7 +454,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos-tutorials">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=rUIcWtFU5qM">1. Intro, Build, Parallel dispatch</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=O-asHTtO7O4">2. Views and Spaces</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=nGyJS8u-6GY">3. Multidim loops and Data Structures</a></li>
@@ -452,7 +466,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos">GitHub Repo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="contributing.html">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="templates/index.html">Documentation Templates</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="templates/class_api.html">Class API Template</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="developer-guides/index.html">Developer Guides</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="developer-guides/prs-and-reviews.html">PRs and Reviews</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="citation.html">Citing Kokkos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
@@ -508,65 +533,116 @@
 </div>
 <p>This page is organized in four sections:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#keywords-backends"><span class="std std-ref">Device Backends</span></a></p></li>
-<li><p><a class="reference internal" href="#keywords-enable-options"><span class="std std-ref">Enable Options</span></a></p></li>
+<li><p><a class="reference internal" href="#keywords-backends"><span class="std std-ref">Backend selection</span></a></p></li>
+<li><p><a class="reference internal" href="#keywords-enable-options"><span class="std std-ref">Options</span></a></p></li>
 <li><p><a class="reference internal" href="#keywords-tpls"><span class="std std-ref">Third-party Libraries (TPLs)</span></a></p></li>
-<li><p><a class="reference internal" href="#keywords-arch"><span class="std std-ref">Architecture Keywords</span></a></p></li>
+<li><p><a class="reference internal" href="#keywords-arch"><span class="std std-ref">Architectures</span></a></p></li>
 </ul>
-<section id="device-backends">
-<span id="keywords-backends"></span><h2>Device Backends<a class="headerlink" href="#device-backends" title="Permalink to this heading">#</a></h2>
+<section id="backend-selection">
+<span id="keywords-backends"></span><h2>Backend selection<a class="headerlink" href="#backend-selection" title="Permalink to this heading">#</a></h2>
+<p><strong>Default State:</strong>
+All backends are disabled by default.  This ensures you explicitly choose the
+backends you need for your specific hardware setup.
+If no backend is enabled explicitly, the Serial backend will be enabled.</p>
+<p><strong>Enabling Backends:</strong>
+You can enable backends by configuring with <code class="docutils literal notranslate"><span class="pre">-DKokkos_ENABLE_&lt;BACKEND&gt;=ON</span></code>
+flag, where <code class="docutils literal notranslate"><span class="pre">&lt;BACKEND&gt;</span></code> is replaced with the specific backend you want to
+enable (e.g. <code class="docutils literal notranslate"><span class="pre">-DKokkos_ENABLE_CUDA=ON</span></code> for CUDA).</p>
+<dl>
+<dt><strong>Restrictions:</strong></dt><dd><p>Mutual Exclusion: You can only have one device backend (e.g., CUDA, HIP,
+SYCL) and one host parallel backend (e.g., OpenMP, C++ threads) enabled at
+the same time. This is because these backends manage parallelism in
+potentially conflicting ways.</p>
+<p>Host Backend Requirement: At least one host backend must always be enabled.
+This is because Kokkos code execution typically starts on the host (CPU)
+before potentially being offloaded to devices (GPUs, accelerators). If you
+don’t explicitly enable a host backend, Kokkos will automatically enable the
+Serial backend, which provides a sequential execution model.</p>
+</dd>
+</dl>
+<section id="serial-backend">
+<h3>Serial backend<a class="headerlink" href="#serial-backend" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-given docutils container">
 <table class="docutils align-left">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 65%" />
-<col style="width: 10%" />
+<col style="width: 28%" />
+<col style="width: 72%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>Description/info</p></th>
-<th class="head"><p>Default</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA</span></code></p></td>
-<td><p>To build CUDA backend</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_OPENMP</span></code></p></td>
-<td><p>To build OpenMP backend</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_THREADS</span></code></p></td>
-<td><p>To build C++ Threads backend</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_SERIAL</span></code></p></td>
-<td><p>To build serial backend</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">ON</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HIP</span></code></p></td>
-<td><p>To build HIP backend</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_OPENMPTARGET</span></code></p></td>
-<td><p><span class="red">[Experimental]</span> To build the OpenMP target backend</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_SYCL</span></code></p></td>
-<td><p><span class="red">[Experimental]</span> To build SYCL backend</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HPX</span></code></p></td>
-<td><p><span class="red">[Experimental]</span> To build HPX backend</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_SERIAL</span></code></p></td>
+<td><p>To build the Serial backend targeting CPUs</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="enable-options">
-<span id="keywords-enable-options"></span><h2>Enable Options<a class="headerlink" href="#enable-options" title="Permalink to this heading">#</a></h2>
+<section id="host-parallel-backends">
+<h3>Host parallel backends<a class="headerlink" href="#host-parallel-backends" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Description/info</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_OPENMP</span></code></p></td>
+<td><p>To build the OpenMP backend targeting CPUs</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_THREADS</span></code></p></td>
+<td><p>To build the C++ Threads backend</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HPX</span></code></p></td>
+<td><p><span class="red">[Experimental]</span> To build the HPX backend</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="device-backends">
+<h3>Device backends<a class="headerlink" href="#device-backends" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Description/info</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA</span></code></p></td>
+<td><p>To build the CUDA backend targeting NVIDIA GPUs</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HIP</span></code></p></td>
+<td><p>To build the HIP backend targeting AMD GPUs</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_SYCL</span></code></p></td>
+<td><p><span class="red">[Experimental]</span> To build the SYCL backend targeting Intel GPUs</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_OPENMPTARGET</span></code></p></td>
+<td><p><span class="red">[Experimental]</span> To build the OpenMP target backend</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="options">
+<span id="keywords-enable-options"></span><h2>Options<a class="headerlink" href="#options" title="Permalink to this heading">#</a></h2>
+<section id="general-options">
+<h3>General options<a class="headerlink" href="#general-options" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-given docutils container">
 <table class="docutils align-left">
 <colgroup>
@@ -581,14 +657,90 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_AGGRESSIVE_VECTORIZATION</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_BENCHMARKS</span></code></p></td>
+<td><p>Build benchmarks</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_EXAMPLES</span></code></p></td>
+<td><p>Build examples</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_TESTS</span></code></p></td>
+<td><p>Build tests</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEPRECATED_CODE_3</span></code></p></td>
+<td><p>Enable deprecated code in the Kokkos 3.x series <span class="red">[Removed in 4.3]</span></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEPRECATED_CODE_4</span></code></p></td>
+<td><p>Enable deprecated code in the Kokkos 4.x series</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ON</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEPRECATION_WARNINGS</span></code></p></td>
+<td><p>Whether to raise warnings at compile time when using deprecated Kokkos facilities</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ON</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_TUNING</span></code></p></td>
+<td><p>Create bindings for tuning tools</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_AGGRESSIVE_VECTORIZATION</span></code></p></td>
 <td><p>Aggressively vectorize loops</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_COMPILER_WARNINGS</span></code></p></td>
-<td><p>Print all compiler warnings</p></td>
+</tbody>
+</table>
+</div>
+</section>
+<section id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 52%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Description/info</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEBUG</span></code></p></td>
+<td><p>Activate extra debug features - may increase compile times</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEBUG_BOUNDS_CHECK</span></code></p></td>
+<td><p>Use bounds checking - will increase runtime</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEBUG_DUALVIEW_MODIFY_CHECK</span></code></p></td>
+<td><p>Debug check on dual views</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="backend-specific-options">
+<h3>Backend-specific options<a class="headerlink" href="#backend-specific-options" title="Permalink to this heading">#</a></h3>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 52%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Description/info</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_CONSTEXPR</span></code></p></td>
 <td><p>Activate experimental relaxed constexpr functions</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
@@ -609,44 +761,16 @@
 <td><p>Use unified memory (UM) by default for CUDA</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEBUG</span></code></p></td>
-<td><p>Activate extra debug features - may increase compile times</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEBUG_BOUNDS_CHECK</span></code></p></td>
-<td><p>Use bounds checking - will increase runtime</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEBUG_DUALVIEW_MODIFY_CHECK</span></code></p></td>
-<td><p>Debug check on dual views</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_DEPRECATED_CODE</span></code></p></td>
-<td><p>Enable deprecated code</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_EXAMPLES</span></code></p></td>
-<td><p>Enable building examples</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HIP_MULTIPLE_KERNEL_INSTANTIATIONS</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HIP_MULTIPLE_KERNEL_INSTANTIATIONS</span></code></p></td>
 <td><p>Instantiate multiple kernels at compile time - improve performance but increase compile time</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HIP_RELOCATABLE_DEVICE_CODE</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HIP_RELOCATABLE_DEVICE_CODE</span></code></p></td>
 <td><p>Enable relocatable device code (RDC) for HIP</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_LARGE_MEM_TESTS</span></code></p></td>
-<td><p>Perform extra large memory tests</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_TESTS</span></code></p></td>
-<td><p>Build tests</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_TUNING</span></code></p></td>
-<td><p>Create bindings for tuning tools</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_ATOMICS_BYPASS</span></code></p></td>
+<td><p>Disable atomics when no host parallel nor device backend is enabled for Serial only builds (since Kokkos 4.3)</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
 </tbody>
@@ -654,15 +778,16 @@
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_LAMBDA</span></code> default value is <code class="docutils literal notranslate"><span class="pre">OFF</span></code> until 3.7 and <code class="docutils literal notranslate"><span class="pre">ON</span></code> since 4.0</p>
 </section>
-<section id="third-party-libraries-tpls">
-<span id="keywords-tpls"></span><h2>Third-party Libraries (TPLs)<a class="headerlink" href="#third-party-libraries-tpls" title="Permalink to this heading">#</a></h2>
-<p>The following options control enabling TPLs:</p>
+<section id="development">
+<h3>Development<a class="headerlink" href="#development" title="Permalink to this heading">#</a></h3>
+<p>These are intended for developers of Kokkos.  If you are a user, you probably
+should not be setting these.</p>
 <div class="table-wrapper colwidths-given docutils container">
 <table class="docutils align-left">
 <colgroup>
-<col style="width: 30%" />
-<col style="width: 60%" />
-<col style="width: 10%" />
+<col style="width: 20%" />
+<col style="width: 52%" />
+<col style="width: 28%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"></th>
@@ -671,25 +796,61 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HPX</span></code></p></td>
-<td><p>Whether to enable the HPX library</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_COMPILER_WARNINGS</span></code></p></td>
+<td><p>Print all compiler warnings</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HWLOC</span></code></p></td>
-<td><p>Whether to enable the HWLOC library</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Off</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HEADER_SELF_CONTAINMENT_TESTS</span></code></p></td>
+<td><p>Check that headers are self-contained</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_MEMKIND</span></code></p></td>
-<td><p>Whether to enable the MEMKIND library</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Off</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_LARGE_MEM_TESTS</span></code></p></td>
+<td><p>Perform extra large memory tests</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="third-party-libraries-tpls">
+<span id="keywords-tpls"></span><h2>Third-party Libraries (TPLs)<a class="headerlink" href="#third-party-libraries-tpls" title="Permalink to this heading">#</a></h2>
+<p>The following options control enabling TPLs:</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 40%" />
+<col style="width: 10%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Description/info</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HWLOC</span></code></p></td>
+<td><p>Whether to enable the HWLOC library</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_LIBDL</span></code></p></td>
 <td><p>Whether to enable the LIBDL library</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">On</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ON</span></code></p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_LIBRT</span></code></p></td>
-<td><p>Whether to enable the LIBRT library</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">Off</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_ONEDPL</span></code></p></td>
+<td><p>Whether to enable the oneDPL library when using the SYCL backend</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ON</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_ROCTHRUST</span></code></p></td>
+<td><p>Whether to enable the rocThrust library when using the HIP backend</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ON</span></code></p></td>
+<td><p>(since Kokkos 4.3)</p></td>
 </tr>
 </tbody>
 </table>
@@ -717,16 +878,8 @@
 <td><p>Location of HWLOC install prefix</p></td>
 <td><p>PATH Default:</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_MEMKIND_DIR</span></code> or <code class="docutils literal notranslate"><span class="pre">MEMKIND_ROOT</span></code></p></td>
-<td><p>Location of MEMKIND install prefix</p></td>
-<td><p>PATH Default:</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_LIBDL_DIR</span></code> or <code class="docutils literal notranslate"><span class="pre">LIBDL_ROOT</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_LIBDL_DIR</span></code> or <code class="docutils literal notranslate"><span class="pre">LIBDL_ROOT</span></code></p></td>
 <td><p>Location of LIBDL install prefix</p></td>
-<td><p>PATH Default:</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_LIBRT_DIR</span></code> or <code class="docutils literal notranslate"><span class="pre">LIBRT_ROOT</span></code></p></td>
-<td><p>Location of LIBRT install prefix</p></td>
 <td><p>PATH Default:</p></td>
 </tr>
 </tbody>
@@ -755,8 +908,10 @@
 </table>
 </div>
 </section>
-<section id="architecture-keywords">
-<span id="keywords-arch"></span><h2>Architecture Keywords<a class="headerlink" href="#architecture-keywords" title="Permalink to this heading">#</a></h2>
+<section id="architectures">
+<span id="keywords-arch"></span><h2>Architectures<a class="headerlink" href="#architectures" title="Permalink to this heading">#</a></h2>
+<section id="cpu-architectures">
+<h3>CPU architectures<a class="headerlink" href="#cpu-architectures" title="Permalink to this heading">#</a></h3>
 <div class="table-wrapper colwidths-given docutils container">
 <table class="docutils align-left">
 <colgroup>
@@ -779,136 +934,40 @@
 <td><p>Optimize for ARMv8.2 with SVE Support</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ADA89</span></code></p></td>
-<td><p>Optimize for the NVIDIA Ada generation CC 8.9 <sup>since Kokkos 4.1</sup></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMPERE80</span></code></p></td>
-<td><p>Optimize for the NVIDIA Ampere generation CC 8.0</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMPERE86</span></code></p></td>
-<td><p>Optimize for the NVIDIA Ampere generation CC 8.6</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMDAVX</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMDAVX</span></code></p></td>
 <td><p>Optimize for AMDAVX architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ARMV80</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ARMV80</span></code></p></td>
 <td><p>Optimize for ARMV80 architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ARMV81</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ARMV81</span></code></p></td>
 <td><p>Optimize for ARMV81 architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ARMV8_THUNDERX</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ARMV8_THUNDERX</span></code></p></td>
 <td><p>Optimize for ARMV8_THUNDERX architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ARMV8_THUNDERX2</span></code></p></td>
-<td><p>Optimize for the ARMV8_TX2 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ARMV8_TX2</span></code></p></td>
-<td><p>Optimize for ARMV8_TX2 architecture</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ARMV8_THUNDERX2</span></code></p></td>
+<td><p>Optimize for the ARMV8_THUNDERX2 architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_BDW</span></code></p></td>
 <td><p>Optimize for BDW architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_BGQ</span></code></p></td>
-<td><p>Optimize for BGQ architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_HOPPER90</span></code></p></td>
-<td><p>Optimize for the NVIDIA Hopper generation CC 9.0 <sup>since Kokkos 4.0</sup></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_HSW</span></code></p></td>
 <td><p>Optimize for HSW architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN</span></code></p></td>
-<td><p>Optimize for Intel GPUs, Just-In-Time compilation*</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_DG1</span></code></p></td>
-<td><p>Optimize for Intel Iris XeMAX GPU</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN9</span></code></p></td>
-<td><p>Optimize for Intel GPU Gen9</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN11</span></code></p></td>
-<td><p>Optimize for Intel GPU Gen11</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN12LP</span></code></p></td>
-<td><p>Optimize for Intel GPU Gen12LP</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_XEHP</span></code></p></td>
-<td><p>Optimize for Intel GPU Xe-HP</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_PVC</span></code></p></td>
-<td><p>Optimize for Intel GPU Ponte Vecchio/GPU Max</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KEPLER30</span></code></p></td>
-<td><p>Optimize for KEPLER30 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KEPLER32</span></code></p></td>
-<td><p>Optimize for KEPLER32 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KEPLER35</span></code></p></td>
-<td><p>Optimize for KEPLER35 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KEPLER37</span></code></p></td>
-<td><p>Optimize for KEPLER37 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KNC</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KNC</span></code></p></td>
 <td><p>Optimize for KNC architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KNL</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KNL</span></code></p></td>
 <td><p>Optimize for KNL architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_MAXWELL50</span></code></p></td>
-<td><p>Optimize for MAXWELL50 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_MAXWELL52</span></code></p></td>
-<td><p>Optimize for MAXWELL52 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_MAXWELL53</span></code></p></td>
-<td><p>Optimize for MAXWELL53 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_NAVI1030</span></code> <span class="red">[Since 4.0]</span></p></td>
-<td><p>Optimize for AMD GPU V620/W6800 GFX1030</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_PASCAL60</span></code></p></td>
-<td><p>Optimize for PASCAL60 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_PASCAL61</span></code></p></td>
-<td><p>Optimize for PASCAL61 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_POWER7</span></code></p></td>
-<td><p>Optimize for POWER7 architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_POWER8</span></code></p></td>
@@ -931,38 +990,6 @@
 <td><p>Optimize for Sapphire Rapids architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_TURING75</span></code></p></td>
-<td><p>Optimize for TURING75 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VEGA900</span></code> <span class="red">[Removed in 4.0]</span></p></td>
-<td><p>Optimize for AMD GPU MI25 GFX900</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VEGA906</span></code></p></td>
-<td><p>Optimize for AMD GPU MI50/MI60 GFX906</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VEGA908</span></code></p></td>
-<td><p>Optimize for AMD GPU MI100 GFX908</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VEGA90A</span></code></p></td>
-<td><p>Optimize for AMD GPU MI200 series GFX90A</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VOLTA70</span></code></p></td>
-<td><p>Optimize for VOLTA70 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VOLTA72</span></code></p></td>
-<td><p>Optimize for VOLTA72 architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_WSM</span></code></p></td>
-<td><p>Optimize for WSM architecture</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ZEN</span></code></p></td>
 <td><p>Optimize for Zen architecture</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
@@ -978,11 +1005,277 @@
 </tbody>
 </table>
 </div>
-<p>* <code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN</span></code> enables Just-In-Time compilation for Intel GPUs whereas all the other flags for Intel compilers
-request Ahead-Of-Time compilation. Just-In-Time compilation means that the compiler is invoked again when the binaries created
-are actually executed and only at that point the architecture to compile for is determined. On the other hand, Ahead-Of-Time
-compilation describes the standard model where the compiler is only invoked once to create the binary and the architecture to
-compile for is determined before the program is run.</p>
+</section>
+<section id="gpu-architectures">
+<h3>GPU Architectures<a class="headerlink" href="#gpu-architectures" title="Permalink to this heading">#</a></h3>
+<section id="nvidia-gpus">
+<h4>NVIDIA GPUs<a class="headerlink" href="#nvidia-gpus" title="Permalink to this heading">#</a></h4>
+<p>The Kokkos naming convention is to aggregate the eponym of the Nvidia GPU
+microarchitecture and the associated CUDA Compute Capability.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_&lt;MICROARCHITECTURE&gt;&lt;COMPUTE_CAPABILITY&gt;</span></code></p>
+<p>If the CUDA backend is enabled and no NVIDIA GPU architecture is specified,
+Kokkos will attempt to autodetect the architecture flag at configuration time.</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 24%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>NVIDIA GPUs</strong></p></th>
+<th class="head"><p>Architecture</p></th>
+<th class="head"><p>Compute Capability</p></th>
+<th class="head"><p>Models</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_HOPPER90</span></code></p></td>
+<td><p>Hopper</p></td>
+<td><p>9.0</p></td>
+<td><p>H100</p></td>
+<td><p>(since Kokkos 4.0)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_ADA89</span></code></p></td>
+<td><p>Ada Lovelace</p></td>
+<td><p>8.9</p></td>
+<td><p>L4, L40</p></td>
+<td><p>(since Kokkos 4.1)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMPERE86</span></code></p></td>
+<td><p>Ampere</p></td>
+<td><p>8.6</p></td>
+<td><p>A40, A10, A16, A2</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMPERE80</span></code></p></td>
+<td><p>Ampere</p></td>
+<td><p>8.0</p></td>
+<td><p>A100, A30</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_TURING75</span></code></p></td>
+<td><p>Turing</p></td>
+<td><p>7.5</p></td>
+<td><p>T4</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VOLTA72</span></code></p></td>
+<td><p>Volta</p></td>
+<td><p>7.2</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VOLTA70</span></code></p></td>
+<td><p>Volta</p></td>
+<td><p>7.0</p></td>
+<td><p>V100</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_PASCAL61</span></code></p></td>
+<td><p>Pascal</p></td>
+<td><p>6.1</p></td>
+<td><p>P40, P4</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_PASCAL60</span></code></p></td>
+<td><p>Pascal</p></td>
+<td><p>6.0</p></td>
+<td><p>P100</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_MAXWELL53</span></code></p></td>
+<td><p>Maxwell</p></td>
+<td><p>5.3</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_MAXWELL52</span></code></p></td>
+<td><p>Maxwell</p></td>
+<td><p>5.2</p></td>
+<td><p>M60, M40</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_MAXWELL50</span></code></p></td>
+<td><p>Maxwell</p></td>
+<td><p>5.0</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KEPLER37</span></code></p></td>
+<td><p>Kepler</p></td>
+<td><p>3.7</p></td>
+<td><p>K80</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KEPLER35</span></code></p></td>
+<td><p>Kepler</p></td>
+<td><p>3.5</p></td>
+<td><p>K40, K20</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KEPLER32</span></code></p></td>
+<td><p>Kepler</p></td>
+<td><p>3.2</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_KEPLER30</span></code></p></td>
+<td><p>Kepler</p></td>
+<td><p>3.0</p></td>
+<td><p>K10</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="amd-gpus">
+<h4>AMD GPUs<a class="headerlink" href="#amd-gpus" title="Permalink to this heading">#</a></h4>
+<p>The Kokkos naming convention is to aggregate AMD_ and the architecture flag.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_&lt;ARCHITECTURE_FLAG&gt;</span></code></p>
+<p>If the HIP backend is enabled and no AMD GPU architecture is specified,
+Kokkos will attempt to autodetect the architecture flag at configuration time.</p>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>AMD GPUs</strong></p></th>
+<th class="head"><p>Architecture flags</p></th>
+<th class="head"><p>Models</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX942</span></code></p></td>
+<td><p>GFX942</p></td>
+<td><p>MI300A, MI300X</p></td>
+<td><p>(since Kokkos 4.2)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX940</span></code></p></td>
+<td><p>GFX940</p></td>
+<td><p>MI300A (pre-production)</p></td>
+<td><p>(since Kokkos 4.2.1)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX90A</span></code></p></td>
+<td><p>GFX90A</p></td>
+<td><p>MI200 series</p></td>
+<td><p>(since Kokkos 4.2)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX908</span></code></p></td>
+<td><p>GFX90A</p></td>
+<td><p>MI100</p></td>
+<td><p>(since Kokkos 4.2)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX906</span></code></p></td>
+<td><p>GFX906</p></td>
+<td><p>MI50, MI60</p></td>
+<td><p>(since Kokkos 4.2)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX1100</span></code></p></td>
+<td><p>GFX1100</p></td>
+<td><p>7900xt</p></td>
+<td><p>(since Kokkos 4.2)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX1030</span></code></p></td>
+<td><p>GFX1030</p></td>
+<td><p>V620, W6800</p></td>
+<td><p>(since Kokkos 4.2)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VEGA90A</span></code></p></td>
+<td><p>GFX90A</p></td>
+<td><p>MI200 series</p></td>
+<td><p>Prefer <code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX90A</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VEGA908</span></code></p></td>
+<td><p>GFX908</p></td>
+<td><p>MI100</p></td>
+<td><p>Prefer <code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX908</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VEGA906</span></code></p></td>
+<td><p>GFX906</p></td>
+<td><p>MI50, MI60</p></td>
+<td><p>Prefer <code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX906</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_VEGA900</span></code></p></td>
+<td><p>GFX900</p></td>
+<td><p>MI25</p></td>
+<td><p>removed in 4.0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="intel-gpus">
+<h4>Intel GPUs<a class="headerlink" href="#intel-gpus" title="Permalink to this heading">#</a></h4>
+<div class="table-wrapper colwidths-given docutils container">
+<table class="docutils align-left">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 35%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>CMake option</p></th>
+<th class="head"><p>Architecture</p></th>
+<th class="head"><p>Models</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_PVC</span></code></p></td>
+<td><p>Xe-HPC (Ponte Vecchio)</p></td>
+<td><p>Intel Data Center GPU Max 1550</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_XEHP</span></code></p></td>
+<td><p>Xe-HP</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_DG1</span></code></p></td>
+<td><p>Iris Xe MAX (DG1)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN12LP</span></code></p></td>
+<td><p>Gen12LP</p></td>
+<td><p>Intel UHD Graphics 770</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN11</span></code></p></td>
+<td><p>Gen11</p></td>
+<td><p>Intel UHD Graphics</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN9</span></code></p></td>
+<td><p>Gen9</p></td>
+<td><p>Intel HD Graphics 510, Intel Iris Pro Graphics 580</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN</span></code></p></td>
+<td><p>Just-In-Time compilation*</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>* <code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_INTEL_GEN</span></code> enables Just-In-Time compilation for Intel GPUs
+whereas all the other flags for Intel compilers request Ahead-Of-Time
+compilation.</p>
+<p>Just-In-Time (JIT) compilation means that the compiler is invoked again when
+the binaries created are actually executed and only at that point the
+architecture to compile for is determined.</p>
+<p>On the other hand, Ahead-Of-Time (AOT) compilation describes the standard model
+where the compiler is only invoked once to create the binary and the
+architecture to compile for is determined before the program is run.</p>
+</section>
+</section>
 </section>
 </section>
 
@@ -1044,10 +1337,30 @@ compile for is determined before the program is run.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">CMake Keywords</a><ul>
-<li><a class="reference internal" href="#device-backends">Device Backends</a></li>
-<li><a class="reference internal" href="#enable-options">Enable Options</a></li>
+<li><a class="reference internal" href="#backend-selection">Backend selection</a><ul>
+<li><a class="reference internal" href="#serial-backend">Serial backend</a></li>
+<li><a class="reference internal" href="#host-parallel-backends">Host parallel backends</a></li>
+<li><a class="reference internal" href="#device-backends">Device backends</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#options">Options</a><ul>
+<li><a class="reference internal" href="#general-options">General options</a></li>
+<li><a class="reference internal" href="#debugging">Debugging</a></li>
+<li><a class="reference internal" href="#backend-specific-options">Backend-specific options</a></li>
+<li><a class="reference internal" href="#development">Development</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#third-party-libraries-tpls">Third-party Libraries (TPLs)</a></li>
-<li><a class="reference internal" href="#architecture-keywords">Architecture Keywords</a></li>
+<li><a class="reference internal" href="#architectures">Architectures</a><ul>
+<li><a class="reference internal" href="#cpu-architectures">CPU architectures</a></li>
+<li><a class="reference internal" href="#gpu-architectures">GPU Architectures</a><ul>
+<li><a class="reference internal" href="#nvidia-gpus">NVIDIA GPUs</a></li>
+<li><a class="reference internal" href="#amd-gpus">AMD GPUs</a></li>
+<li><a class="reference internal" href="#intel-gpus">Intel GPUs</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1067,5 +1380,6 @@ compile for is determined before the program is run.</p>
     <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/design-tabs.js"></script>
     </body>
 </html>

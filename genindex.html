@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     <link rel="stylesheet" type="text/css" href="_static/hacks.css" />
     
@@ -155,6 +156,7 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="programmingguide.html">Programming Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="ProgrammingGuide/Introduction.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ProgrammingGuide/Machine-Model.html">2. Machine Model</a></li>
@@ -188,6 +190,7 @@
 <li class="toctree-l3"><a class="reference internal" href="API/core/initialize_finalize/ScopeGuard.html"><code class="docutils literal notranslate"><span class="pre">ScopeGuard</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/initialize_finalize/InitializationSettings.html"><code class="docutils literal notranslate"><span class="pre">InitializationSettings</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/initialize_finalize/InitArguments.html">InitArguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/initialize_finalize/push_finalize_hook.html"><code class="docutils literal notranslate"><span class="pre">push_finalize_hook</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="API/core/View.html">View and related</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -293,18 +296,28 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="API/core/Utilities.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/abort.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::abort</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/all.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/assert.html"><code class="docutils literal notranslate"><span class="pre">KOKKOS_ASSERT</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/complex.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::complex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/min_max_clamp.html">Minimum/maximum operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/printf.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::printf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/swap.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::kokkos_swap</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/timer.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Timer</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/device_id.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::device_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/utilities/num_devices.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_devices</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/num_threads.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_threads</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="API/core/utilities/experimental.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="API/core/Detection-Idiom.html">Detection Idiom</a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/core/Macros.html">Macros</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="API/core/Profiling.html">Profiling</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="API/core/profiling/scoped_region.html"><code class="docutils literal notranslate"><span class="pre">Profiling::ScopedRegion</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="API/core/profiling/profiling_section.html"><code class="docutils literal notranslate"><span class="pre">Profiling::ProfilingSection</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="API/containers-index.html">API: Containers</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="API/containers-index.html">API: Containers</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/Bitset.html"><code class="docutils literal notranslate"><span class="pre">Bitset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/Bitset.html#constbitset"><code class="docutils literal notranslate"><span class="pre">ConstBitset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/DualView.html"><code class="docutils literal notranslate"><span class="pre">DualView</span></code></a></li>
@@ -314,23 +327,23 @@
 <li class="toctree-l2"><a class="reference internal" href="API/containers/ScatterView.html"><code class="docutils literal notranslate"><span class="pre">ScatterView</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/StaticCrsGraph.html"><code class="docutils literal notranslate"><span class="pre">StaticCrsGraph</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/containers/Unordered-Map.html"><code class="docutils literal notranslate"><span class="pre">UnorderedMap</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="API/containers/vector.html"><code class="docutils literal notranslate"><span class="pre">vector</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="API/containers/vector.html"><code class="docutils literal notranslate"><span class="pre">vector</span></code> [DEPRECATED]</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="API/algorithms-index.html">API: Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="API/algorithms-index.html">API: Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="API/algorithms/Random-Number.html">Random-Number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/algorithms/Random-Number.html#generator">Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/algorithms/Sort.html">Sort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/algorithms/Sort.html#sorting-with-nested-policies-team-and-thread-level">Sorting with nested policies (team- and thread-level)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="API/algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="API/algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="API/algorithms/std-algorithms/Iterators.html">Iterators</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdMinElement.html"><code class="docutils literal notranslate"><span class="pre">min_element</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdMaxElement.html"><code class="docutils literal notranslate"><span class="pre">max_element</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdMinMaxElement.html"><code class="docutils literal notranslate"><span class="pre">minmax_element</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdModSeq.html">Modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdModSeq.html">Modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCopy.html"><code class="docutils literal notranslate"><span class="pre">copy</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCopyIf.html"><code class="docutils literal notranslate"><span class="pre">copy_if</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCopy_n.html"><code class="docutils literal notranslate"><span class="pre">copy_n</span></code></a></li>
@@ -361,7 +374,7 @@
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdAdjacentFind.html"><code class="docutils literal notranslate"><span class="pre">adjacent_find</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCount.html"><code class="docutils literal notranslate"><span class="pre">count</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdCountIf.html"><code class="docutils literal notranslate"><span class="pre">count_if</span></code></a></li>
@@ -382,7 +395,7 @@
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdSearchN.html"><code class="docutils literal notranslate"><span class="pre">search_n</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdExclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">exclusive_scan</span></code></a></li>
@@ -392,13 +405,13 @@
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdIsSorted.html"><code class="docutils literal notranslate"><span class="pre">is_sorted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdIsSortedUntil.html"><code class="docutils literal notranslate"><span class="pre">is_sorted_until</span></code></a></li>
 </ul>
@@ -407,7 +420,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="API/simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="API/simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="API/simd/simd.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/simd/simd_mask.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd_mask</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="API/simd/where_expression.html"><code class="docutils literal notranslate"><span class="pre">Experimental::where_expression</span></code></a></li>
@@ -416,7 +429,7 @@
 <li class="toctree-l1"><a class="reference internal" href="API/alphabetical.html">API in Alphabetical Order</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deprecation_page.html">Deprecation for Kokkos-3.x</a></li>
 <li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known issues</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="usecases/MPI-Halo-Exchange.html">MPI Halo Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecases/Average-To-Nodes.html">ScatterView averaging elements to nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usecases/MDRangePolicy.html">MDRangePolicy Use Case</a></li>
@@ -430,7 +443,8 @@
 <li class="toctree-l2"><a class="reference internal" href="usecases/Moving_from_EnableUVM_to_SharedSpace.html">Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="testing-and-issue-tracking.html">Kokkos Planning and Testing</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="testing-and-issue-tracking/Kokkos-Project-Planning.html">Kokkos Project Planning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testing-and-issue-tracking/Requirements-Issues-and-Feedback.html">Requirements, Issues and Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testing-and-issue-tracking/Testing-Process-Details.html">Attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="testing-and-issue-tracking/Testing-Processes.html">Kokkos Testing Processes and Change Process</a></li>
@@ -438,7 +452,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos-tutorials">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=rUIcWtFU5qM">1. Intro, Build, Parallel dispatch</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=O-asHTtO7O4">2. Views and Spaces</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=nGyJS8u-6GY">3. Multidim loops and Data Structures</a></li>
@@ -450,7 +464,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos">GitHub Repo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="contributing.html">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="templates/index.html">Documentation Templates</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="templates/class_api.html">Class API Template</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="developer-guides/index.html">Developer Guides</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="developer-guides/prs-and-reviews.html">PRs and Reviews</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="citation.html">Citing Kokkos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
@@ -489,8 +514,22 @@
           
 <section class="genindex-section">
   <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#J"><strong>J</strong></a> | <a href="#K"><strong>K</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#V"><strong>V</strong></a></div>
+  <div class="genindex-jumpbox"><a href="#Symbols"><strong>Symbols</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#J"><strong>J</strong></a> | <a href="#K"><strong>K</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#V"><strong>V</strong></a></div>
 </section>
+<section id="Symbols" class="genindex-section">
+  <h2>Symbols</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="API/core/profiling/profiling_section.html#_CPPv4D0v">~ProfilingSection (C++ function)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="API/core/profiling/scoped_region.html#_CPPv4D0v">~ScopedRegion (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
 <section id="A" class="genindex-section">
   <h2>A</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
@@ -675,6 +714,8 @@
 </li>
         <li><a href="API/algorithms/std-algorithms/Iterators.html#_CPPv4I0DpE4cendDaRKN6Kokkos4ViewI8DataTypeDp10PropertiesEE">cend (C++ kokkosinlinefunction)</a>
 </li>
+        <li><a href="API/core/policies/RangePolicy.html#_CPPv49ChunkSizei">ChunkSize (C++ function)</a>
+</li>
         <li><a href="API/core/utilities/complex.html#_CPPv4I0E7complex">complex (C++ class)</a>
 </li>
         <li><a href="API/core/utilities/complex.html#_CPPv4I0EN7complex7complexERKNSt7complexI1TEE">complex::complex (C++ function)</a>
@@ -721,8 +762,6 @@
         </ul></li>
         <li><a href="API/core/utilities/complex.html#_CPPv4I0EN7complexaSER7complexI6ScalarERK1T">complex::operator= (C++ kokkosinlinefunction)</a>, <a href="API/core/utilities/complex.html#_CPPv4I0EN7complexaSER7complexI6ScalarERK7complexI1TE">[1]</a>, <a href="API/core/utilities/complex.html#_CPPv4I0EN7complexaSER7complexI6ScalarERKNSt7complexI1TEE">[2]</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="API/core/utilities/complex.html#_CPPv4I0EN7complexeqER7complexRKNSt7complexI1TEE">complex::operator== (C++ function)</a>
 
         <ul>
@@ -731,6 +770,8 @@
         </ul></li>
         <li><a href="API/core/utilities/complex.html#_CPPv4N7complex2reE">complex::re (C++ member)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="API/core/utilities/complex.html#_CPPv4N7complex4realE8RealType">complex::real (C++ kokkosinlinefunction)</a>, <a href="API/core/utilities/complex.html#_CPPv4N7complex4realEv">[1]</a>, <a href="API/core/utilities/complex.html#_CPPv4NK7complex4realEv">[2]</a>
 </li>
         <li><a href="API/core/utilities/complex.html#_CPPv4N7complex10value_typeE">complex::value_type (C++ type)</a>
@@ -756,6 +797,22 @@
         <li><a href="API/containers/Bitset.html#_CPPv4NK11ConstBitset4testEj">ConstBitset::test (C++ function)</a>
 </li>
         <li><a href="API/containers/ScatterView.html#_CPPv410contributeR4ViewI3DT1Dp2VPERKN6Kokkos12Experimental11ScatterViewI3DT22LY2ES2OP2CT2DPEE">contribute (C++ function)</a>
+</li>
+        <li><a href="templates/class_api.html#_CPPv4I0DpE10CoolerView">CoolerView (C++ class)</a>
+</li>
+        <li><a href="templates/class_api.html#_CPPv4N10CoolerView10CoolerViewERR10CoolerView">CoolerView::CoolerView (C++ function)</a>
+</li>
+        <li><a href="templates/class_api.html#_CPPv4N10CoolerView9data_typeE">CoolerView::data_type (C++ type)</a>
+</li>
+        <li><a href="templates/class_api.html#_CPPv4I0EN10CoolerView3fooE1U">CoolerView::foo (C++ function)</a>
+</li>
+        <li><a href="templates/class_api.html#_CPPv4N10CoolerView6foobarE">CoolerView::foobar (C++ type)</a>
+</li>
+        <li><a href="templates/class_api.html#_CPPv4N10CoolerView6foobatE">CoolerView::foobat (C++ type)</a>
+</li>
+        <li><a href="templates/class_api.html#_CPPv4N10CoolerView8some_varE">CoolerView::some_var (C++ member)</a>
+</li>
+        <li><a href="templates/class_api.html#_CPPv4N10CoolerViewD0Ev">CoolerView::~CoolerView (C++ function)</a>
 </li>
         <li><a href="API/core/view/create_mirror.html#_CPPv4I00E13create_mirror14ImplMirrorTypeDTN6Kokkos19WithoutInitializingEERK5SpaceRK8ViewType">create_mirror (C++ function)</a>, <a href="API/core/view/create_mirror.html#_CPPv4I00E13create_mirror14ImplMirrorTypeRK5SpaceRK8ViewType">[1]</a>, <a href="API/core/view/create_mirror.html#_CPPv4I0DpE13create_mirrorDaRKN4Impl12ViewCtorPropIDp12ViewCtorArgsEERK8ViewType">[2]</a>, <a href="API/core/view/create_mirror.html#_CPPv4I0E13create_mirrorN8ViewType10HostMirrorEDTN6Kokkos19WithoutInitializingEERK8ViewType">[3]</a>, <a href="API/core/view/create_mirror.html#_CPPv4I0E13create_mirrorN8ViewType10HostMirrorERK8ViewType">[4]</a>
 </li>
@@ -1038,6 +1095,20 @@
         <li><a href="API/core/view/view.html#_CPPv4I0ENK6extentE6size_tRK5iType">extent (C++ function)</a>
 </li>
         <li><a href="API/core/view/view.html#_CPPv4I0ENK10extent_intEiRK5iType">extent_int (C++ function)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="F" class="genindex-section">
+  <h2>F</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="API/core/builtinreducers/ReducerConcept.html#_CPPv4NK5finalER10value_type">final (C++ kokkosinlinefunction)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="templates/class_api.html#_CPPv412frobrnicatorR10CoolerView">frobrnicator (C++ function)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -1391,6 +1462,8 @@
   <h2>O</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="API/core/view/view.html#_CPPv4I0000Ecv6mdspanI16OtherElementType12OtherExtents17OtherLayoutPolicy13OtherAccessorEv">operator mdspan&lt;OtherElementType, OtherExtents, OtherLayoutPolicy, OtherAccessor&gt; (C++ function)</a>
+</li>
         <li><a href="API/core/view/view.html#_CPPv4I00Eneb7ViewDst7ViewSrc">operator!= (C++ function)</a>
 </li>
         <li><a href="API/core/view/view.html#_CPPv4NKclEDpRK7IntType">operator() (C++ function)</a>
@@ -1399,7 +1472,7 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="API/core/view/layoutStride.html#_CPPv4aSRK12LayoutStride">operator= (C++ function)</a>, <a href="API/core/view/layoutStride.html#_CPPv4aSRR12LayoutStride">[1]</a>
 </li>
-        <li><a href="API/core/view/view.html#_CPPv4I00Eeqb7ViewDst7ViewSrc">operator== (C++ function)</a>
+        <li><a href="API/core/view/view.html#_CPPv4I00Eeqb7ViewDst7ViewSrc">operator== (C++ function)</a>, <a href="templates/class_api.html#_CPPv4I0Eeqb10CoolerView7ViewSrc">[1]</a>
 </li>
         <li><a href="API/core/view/layoutStride.html#_CPPv416order_dimensionsKiPCK10iTypeOrderPCK10iTypeDimen">order_dimensions (C++ kokkosinlinefunction)</a>
 </li>
@@ -1423,10 +1496,10 @@
 </li>
         <li><a href="API/core/builtinreducers/Prod.html#_CPPv4NK4Prod4initER10value_type">Prod::init (C++ kokkosinlinefunction)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="API/core/builtinreducers/Prod.html#_CPPv4NK4Prod4joinER10value_typeRK10value_type">Prod::join (C++ kokkosinlinefunction)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="API/core/builtinreducers/Prod.html#_CPPv4N4Prod4ProdER10value_type">Prod::Prod (C++ kokkosinlinefunction)</a>, <a href="API/core/builtinreducers/Prod.html#_CPPv4N4Prod4ProdERK16result_view_type">[1]</a>
 </li>
         <li><a href="API/core/builtinreducers/Prod.html#_CPPv4N4Prod7reducerE">Prod::reducer (C++ type)</a>
@@ -1439,6 +1512,10 @@
 </li>
         <li><a href="API/core/builtinreducers/Prod.html#_CPPv4NK4Prod4viewEv">Prod::view (C++ kokkosinlinefunction)</a>
 </li>
+        <li><a href="API/core/profiling/profiling_section.html#_CPPv416ProfilingSectionRKNSt6stringE">ProfilingSection (C++ function)</a>
+</li>
+        <li><a href="API/core/initialize_finalize/push_finalize_hook.html#_CPPv418push_finalize_hookNSt8functionIFvvEEE">push_finalize_hook (C++ function)</a>
+</li>
     </ul></td>
   </tr></table>
 </section>
@@ -1447,7 +1524,7 @@
   <h2>R</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="API/core/policies/RangePolicy.html#_CPPv411RangePolicyv">RangePolicy (C++ function)</a>, <a href="API/core/policies/RangePolicy.html#_CPPv4IDpE11RangePolicyRK14ExecutionSpaceRK7int64_tRK7int64_tDpK8InitArgs">[1]</a>, <a href="API/core/policies/RangePolicy.html#_CPPv4IDpE11RangePolicyRK7int64_tRK7int64_tDpK8InitArgs">[2]</a>
+        <li><a href="API/core/policies/RangePolicy.html#_CPPv411RangePolicy7int64_t7int64_t">RangePolicy (C++ function)</a>, <a href="API/core/policies/RangePolicy.html#_CPPv411RangePolicy7int64_t7int64_t9ChunkSize">[1]</a>, <a href="API/core/policies/RangePolicy.html#_CPPv411RangePolicyRK14ExecutionSpace7int64_t7int64_t">[2]</a>, <a href="API/core/policies/RangePolicy.html#_CPPv411RangePolicyRK14ExecutionSpace7int64_t7int64_t9ChunkSize">[3]</a>, <a href="API/core/policies/RangePolicy.html#_CPPv411RangePolicyv">[4]</a>
 </li>
         <li><a href="API/core/view/view.html#_CPPv44rankv">rank (C++ function)</a>
 </li>
@@ -1505,6 +1582,8 @@
 </li>
         <li><a href="API/containers/ScatterView.html#_CPPv4NK11ScatterView7subviewEv">ScatterView::subview (C++ function)</a>
 </li>
+        <li><a href="API/core/profiling/scoped_region.html#_CPPv412ScopedRegionRKNSt6stringE">ScopedRegion (C++ function)</a>
+</li>
         <li><a href="API/core/initialize_finalize/ScopeGuard.html#_CPPv410ScopeGuard">ScopeGuard (C++ class)</a>
 </li>
         <li><a href="API/core/initialize_finalize/ScopeGuard.html#_CPPv4N10ScopeGuardaSERK10ScopeGuard">ScopeGuard::operator= (C++ function)</a>, <a href="API/core/initialize_finalize/ScopeGuard.html#_CPPv4N10ScopeGuardaSERR10ScopeGuard">[1]</a>
@@ -1524,6 +1603,10 @@
         <li><a href="API/core/view/view.html#_CPPv4NK18span_is_contiguousEv">span_is_contiguous (C++ function)</a>
 </li>
         <li><a href="API/core/view/view.html#_CPPv410specialize">specialize (C++ type)</a>
+</li>
+        <li><a href="API/core/profiling/profiling_section.html#_CPPv45startv">start (C++ function)</a>
+</li>
+        <li><a href="API/core/profiling/profiling_section.html#_CPPv44stopv">stop (C++ function)</a>
 </li>
         <li><a href="API/core/view/view.html#_CPPv4I0ENK6strideE6size_tRK5iType">stride (C++ function)</a>, <a href="API/core/view/view.html#_CPPv4I0ENK6strideEvP5iType">[1]</a>
 
@@ -1615,14 +1698,14 @@
 </li>
         <li><a href="API/core/policies/TeamPolicy.html#_CPPv4N10TeamPolicy15execution_spaceE">TeamPolicy::execution_space (C++ type)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="API/core/policies/TeamPolicy.html#_CPPv4N10TeamPolicy10index_typeE">TeamPolicy::index_type (C++ type)</a>
 </li>
         <li><a href="API/core/policies/TeamPolicy.html#_CPPv4N10TeamPolicy17iteration_patternE">TeamPolicy::iteration_pattern (C++ type)</a>
 </li>
         <li><a href="API/core/policies/TeamPolicy.html#_CPPv4N10TeamPolicy13launch_boundsE">TeamPolicy::launch_bounds (C++ type)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="API/core/policies/TeamPolicy.html#_CPPv4NK10TeamPolicy11league_sizeEv">TeamPolicy::league_size (C++ function)</a>
 </li>
         <li><a href="API/core/policies/TeamPolicy.html#_CPPv4N10TeamPolicy11member_typeE">TeamPolicy::member_type (C++ type)</a>
@@ -1653,9 +1736,23 @@
 </li>
         <li><a href="API/core/policies/TeamPolicy.html#_CPPv4N10TeamPolicy8work_tagE">TeamPolicy::work_tag (C++ type)</a>
 </li>
+        <li><a href="API/core/policies/TeamThreadMDRange.html#_CPPv4I00E17TeamThreadMDRange">TeamThreadMDRange (C++ class)</a>
+</li>
+        <li><a href="API/core/policies/TeamThreadMDRange.html#_CPPv4N17TeamThreadMDRange17TeamThreadMDRangeE4team8extent_18extent_2z">TeamThreadMDRange::TeamThreadMDRange (C++ function)</a>
+</li>
         <li><a href="API/core/policies/NestedPolicies.html#_CPPv415TeamThreadRange14TeamMemberType9IndexType">TeamThreadRange (C++ function)</a>, <a href="API/core/policies/NestedPolicies.html#_CPPv415TeamThreadRange14TeamMemberType9IndexType9IndexType">[1]</a>
 </li>
+        <li><a href="API/core/policies/TeamVectorMDRange.html#_CPPv4I00E17TeamVectorMDRange">TeamVectorMDRange (C++ class)</a>
+</li>
+        <li><a href="API/core/policies/TeamVectorMDRange.html#_CPPv4N17TeamVectorMDRange17TeamVectorMDRangeE4team8extent_18extent_2z">TeamVectorMDRange::TeamVectorMDRange (C++ function)</a>
+</li>
+        <li><a href="API/core/policies/ThreadVectorMDRange.html#_CPPv4I00E19ThreadVectorMDRange">ThreadVectorMDRange (C++ class)</a>
+</li>
+        <li><a href="API/core/policies/ThreadVectorMDRange.html#_CPPv4N19ThreadVectorMDRange19ThreadVectorMDRangeE4team8extent_18extent_2z">ThreadVectorMDRange::ThreadVectorMDRange (C++ function)</a>
+</li>
         <li><a href="API/core/policies/NestedPolicies.html#_CPPv417ThreadVectorRange14TeamMemberType9IndexType">ThreadVectorRange (C++ function)</a>, <a href="API/core/policies/NestedPolicies.html#_CPPv417ThreadVectorRange14TeamMemberType9IndexType9IndexType">[1]</a>
+</li>
+        <li><a href="API/core/view/view.html#_CPPv4I0E9to_mdspanDaRK17OtherAccessorType">to_mdspan (C++ function)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -1675,7 +1772,7 @@
 </li>
         <li><a href="API/containers/Unordered-Map.html#_CPPv4NK12UnorderedMap4findE3Key">UnorderedMap::find (C++ kokkosinlinefunction)</a>
 </li>
-        <li><a href="API/containers/Unordered-Map.html#_CPPv4NK12UnorderedMap6insertE3Key5Value">UnorderedMap::insert (C++ kokkosinlinefunction)</a>, <a href="API/containers/Unordered-Map.html#_CPPv4NK12UnorderedMap6insertE3key">[1]</a>
+        <li><a href="API/containers/Unordered-Map.html#_CPPv4NK12UnorderedMap6insertE3Key5Value6Insert">UnorderedMap::insert (C++ kokkosinlinefunction)</a>, <a href="API/containers/Unordered-Map.html#_CPPv4NK12UnorderedMap6insertE3key">[1]</a>
 </li>
         <li><a href="API/containers/Unordered-Map.html#_CPPv4NK12UnorderedMap12is_allocatedEv">UnorderedMap::is_allocated (C++ kokkosinlinefunction)</a>
 </li>
@@ -1683,15 +1780,21 @@
 </li>
         <li><a href="API/containers/Unordered-Map.html#_CPPv4N12UnorderedMap6rehashE8uint32_t">UnorderedMap::rehash (C++ function)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="API/containers/Unordered-Map.html#_CPPv4NK12UnorderedMap4sizeEv">UnorderedMap::size (C++ function)</a>
 </li>
         <li><a href="API/containers/Unordered-Map.html#_CPPv4N12UnorderedMap12UnorderedMapE8uint32_t">UnorderedMap::UnorderedMap (C++ function)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="API/containers/Unordered-Map.html#_CPPv4NK12UnorderedMap8valid_atE8uint32_t">UnorderedMap::valid_at (C++ kokkosinlinefunction)</a>
 </li>
         <li><a href="API/containers/Unordered-Map.html#_CPPv4NK12UnorderedMap8value_atE8uint32_t">UnorderedMap::value_at (C++ kokkosinlinefunction)</a>
+</li>
+        <li><a href="API/containers/Unordered-Map.html#_CPPv4I00E25UnorderedMapInsertOpTypes">UnorderedMapInsertOpTypes (C++ struct)</a>
+</li>
+        <li><a href="API/containers/Unordered-Map.html#_CPPv4N25UnorderedMapInsertOpTypes9AtomicAddE">UnorderedMapInsertOpTypes::AtomicAdd (C++ struct)</a>
+</li>
+        <li><a href="API/containers/Unordered-Map.html#_CPPv4N25UnorderedMapInsertOpTypes4NoOpE">UnorderedMapInsertOpTypes::NoOp (C++ struct)</a>
 </li>
         <li><a href="API/containers/Unordered-Map.html#_CPPv424UnorderedMapInsertResult">UnorderedMapInsertResult (C++ class)</a>
 </li>
@@ -1787,7 +1890,7 @@
 </li>
         <li><a href="API/containers/vector.html#_CPPv4N6vector6vectorEi6Scalar">vector::vector (C++ function)</a>, <a href="API/containers/vector.html#_CPPv4N6vector6vectorEv">[1]</a>
 </li>
-        <li><a href="API/core/view/view.html#_CPPv44View12pointer_typeDpRK7IntType">View (C++ function)</a>, <a href="API/core/view/view.html#_CPPv44View12pointer_typeRK12array_layout">[1]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK12ScratchSpaceDpRK7IntType">[2]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK12ScratchSpaceRK12array_layout">[3]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK15AllocPropertiesDpRK7IntType">[4]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK15AllocPropertiesRK12array_layout">[5]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK4ViewI2DTDp4PropE">[6]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK4ViewI2DTDp4PropEDp4Args">[7]</a>, <a href="API/core/view/view.html#_CPPv44ViewRKNSt6stringEDpRK7IntType">[8]</a>, <a href="API/core/view/view.html#_CPPv44ViewRKNSt6stringERK12array_layout">[9]</a>, <a href="API/core/view/view.html#_CPPv44ViewRR4View">[10]</a>, <a href="API/core/view/view.html#_CPPv44Viewv">[11]</a>
+        <li><a href="API/core/view/view.html#_CPPv44View12pointer_typeDpRK7IntType">View (C++ function)</a>, <a href="API/core/view/view.html#_CPPv44View12pointer_typeRK12array_layout">[1]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK12ScratchSpaceDpRK7IntType">[2]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK12ScratchSpaceRK12array_layout">[3]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK15AllocPropertiesDpRK7IntType">[4]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK15AllocPropertiesRK12array_layout">[5]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK19NATURAL_MDSPAN_TYPE">[6]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK4ViewI2DTDp4PropE">[7]</a>, <a href="API/core/view/view.html#_CPPv44ViewRK4ViewI2DTDp4PropEDp4Args">[8]</a>, <a href="API/core/view/view.html#_CPPv44ViewRKNSt6stringEDpRK7IntType">[9]</a>, <a href="API/core/view/view.html#_CPPv44ViewRKNSt6stringERK12array_layout">[10]</a>, <a href="API/core/view/view.html#_CPPv44ViewRR4View">[11]</a>, <a href="API/core/view/view.html#_CPPv44Viewv">[12]</a>, <a href="API/core/view/view.html#_CPPv4I0000E4ViewRK6mdspanI11ElementType11ExtentsType10LayoutType12AccessorTypeE">[13]</a>
 </li>
         <li><a href="API/core/builtinreducers/ReducerConcept.html#_CPPv4NK4viewEv">view (C++ kokkosinlinefunction)</a>
 </li>
@@ -1841,5 +1944,6 @@
     <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script src="_static/design-tabs.js"></script>
     </body>
 </html>

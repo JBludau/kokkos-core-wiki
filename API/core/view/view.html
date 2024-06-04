@@ -10,6 +10,7 @@
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/hacks.css" />
     
@@ -157,6 +158,7 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../quick_start.html">Quick Start</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../programmingguide.html">Programming Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../ProgrammingGuide/Introduction.html">1. Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../ProgrammingGuide/Machine-Model.html">2. Machine Model</a></li>
@@ -190,6 +192,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../initialize_finalize/ScopeGuard.html"><code class="docutils literal notranslate"><span class="pre">ScopeGuard</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../initialize_finalize/InitializationSettings.html"><code class="docutils literal notranslate"><span class="pre">InitializationSettings</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../initialize_finalize/InitArguments.html">InitArguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../initialize_finalize/push_finalize_hook.html"><code class="docutils literal notranslate"><span class="pre">push_finalize_hook</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../View.html">View and related</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -295,18 +298,28 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../Utilities.html">Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../utilities/abort.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::abort</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../utilities/all.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::ALL</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utilities/assert.html"><code class="docutils literal notranslate"><span class="pre">KOKKOS_ASSERT</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../utilities/complex.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::complex</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utilities/min_max_clamp.html">Minimum/maximum operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utilities/printf.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::printf</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utilities/swap.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::kokkos_swap</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../utilities/timer.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Timer</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../utilities/device_id.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::device_id</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../utilities/num_devices.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_devices</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../utilities/num_threads.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::num_threads</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../utilities/experimental.html"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Detection-Idiom.html">Detection Idiom</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Macros.html">Macros</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Profiling.html">Profiling</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../profiling/scoped_region.html"><code class="docutils literal notranslate"><span class="pre">Profiling::ScopedRegion</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../profiling/profiling_section.html"><code class="docutils literal notranslate"><span class="pre">Profiling::ProfilingSection</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../containers-index.html">API: Containers</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../containers-index.html">API: Containers</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../containers/Bitset.html"><code class="docutils literal notranslate"><span class="pre">Bitset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../containers/Bitset.html#constbitset"><code class="docutils literal notranslate"><span class="pre">ConstBitset</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../containers/DualView.html"><code class="docutils literal notranslate"><span class="pre">DualView</span></code></a></li>
@@ -316,23 +329,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../../containers/ScatterView.html"><code class="docutils literal notranslate"><span class="pre">ScatterView</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../containers/StaticCrsGraph.html"><code class="docutils literal notranslate"><span class="pre">StaticCrsGraph</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../containers/Unordered-Map.html"><code class="docutils literal notranslate"><span class="pre">UnorderedMap</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../containers/vector.html"><code class="docutils literal notranslate"><span class="pre">vector</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../containers/vector.html"><code class="docutils literal notranslate"><span class="pre">vector</span></code> [DEPRECATED]</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../algorithms-index.html">API: Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algorithms-index.html">API: Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../algorithms/Random-Number.html">Random-Number</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../algorithms/Random-Number.html#generator">Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../algorithms/Sort.html">Sort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../algorithms/Sort.html#sorting-with-nested-policies-team-and-thread-level">Sorting with nested policies (team- and thread-level)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../algorithms/std-algorithms-index.html">Std Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../algorithms/std-algorithms/Iterators.html">Iterators</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdMinMaxElement.html">Minimum/maximum</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdMinElement.html"><code class="docutils literal notranslate"><span class="pre">min_element</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdMaxElement.html"><code class="docutils literal notranslate"><span class="pre">max_element</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdMinMaxElement.html"><code class="docutils literal notranslate"><span class="pre">minmax_element</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdModSeq.html">Modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdModSeq.html">Modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdCopy.html"><code class="docutils literal notranslate"><span class="pre">copy</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdCopyIf.html"><code class="docutils literal notranslate"><span class="pre">copy_if</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdCopy_n.html"><code class="docutils literal notranslate"><span class="pre">copy_n</span></code></a></li>
@@ -363,7 +376,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdUniqueCopy.html"><code class="docutils literal notranslate"><span class="pre">unique_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdNonModSeq.html">Non-modifying Sequence</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdAdjacentFind.html"><code class="docutils literal notranslate"><span class="pre">adjacent_find</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdCount.html"><code class="docutils literal notranslate"><span class="pre">count</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdCountIf.html"><code class="docutils literal notranslate"><span class="pre">count_if</span></code></a></li>
@@ -384,7 +397,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdSearchN.html"><code class="docutils literal notranslate"><span class="pre">search_n</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdNumeric.html">Numeric</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdAdjacentDifference.html"><code class="docutils literal notranslate"><span class="pre">adjacent_difference</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdReduce.html"><code class="docutils literal notranslate"><span class="pre">reduce</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdExclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">exclusive_scan</span></code></a></li>
@@ -394,13 +407,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdSorting.html">Sorting</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdIsSorted.html"><code class="docutils literal notranslate"><span class="pre">is_sorted</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdIsSortedUntil.html"><code class="docutils literal notranslate"><span class="pre">is_sorted_until</span></code></a></li>
 </ul>
@@ -409,7 +422,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../simd-index.html">API: SIMD</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../simd/simd.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../simd/simd_mask.html"><code class="docutils literal notranslate"><span class="pre">Experimental::simd_mask</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../simd/where_expression.html"><code class="docutils literal notranslate"><span class="pre">Experimental::where_expression</span></code></a></li>
@@ -418,7 +431,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../alphabetical.html">API in Alphabetical Order</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../deprecation_page.html">Deprecation for Kokkos-3.x</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../known-issues.html">Known issues</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usecases.html">Use Cases and Examples</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../usecases/MPI-Halo-Exchange.html">MPI Halo Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../usecases/Average-To-Nodes.html">ScatterView averaging elements to nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../usecases/MDRangePolicy.html">MDRangePolicy Use Case</a></li>
@@ -432,7 +445,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../usecases/Moving_from_EnableUVM_to_SharedSpace.html">Moving code from requiring <code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> to using <code class="docutils literal notranslate"><span class="pre">SharedSpace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../testing-and-issue-tracking.html">Testing and Issue Tracking</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../testing-and-issue-tracking.html">Kokkos Planning and Testing</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../testing-and-issue-tracking/Kokkos-Project-Planning.html">Kokkos Project Planning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../testing-and-issue-tracking/Requirements-Issues-and-Feedback.html">Requirements, Issues and Feedback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../testing-and-issue-tracking/Testing-Process-Details.html">Attachments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../testing-and-issue-tracking/Testing-Processes.html">Kokkos Testing Processes and Change Process</a></li>
@@ -440,7 +454,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos-tutorials">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../videolectures.html">Video lectures and slides</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=rUIcWtFU5qM">1. Intro, Build, Parallel dispatch</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=O-asHTtO7O4">2. Views and Spaces</a></li>
 <li class="toctree-l2"><a class="reference external" href="https://www.youtube.com/watch?v=nGyJS8u-6GY">3. Multidim loops and Data Structures</a></li>
@@ -452,7 +466,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/kokkos/kokkos">GitHub Repo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../contributing.html">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../templates/index.html">Documentation Templates</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../templates/class_api.html">Class API Template</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../developer-guides/index.html">Developer Guides</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../developer-guides/prs-and-reviews.html">PRs and Reviews</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">FAQ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../citation.html">Citing Kokkos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
 </ul>
@@ -576,7 +601,7 @@ Their underlying types are unspecified, but equivalent to <code class="docutils 
 member function callable from host and device side.
 Users are encouraged to use <code class="docutils literal notranslate"><span class="pre">rank()</span></code> and <code class="docutils literal notranslate"><span class="pre">rank_dynamic()</span></code> (akin to a static member function call)
 instead of relying on implicit conversion to an integral type.</p>
-<p>The actual type of <code class="docutils literal notranslate"><span class="pre">rank[_dymanic]</span></code> as it was defined until Kokkos 4.1 was left up to the implementation
+<p>The actual type of <code class="docutils literal notranslate"><span class="pre">rank[_dynamic]</span></code> as it was defined until Kokkos 4.1 was left up to the implementation
 (that is, up to the compiler not to Kokkos) but in practice it was often <code class="docutils literal notranslate"><span class="pre">int</span></code> which means
 this change may yield warnings about comparing signed and unsigned integral types.
 It may also break code that was using the type of <code class="docutils literal notranslate"><span class="pre">View::rank</span></code>.
@@ -867,6 +892,63 @@ corresponding to compile-time dimensions must match the View type’s compile-ti
 <dd><p>Subview constructor. See <code class="docutils literal notranslate"><span class="pre">subview</span></code> function for arguments.</p>
 </dd></dl>
 
+<dl class="cppkokkos function">
+<dt class="sig sig-object cppkokkos" id="_CPPv44ViewRK19NATURAL_MDSPAN_TYPE">
+<span id="_CPPv34ViewRK19NATURAL_MDSPAN_TYPE"></span><span id="_CPPv24ViewRK19NATURAL_MDSPAN_TYPE"></span><span id="View__NATURAL_MDSPAN_TYPECR"></span><span class="k"><span class="pre">explicit</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">traits</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">is_managed</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">View</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">NATURAL_MDSPAN_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv44ViewRK19NATURAL_MDSPAN_TYPE" title="Permalink to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mds</strong> – the mdspan to convert from.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">explicit</span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span></code> is only available on C++20 and later. When building Kokkos with C++17, this constructor will be fully implicit.
+Be aware that later upgrading to C++20 will in some cases cause compilation issues in cases where <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">traits</span><span class="o">::</span><span class="n">is_managed</span></code> is <code class="code highlight cpp docutils literal highlight-cpp"><span class="nb">false</span></code>.</p>
+</div>
+<p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">NATURAL_MDSPAN_TYPE</span></code> is the <a class="reference internal" href="#api-view-natural-mdspans"><span class="std std-ref">natural mdspan</span></a> of the View. The <em>natural mdspan</em> is only available if <a class="reference internal" href="#_CPPv412array_layout" title="array_layout"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">array_layout</span></code></a> is one of <a class="reference internal" href="layoutLeft.html#_CPPv410LayoutLeft" title="LayoutLeft"><code class="xref cppkokkos cppkokkos-struct docutils literal notranslate"><span class="pre">LayoutLeft</span></code></a>, <a class="reference internal" href="layoutRight.html#_CPPv411LayoutRight" title="LayoutRight"><code class="xref cppkokkos cppkokkos-struct docutils literal notranslate"><span class="pre">LayoutRight</span></code></a>,
+or <a class="reference internal" href="layoutStride.html#_CPPv412LayoutStride" title="LayoutStride"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">LayoutStride</span></code></a>. This constructor is only available if <em>natural mdspan</em> is available.</p>
+<p>Constructs a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code> by converting from <code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">mds</span></code>. The <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code> will be unmanaged and constructed as if by <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">View</span><span class="p">(</span><span class="n">mds</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">array_layout_from_mapping</span><span class="p">(</span><span class="n">mds</span><span class="p">.</span><span class="n">mapping</span><span class="p">()))</span></code></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#api-view-natural-mdspans"><span class="std std-ref">Natural mdspans</span></a></p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4.0.</span></p>
+</div>
+</dd></dl>
+
+<dl class="cppkokkos function">
+<dt class="sig sig-object cppkokkos" id="_CPPv4I0000E4ViewRK6mdspanI11ElementType11ExtentsType10LayoutType12AccessorTypeE">
+<span id="_CPPv3I0000E4ViewRK6mdspanI11ElementType11ExtentsType10LayoutType12AccessorTypeE"></span><span id="_CPPv2I0000E4ViewRK6mdspanI11ElementType11ExtentsType10LayoutType12AccessorTypeE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ElementType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExtentsType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LayoutType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AccessorType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">explicit</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">SEE_BELOW</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">View</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">mdspan</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0000E4ViewRK6mdspanI11ElementType11ExtentsType10LayoutType12AccessorTypeE" title="View::ElementType"><span class="n"><span class="pre">ElementType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0000E4ViewRK6mdspanI11ElementType11ExtentsType10LayoutType12AccessorTypeE" title="View::ExtentsType"><span class="n"><span class="pre">ExtentsType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0000E4ViewRK6mdspanI11ElementType11ExtentsType10LayoutType12AccessorTypeE" title="View::LayoutType"><span class="n"><span class="pre">LayoutType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0000E4ViewRK6mdspanI11ElementType11ExtentsType10LayoutType12AccessorTypeE" title="View::AccessorType"><span class="n"><span class="pre">AccessorType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000E4ViewRK6mdspanI11ElementType11ExtentsType10LayoutType12AccessorTypeE" title="Permalink to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ElementType</strong> – the mdspan element type</p></li>
+<li><p><strong>ExtentsType</strong> – the mdspan extents</p></li>
+<li><p><strong>LayoutType</strong> – the mdspan layout</p></li>
+<li><p><strong>AccessorType</strong> – the mdspan extents</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>mds</strong> – the mdspan to convert from</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">explicit</span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span></code> is only available on C++20 and later. When building Kokkos with C++17, this constructor will be fully implicit.
+Be aware that later upgrading to C++20 will in some cases cause compilation issues in cases where the condition is false.</p>
+</div>
+<p>Constructs a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code> by converting from <code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">mds</span></code>.
+The <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code>’s <a class="reference internal" href="#api-view-natural-mdspans"><span class="std std-ref">natural mdspan</span></a> must be constructible from <code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">mds</span></code>. The <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code> will be constructed as if by <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">View</span><span class="p">(</span><span class="n">NATURAL_MDSPAN_TYPE</span><span class="p">(</span><span class="n">mds</span><span class="p">))</span></code></p>
+<dl class="simple">
+<dt>In C++20:</dt><dd><p>This constructor is implicit if <code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">mds</span></code> is implicitly convertible to the <em>natural mdspan</em> of the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code>.</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4.0.</span></p>
+</div>
+</dd></dl>
+
 </section>
 <section id="data-access-functions">
 <h3>Data Access Functions<a class="headerlink" href="#data-access-functions" title="Permalink to this heading">#</a></h3>
@@ -1071,6 +1153,46 @@ address is valid, only that it is a non-null pointer.</p>
 </dd></dl>
 
 </section>
+<section id="conversion-to-mdspan">
+<h3>Conversion to mdspan<a class="headerlink" href="#conversion-to-mdspan" title="Permalink to this heading">#</a></h3>
+<dl class="cppkokkos function">
+<dt class="sig sig-object cppkokkos" id="_CPPv4I0000Ecv6mdspanI16OtherElementType12OtherExtents17OtherLayoutPolicy13OtherAccessorEv">
+<span id="_CPPv3I0000Ecv6mdspanI16OtherElementType12OtherExtents17OtherLayoutPolicy13OtherAccessorEv"></span><span id="_CPPv2I0000Ecv6mdspanI16OtherElementType12OtherExtents17OtherLayoutPolicy13OtherAccessorEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OtherElementType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OtherExtents</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OtherLayoutPolicy</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OtherAccessor</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="w"> </span><span class="n"><span class="pre">mdspan</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0000Ecv6mdspanI16OtherElementType12OtherExtents17OtherLayoutPolicy13OtherAccessorEv" title="operator mdspan&lt;OtherElementType, OtherExtents, OtherLayoutPolicy, OtherAccessor&gt;::OtherElementType"><span class="n"><span class="pre">OtherElementType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0000Ecv6mdspanI16OtherElementType12OtherExtents17OtherLayoutPolicy13OtherAccessorEv" title="operator mdspan&lt;OtherElementType, OtherExtents, OtherLayoutPolicy, OtherAccessor&gt;::OtherExtents"><span class="n"><span class="pre">OtherExtents</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0000Ecv6mdspanI16OtherElementType12OtherExtents17OtherLayoutPolicy13OtherAccessorEv" title="operator mdspan&lt;OtherElementType, OtherExtents, OtherLayoutPolicy, OtherAccessor&gt;::OtherLayoutPolicy"><span class="n"><span class="pre">OtherLayoutPolicy</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0000Ecv6mdspanI16OtherElementType12OtherExtents17OtherLayoutPolicy13OtherAccessorEv" title="operator mdspan&lt;OtherElementType, OtherExtents, OtherLayoutPolicy, OtherAccessor&gt;::OtherAccessor"><span class="n"><span class="pre">OtherAccessor</span></span></a><span class="p"><span class="pre">&gt;</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000Ecv6mdspanI16OtherElementType12OtherExtents17OtherLayoutPolicy13OtherAccessorEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>OtherElementType</strong> – the target mdspan element type</p></li>
+<li><p><strong>OtherExtents</strong> – the target mdspan extents</p></li>
+<li><p><strong>OtherLayoutPolicy</strong> – the target mdspan layout</p></li>
+<li><p><strong>OtherAccessor</strong> – the target mdspan accessor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Constraints<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code>‘s <a class="reference internal" href="#api-view-natural-mdspans"><span class="std std-ref">natural mdspan</span></a> must be assignable to <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">mdspan</span><span class="o">&lt;</span><span class="n">OtherElementType</span><span class="p">,</span><span class="w"> </span><span class="n">OtherExtents</span><span class="p">,</span><span class="w"> </span><span class="n">OtherLayoutPolicy</span><span class="p">,</span><span class="w"> </span><span class="n">OtherAccessor</span><span class="o">&gt;</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>an mdspan with extents and a layout converted from the <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code>’s <em>natural mdspan</em>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cppkokkos function">
+<dt class="sig sig-object cppkokkos" id="_CPPv4I0E9to_mdspanDaRK17OtherAccessorType">
+<span id="_CPPv3I0E9to_mdspanRK17OtherAccessorType"></span><span id="_CPPv2I0E9to_mdspanRK17OtherAccessorType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OtherAccessorType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">Kokkos</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">default_accessor</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">traits</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">value_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">to_mdspan</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E9to_mdspanDaRK17OtherAccessorType" title="to_mdspan::OtherAccessorType"><span class="n"><span class="pre">OtherAccessorType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other_accessor</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0E9to_mdspanDaRK17OtherAccessorType" title="to_mdspan::OtherAccessorType"><span class="n"><span class="pre">OtherAccessorType</span></span></a><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0E9to_mdspanDaRK17OtherAccessorType" title="Permalink to this definition">#</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>OtherAccessor</strong> – the target mdspan accessor</p>
+</dd>
+<dt class="field-even">Constraints<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">typename</span><span class="w"> </span><span class="nc">OtherAccessorType</span><span class="o">::</span><span class="n">data_handle_type</span></code> must be assignable to <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">value_type</span><span class="o">*</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code>‘s <a class="reference internal" href="#api-view-natural-mdspans"><span class="std std-ref">natural mdspan</span></a>, but with an accessor policy constructed from <code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">other_accessor</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 </section>
 <section id="nonmember-functions">
 <h2>NonMember Functions<a class="headerlink" href="#nonmember-functions" title="Permalink to this heading">#</a></h2>
@@ -1093,7 +1215,7 @@ address is valid, only that it is a non-null pointer.</p>
 while intercepting illegal assignments if possible at compile time, otherwise at runtime.
 In the following we use <code class="docutils literal notranslate"><span class="pre">DstType</span></code> and <code class="docutils literal notranslate"><span class="pre">SrcType</span></code> as the type of the destination view and source view respectively.
 <code class="docutils literal notranslate"><span class="pre">dst_view</span></code> and <code class="docutils literal notranslate"><span class="pre">src_view</span></code> refer to the runtime instances of the destination and source views, i.e.:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ScrType</span><span class="w"> </span><span class="nf">src_view</span><span class="p">(...);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">SrcType</span><span class="w"> </span><span class="nf">src_view</span><span class="p">(...);</span>
 <span class="n">DstType</span><span class="w"> </span><span class="nf">dst_view</span><span class="p">(</span><span class="n">src_view</span><span class="p">);</span>
 <span class="n">dst_view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">src_view</span><span class="p">;</span>
 </pre></div>
@@ -1142,6 +1264,35 @@ These rules only cover cases where both layouts are one of <code class="docutils
 </pre></div>
 </div>
 </section>
+</section>
+<section id="natural-mdspans">
+<span id="api-view-natural-mdspans"></span><h2>Natural mdspans<a class="headerlink" href="#natural-mdspans" title="Permalink to this heading">#</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 4.4.0.</span></p>
+</div>
+<p>C++23 introduces <a class="reference external" href="https://en.cppreference.com/w/cpp/container/mdspan">mdspan</a>, a non-owning multidimensional array view.
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code> is compatible with <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">mdspan</span></code> and can be implicitly converted from and to valid mdspans.
+These conversion rules are dictated by the <em>natural mdspan</em> of a view.
+For an mdspan <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">m</span></code> of type <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">M</span></code> that is the <em>natural mdspan</em> of a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">View</span></code> <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">v</span></code> of type <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">V</span></code>, the following properties hold:</p>
+<ol class="arabic simple">
+<li><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">M</span><span class="o">::</span><span class="n">value_type</span></code> is <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">V</span><span class="o">::</span><span class="n">value_type</span></code></p></li>
+<li><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">M</span><span class="o">::</span><span class="n">index_type</span></code> is <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span></code>.</p></li>
+<li><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">M</span><span class="o">::</span><span class="n">extents_type</span></code> is <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">extents</span><span class="o">&lt;</span><span class="n">M</span><span class="o">::</span><span class="n">index_type</span><span class="p">,</span><span class="w"> </span><span class="n">Extents</span><span class="p">...</span><span class="o">&gt;</span></code> where</p>
+<ul class="simple">
+<li><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="k">sizeof</span><span class="p">(</span><span class="n">Extents</span><span class="p">...)</span></code> is <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">V</span><span class="o">::</span><span class="n">rank</span><span class="p">()</span></code></p></li>
+<li><p>and each element at index <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">r</span></code> of <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">Extents</span><span class="p">...</span></code> is <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">V</span><span class="o">::</span><span class="n">static_extents</span><span class="p">(</span><span class="n">r</span><span class="p">)</span></code> if <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">V</span><span class="o">::</span><span class="n">static_extents</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span></code>, otherwise <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">dynamic_extent</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">M</span><span class="o">::</span><span class="n">layout_type</span></code> is</p>
+<ul class="simple">
+<li><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">layout_left_padded</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">dynamic_extent</span><span class="o">&gt;</span></code> if <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">V</span><span class="o">::</span><span class="n">array_layout</span></code> is <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">LayoutLeft</span></code></p></li>
+<li><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">layout_right_padded</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">dynamic_extent</span><span class="o">&gt;</span></code> if <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">V</span><span class="o">::</span><span class="n">array_layout</span></code> is <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">LayoutRight</span></code></p></li>
+<li><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">layout_stride</span></code> if <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">V</span><span class="o">::</span><span class="n">array_layout</span></code> is <a class="reference internal" href="layoutStride.html#_CPPv412LayoutStride" title="LayoutStride"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">LayoutStride</span></code></a></p></li>
+</ul>
+</li>
+<li><p><code class="code highlight cpp docutils literal highlight-cpp"><span class="n">M</span><span class="o">::</span><span class="n">accessor_type</span></code> is <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">std</span><span class="o">::</span><span class="n">default_accessor</span><span class="o">&lt;</span><span class="n">V</span><span class="o">::</span><span class="n">value_type</span><span class="o">&gt;</span></code></p></li>
+</ol>
+<p>Additionally, the <em>natural mdspan</em> is constructed so that <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">m</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">data</span><span class="p">()</span></code> and for each extent <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">r</span></code>, <code class="code highlight cpp docutils literal highlight-cpp"><span class="n">m</span><span class="p">.</span><span class="n">extents</span><span class="p">().</span><span class="n">extent</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">extent</span><span class="p">(</span><span class="n">r</span><span class="p">)</span></code>.</p>
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
@@ -1252,6 +1403,7 @@ These rules only cover cases where both layouts are one of <code class="docutils
 <li><a class="reference internal" href="#data-access-functions">Data Access Functions</a></li>
 <li><a class="reference internal" href="#data-layout-dimensions-strides">Data Layout, Dimensions, Strides</a></li>
 <li><a class="reference internal" href="#other">Other</a></li>
+<li><a class="reference internal" href="#conversion-to-mdspan">Conversion to mdspan</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#nonmember-functions">NonMember Functions</a></li>
@@ -1259,6 +1411,7 @@ These rules only cover cases where both layouts are one of <code class="docutils
 <li><a class="reference internal" href="#assignment-examples">Assignment Examples</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#natural-mdspans">Natural mdspans</a></li>
 <li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
@@ -1279,5 +1432,6 @@ These rules only cover cases where both layouts are one of <code class="docutils
     <script src="../../../_static/scripts/furo.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
     </body>
 </html>

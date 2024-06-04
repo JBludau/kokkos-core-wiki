@@ -146,7 +146,7 @@ struct functor {
   }
 };
 ```
-The `set_scratch_size` function of the [`TeamPolicy`](../API/core/policies/TeamPolicy) takes two or three arguments. The first argument specifies the level in the scratch hierarchy for which a specific size is requested. Different levels have different restrictions. Generally, the first level is restricted to a few tens of kilobytes roughly corresponding to L1 cache size. The second level can be used to get an aggregate over all teams of a few gigabyte, corresponding to available space in high-bandwidth memory. The third level mostly falls back to capacity memory in the node. The second and third argument are either per-thread or per-team sizes for scratch memory. Note like previously discussed, the setter function does not modify the instance it is called on, but returns a copy of the policy object with adjusted scratch size request.
+The `set_scratch_size` function of the [`TeamPolicy`](../API/core/policies/TeamPolicy) takes two or three arguments. The first argument specifies the level in the scratch hierarchy for which a specific size is requested. Different levels have different restrictions. Generally, the first level is restricted to a few tens of kilobytes roughly corresponding to L1 cache size. The second level can be used to get an aggregate over all teams of a few gigabyte, corresponding to available space in high-bandwidth memory. The third level mostly falls back to capacity memory in the node. The second and third argument are either per-thread or per-team sizes for scratch memory.
 
 Here are some examples:
 
@@ -263,7 +263,7 @@ The third pattern is [`parallel_scan()`](../API/core/parallel-dispatch/parallel_
 
 #### 8.4.1.1 Team Barriers
 
-In instances where one loop operation might need to be sequenced with a different loop operation, such as filling of arrays as a preparation stage for following computations on that data, it is important to be able to control threads in time; this can be done through the use of barriers. In nested loops, the outside loop ( [`TeamPolicy<> ()`](../API/core/policies/TeamPolicy) ) has a built-in (implicit) team barrier; inner loops ( [`TeamThreadRange ()`](../API/core/policies/TeamThreadRange.md) ) do not. This latter condition is often referred to as a 'non-blocking' condition. When necessary, an explicit barrier can be introduced to synchronize team threads; an example is shown in the previous example. 
+In instances where one loop operation might need to be sequenced with a different loop operation, such as filling of arrays as a preparation stage for following computations on that data, it is important to be able to control threads in time; this can be done through the use of barriers. In nested loops, the outside loop ( [`TeamPolicy<> ()`](../API/core/policies/TeamPolicy) ) has a built-in (implicit) team barrier; inner loops ( [`TeamThreadRange ()`](../API/core/policies/TeamThreadRange) ) do not. This latter condition is often referred to as a 'non-blocking' condition. When necessary, an explicit barrier can be introduced to synchronize team threads; an example is shown in the previous example. 
 
 ### 8.4.2 Vector loops
 
@@ -308,7 +308,7 @@ As the name indicates the vector-level must be vectorizable. The parallel patter
 
 As stated above, a kernel is a parallel region with respect to threads (and vector lanes) within a team. This means that global memory accesses outside of the respective nested levels potentially have to be protected against repetitive execution. A common example is the case where a team performs some calculation but only one result per team has to be written back to global memory.
 
-Kokkos provides the `Kokkkos::single(Policy,Lambda)` function for this case. It currently accepts two policies:
+Kokkos provides the `Kokkos::single(Policy,Lambda)` function for this case. It currently accepts two policies:
 
 * `Kokkos::PerTeam` restricts execution of the lambda's body to once per team
 * `Kokkos::PerThread` restricts execution of the lambda's body to once per thread (that is, to only one vector lane in a thread)
