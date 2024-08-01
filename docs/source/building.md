@@ -51,7 +51,7 @@ which activates the OpenMP backend. All the options controlling device backends,
 
 ## Separate Compilation via CMake Language
 
-Kokkos supports separating the compilation of source files using Kokkos from others. This is controlled similar to a CMake language. The feature requires Kokkos to be compiled with the keyword `Kokkos_ENABLE_COMPILE_AS_CMAKE_LANGUAGE=ON`. The availability of the feature can be checked via `find_package(Kokkos COMPONENTS separable_compilation)`.
+Kokkos supports separating the compilation of source files using Kokkos from others. This is controlled similarly to a CMake language. The feature requires Kokkos to be compiled with the keyword `Kokkos_ENABLE_COMPILE_AS_CMAKE_LANGUAGE=ON`. The availability of the feature can be requested via `find_package(Kokkos COMPONENTS separable_compilation)`.
 The `kokkos_compilation` CMake function marks files in the application's source that contain Kokkos code to be compiled with the correct compiler and flags.
 ````cmake
 # this function is provided to easily select which files use the same compiler as Kokkos
