@@ -407,7 +407,7 @@
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdPartitioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
@@ -529,6 +529,16 @@
 <p class="admonition-title">Important</p>
 <p>With version 3.0 all Kokkos CMake keywords are prefixed with <cite>Kokkos_</cite> which is case-sensitive.</p>
 <p>Recall that to set a keyword in CMake you used the syntax <code class="docutils literal notranslate"><span class="pre">-Dkeyword_name=value</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ccmake</span></code> graphical user interface offers a convenient way to explore
+available CMake options and their current values. It may be more up to date
+with the Kokkos version that you are using.
+<strong>A word of warning:</strong> variables with names containing <code class="docutils literal notranslate"><span class="pre">IMPL</span></code> are private
+implementation details. Avoid modifying these unless you have a deep
+understanding of their implications and are aware that they might change
+without notice.</p>
 </div>
 <p>This page is organized in four sections:</p>
 <ul class="simple">
@@ -744,21 +754,24 @@ Serial backend, which provides a sequential execution model.</p>
 <td><p>Activate experimental relaxed constexpr functions</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_LAMBDA</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_LAMBDA</span></code> <span class="red">[Deprecated since 4.1]</span></p></td>
 <td><p>Activate experimental lambda features</p></td>
 <td><p>(see below)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_LDG_INTRINSIC</span></code></p></td>
-<td><p>Use CUDA LDG intrinsics</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_RELOCATABLE_DEVICE_CODE</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_RELOCATABLE_DEVICE_CODE</span></code></p></td>
 <td><p>Enable relocatable device code (RDC) for CUDA</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> <span class="red">[Deprecated since 4.0]</span> see <a class="reference external" href="usecases/Moving_from_EnableUVM_to_SharedSpace.html">Transition to alternatives</a></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_UVM</span></code> <span class="red">[Deprecated since 4.0]</span> see <a class="reference external" href="usecases/Moving_from_EnableUVM_to_SharedSpace.html">Transition to alternatives</a></p></td>
 <td><p>Use unified memory (UM) by default for CUDA</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_IMPL_CUDA_MALLOC_ASYNC</span></code></p></td>
+<td><p>Use <code class="docutils literal notranslate"><span class="pre">cudaMallocAsync</span></code> (requires CUDA Toolkit version 11.2 or higher). This
+optimization may improve performance in applications with multiple CUDA streams per device, but it
+is known to be incompatible with MPI distributions built on older versions of UCX
+and many Cray MPICH instances. See <a class="reference external" href="known-issues.html#cuda">known issues</a>.</p></td>
+<td><p>(see below)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_HIP_MULTIPLE_KERNEL_INSTANTIATIONS</span></code></p></td>
 <td><p>Instantiate multiple kernels at compile time - improve performance but increase compile time</p></td>
@@ -772,10 +785,15 @@ Serial backend, which provides a sequential execution model.</p>
 <td><p>Disable atomics when no host parallel nor device backend is enabled for Serial only builds (since Kokkos 4.3)</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">OFF</span></code></p></td>
 </tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_IMPL_HPX_ASYNC_DISPATCH</span></code></p></td>
+<td><p>Enable asynchronous dispatch for the HPX backend</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ON</span></code></p></td>
+</tr>
 </tbody>
 </table>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_CUDA_LAMBDA</span></code> default value is <code class="docutils literal notranslate"><span class="pre">OFF</span></code> until 3.7 and <code class="docutils literal notranslate"><span class="pre">ON</span></code> since 4.0</p>
+<p><code class="docutils literal notranslate"><span class="pre">Kokkos_ENABLE_IMPL_CUDA_MALLOC_ASYNC</span></code> default value is <code class="docutils literal notranslate"><span class="pre">OFF</span></code> except in 4.2, 4.3, and 4.4</p>
 </section>
 <section id="development">
 <h3>Development<a class="headerlink" href="#development" title="Permalink to this heading">#</a></h3>
@@ -1154,30 +1172,40 @@ Kokkos will attempt to autodetect the architecture flag at configuration time.</
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX942</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX942_APU</span></code></p></td>
+<td><p>GFX942</p></td>
+<td><p>MI300A</p></td>
+<td><p>(since Kokkos 4.5)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX942</span></code></p></td>
 <td><p>GFX942</p></td>
 <td><p>MI300A, MI300X</p></td>
-<td><p>(since Kokkos 4.2)</p></td>
+<td><p>(since Kokkos 4.2, since Kokkos 4.5 this should only be used for MI300X)</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX940</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX940</span></code></p></td>
 <td><p>GFX940</p></td>
 <td><p>MI300A (pre-production)</p></td>
 <td><p>(since Kokkos 4.2.1)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX90A</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX90A</span></code></p></td>
 <td><p>GFX90A</p></td>
 <td><p>MI200 series</p></td>
 <td><p>(since Kokkos 4.2)</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX908</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX908</span></code></p></td>
 <td><p>GFX90A</p></td>
 <td><p>MI100</p></td>
 <td><p>(since Kokkos 4.2)</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX906</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX906</span></code></p></td>
 <td><p>GFX906</p></td>
 <td><p>MI50, MI60</p></td>
 <td><p>(since Kokkos 4.2)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX1103</span></code></p></td>
+<td><p>GFX1103</p></td>
+<td><p>Ryzen 8000G Phoenix series APU</p></td>
+<td><p>(since Kokkos 4.5)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Kokkos_ARCH_AMD_GFX1100</span></code></p></td>
 <td><p>GFX1100</p></td>
@@ -1307,7 +1335,7 @@ architecture to compile for is determined before the program is run.</p>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2014, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
+                Copyright &#169; 2024, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

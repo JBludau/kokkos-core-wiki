@@ -43,7 +43,7 @@ Kokkos chooses the two spaces using the following list:
 2. `Kokkos::Experimental::HPX`
 3. `Kokkos::Experimental::OpenACC`
 4. `Kokkos::Experimental::OpenMPTarget`
-5. `Kokkos::Experimental::SYCL`
+5. `Kokkos::SYCL`
 6. `Kokkos::HIP`
 7. `Kokkos::OpenMP`
 8. `Kokkos::Threads`
@@ -73,6 +73,8 @@ Table 5.1: Command-line options for Kokkos::initialize
     - allow Kokkos to autotune policies and declare tuning features through the tuning system. If left off, Kokkos uses heuristics.
   * - --kokkos-num-threads=INT     
     - specify total number of threads to use for parallel regions on the host
+  * - --kokkos-device-id=INT
+    - specify device id to be used by Kokkos
   * - --kokkos-map-device-id-by=(random\|mpi_rank), default: mpi_rank
     - strategy to select device-id automatically from available devices: random or mpi_rank:sup:`2`
   * - --kokkos-tools-libs=STR      
@@ -90,6 +92,7 @@ The values are case insensitive.
 
 
 :sup:`1` This is the preferred set of defaults when CUDA and OpenMP are enabled. If you use a thread-parallel host execution space, we prefer Kokkos' OpenMP backend, as this ensures compatibility of Kokkos' threads with the application's direct use of OpenMP threads. Kokkos cannot promise that its Threads backend will not conflict with the application's direct use of operating system threads.
+
 :sup:`2` The two device-id mapping strategies are:
 - random: select a random device from available.
 - mpi_rank: select device based on a round robin assignment of local MPI ranks. Works with OpenMPI, MVAPICH, SLURM, and derived implementations. Support for MPICH was added in Kokkos 4.0

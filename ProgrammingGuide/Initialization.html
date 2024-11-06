@@ -407,7 +407,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../API/algorithms/std-algorithms/StdPartitioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../API/algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
@@ -559,7 +559,7 @@ Kokkos chooses the two spaces using the following list:</p>
 <li><p><cite>Kokkos::Experimental::HPX</cite></p></li>
 <li><p><cite>Kokkos::Experimental::OpenACC</cite></p></li>
 <li><p><cite>Kokkos::Experimental::OpenMPTarget</cite></p></li>
-<li><p><cite>Kokkos::Experimental::SYCL</cite></p></li>
+<li><p><cite>Kokkos::SYCL</cite></p></li>
 <li><p><cite>Kokkos::HIP</cite></p></li>
 <li><p><cite>Kokkos::OpenMP</cite></p></li>
 <li><p><cite>Kokkos::Threads</cite></p></li>
@@ -593,16 +593,19 @@ Kokkos chooses the two spaces using the following list:</p>
 <tr class="row-even"><td><p>–kokkos-num-threads=INT</p></td>
 <td><p>specify total number of threads to use for parallel regions on the host</p></td>
 </tr>
-<tr class="row-odd"><td><p>–kokkos-map-device-id-by=(random|mpi_rank), default: mpi_rank</p></td>
+<tr class="row-odd"><td><p>–kokkos-device-id=INT</p></td>
+<td><p>specify device id to be used by Kokkos</p></td>
+</tr>
+<tr class="row-even"><td><p>–kokkos-map-device-id-by=(random|mpi_rank), default: mpi_rank</p></td>
 <td><p>strategy to select device-id automatically from available devices: random or mpi_rank:sup:<cite>2</cite></p></td>
 </tr>
-<tr class="row-even"><td><p>–kokkos-tools-libs=STR</p></td>
+<tr class="row-odd"><td><p>–kokkos-tools-libs=STR</p></td>
 <td><p>specify which of the tools to use. Must either be full path to library or name of library if the path is present in the runtime library search path (e.g. LD_LIBRARY_PATH)</p></td>
 </tr>
-<tr class="row-odd"><td><p>–kokkos-tools-help</p></td>
+<tr class="row-even"><td><p>–kokkos-tools-help</p></td>
 <td><p>query the (loaded) kokkos-tool for its command-line option support (which should then be passed via –kokkos-tools-args=”…”)</p></td>
 </tr>
-<tr class="row-even"><td><p>–kokkos-tools-args=STR</p></td>
+<tr class="row-odd"><td><p>–kokkos-tools-args=STR</p></td>
 <td><p>a single (quoted) string of options which will be whitespace delimited and passed to the loaded kokkos-tool as command-line arguments. E.g. <cite>&lt;EXE&gt; –kokkos-tools-args=”-c input.txt”</cite> will pass <cite>&lt;EXE&gt; -c input.txt</cite> as argc/argv to tool</p></td>
 </tr>
 </tbody>
@@ -616,8 +619,8 @@ Kokkos chooses the two spaces using the following list:</p>
 </dd>
 </dl>
 <p>The values are case insensitive.</p>
-<p><sup>1</sup> This is the preferred set of defaults when CUDA and OpenMP are enabled. If you use a thread-parallel host execution space, we prefer Kokkos’ OpenMP backend, as this ensures compatibility of Kokkos’ threads with the application’s direct use of OpenMP threads. Kokkos cannot promise that its Threads backend will not conflict with the application’s direct use of operating system threads.
-<sup>2</sup> The two device-id mapping strategies are:
+<p><sup>1</sup> This is the preferred set of defaults when CUDA and OpenMP are enabled. If you use a thread-parallel host execution space, we prefer Kokkos’ OpenMP backend, as this ensures compatibility of Kokkos’ threads with the application’s direct use of OpenMP threads. Kokkos cannot promise that its Threads backend will not conflict with the application’s direct use of operating system threads.</p>
+<p><sup>2</sup> The two device-id mapping strategies are:
 - random: select a random device from available.
 - mpi_rank: select device based on a round robin assignment of local MPI ranks. Works with OpenMPI, MVAPICH, SLURM, and derived implementations. Support for MPICH was added in Kokkos 4.0</p>
 </section>
@@ -691,7 +694,7 @@ Kokkos chooses the two spaces using the following list:</p>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2014, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
+                Copyright &#169; 2024, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

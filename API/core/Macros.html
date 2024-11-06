@@ -407,7 +407,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdPartitioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
@@ -528,18 +528,92 @@
 <section id="version-macros">
 <h2>Version Macros<a class="headerlink" href="#version-macros" title="Permalink to this heading">#</a></h2>
 <div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<table class="docutils align-left">
 <thead>
-<tr class="row-odd"><th class="head"><p>Macro</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="head"><p>Version integer macros</p></th>
+<th class="head"><p>Example value assuming Kokkos version 4.2.1</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION</span></code></p></td>
-<td><p>The Kokkos version; <code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION</span> <span class="pre">%</span> <span class="pre">100</span></code> is the patch level, <code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION</span> <span class="pre">/</span> <span class="pre">100</span> <span class="pre">%</span> <span class="pre">100</span></code> is the minor version, and <code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION</span> <span class="pre">/</span> <span class="pre">10000</span></code> is the major version.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">40201</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_MAJOR</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_MINOR</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">2</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_PATCH</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>Kokkos version macros are defined as integers.
+<code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">&lt;MAJOR&gt;*10000</span> <span class="pre">+</span> <span class="pre">&lt;MINOR&gt;*100</span> <span class="pre">+</span> <span class="pre">&lt;PATCH&gt;</span></code>.
+<code class="docutils literal notranslate"><span class="pre">40201</span></code> corresponds to the Kokkos 4.2.1 release version.
+A <code class="docutils literal notranslate"><span class="pre">99</span></code> patch number denotes a development version.  That is, <code class="docutils literal notranslate"><span class="pre">40199</span></code>
+corresponds to the Kokkos development version post release 4.1</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kokkos_Core.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">KOKKOS_VERSION_MAJOR</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KOKKOS_VERSION</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">10000</span><span class="p">);</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">KOKKOS_VERSION_MINOR</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KOKKOS_VERSION</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">KOKKOS_VERSION_PATCH</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">KOKKOS_VERSION</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="cp">#if KOKKOS_VERSION &gt;= 30700</span>
+<span class="c1">// Kokkos version is at least 3.7</span>
+<span class="cp">#endif</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">KOKKOS_VERSION_PATCH</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">99</span><span class="p">)</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;using development version of Kokkos&quot;</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Until Kokkos 4.1, <code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_MINOR</span></code> and <code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_PATCH</span></code> were not defined when they were meant to be <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</div>
+<div class="table-wrapper docutils container">
+<table class="docutils align-left">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function-like version helper macros (since Kokkos 4.1)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_LESS(major,</span> <span class="pre">minor,</span> <span class="pre">patch)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_LESS_EQUAL(major,</span> <span class="pre">minor,</span> <span class="pre">patch)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_GREATER(major,</span> <span class="pre">minor,</span> <span class="pre">patch)</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_GREATER_EQUAL(major,</span> <span class="pre">minor,</span> <span class="pre">patch)</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_EQUAL(major,</span> <span class="pre">minor,</span> <span class="pre">patch)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">KOKKOS_VERSION_&lt;COMPARE&gt;</span></code> function-like macros return the result of
+comparing the version of Kokkos currently used against the version specified by
+the three arguments <code class="docutils literal notranslate"><span class="pre">major.minor.patch</span></code>.  These are available since Kokkos
+4.1</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kokkos_Core.hpp&gt;</span>
+<span class="c1">// sanity check for illustration</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">KOKKOS_VERSION_EQUAL</span><span class="p">(</span><span class="n">KOKKOS_VERSION_MAJOR</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">KOKKOS_VERSION_MINOR</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">KOKKOS_VERSION_PATCH</span><span class="p">));</span>
+<span class="c1">// set the minimum required version of Kokkos for a project or a file</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">KOKKOS_VERSION_GREATER_EQUAL</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">));</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">do_work</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="cp">#if KOKKOS_VERSION_GREATER_EQUAL(4, 3, 0)</span>
+<span class="w">  </span><span class="c1">// using the new rad functionality</span>
+<span class="w">  </span><span class="cp">#else</span>
+<span class="w">  </span><span class="c1">// falling back to the old boring stuff</span>
+<span class="w">  </span><span class="cp">#endif</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </section>
 <section id="general-settings">
@@ -684,7 +758,7 @@ Kokkos was compiled with.</p>
 </section>
 <section id="third-party-library-settings">
 <h2>Third-Party Library Settings<a class="headerlink" href="#third-party-library-settings" title="Permalink to this heading">#</a></h2>
-<p>These defines give information about what third-party libaries Kokkos was compiled with.</p>
+<p>These defines give information about what third-party libraries Kokkos was compiled with.</p>
 <div class="table-wrapper docutils container">
 <table class="docutils align-default">
 <thead>
@@ -734,6 +808,36 @@ Enabling this TPL might affect performance for Kokkos algorithms that use it, e.
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_AVX2</span></code></p></td>
 <td><p>Optimize for AVX2 (enabled for Zen)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GFX906</span></code></p></td>
+<td><p>Optimize for AMD GPU MI50, MI60 (GPU)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GFX908</span></code></p></td>
+<td><p>Optimize for AMD GPU MI100 (GPU)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GFX90A</span></code></p></td>
+<td><p>Optimize for AMD GPU MI200 series (GPU)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GFX940</span></code></p></td>
+<td><p>Optimize for AMD GPU MI300A pre-production (GPU)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GFX942</span></code></p></td>
+<td><p>Optimize for AMD GPU MI300X (GPU)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GFX942_APU</span></code></p></td>
+<td><p>Optimize for AMD GPU MI300A (GPU)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GFX1030</span></code></p></td>
+<td><p>Optimize for AMD GPU V620, W6800 (GPU)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GFX1100</span></code></p></td>
+<td><p>Optimize for AMD GPU 7900xt (GPU)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GFX1103</span></code></p></td>
+<td><p>Optimize for AMD Phoenix APU (GPU)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AMD_GPU</span></code></p></td>
+<td><p>String of the architecture flag for AMD GPU (e.g. “gfx90A” when targeting a MI250X accelerator)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">KOKKOS_ARCH_AVX</span></code></p></td>
 <td><p>Optimize for AVX</p></td>
@@ -911,7 +1015,7 @@ Enabling this TPL might affect performance for Kokkos algorithms that use it, e.
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2014, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
+                Copyright &#169; 2024, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

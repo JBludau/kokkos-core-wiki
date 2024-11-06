@@ -4,24 +4,32 @@
 .. role:: cppkokkos(code)
     :language: cppkokkos
 
-Header File: ``<Kokkos_Core.hpp>``
+Defined in header ``<Kokkos_Atomic.hpp>`` which is included from ``<Kokkos_Core.hpp>``
 
 Usage
 -----
 
 .. code-block:: cpp
 
-    atomic_store(ptr_to_value,new_value);
+    atomic_store(&obj, desired);
 
-Atomically sets the value at the address given by ``ptr_to_value`` to ``new_value``.
+Atomically replaces the current value of ``obj`` with ``desired``.
 
 Description
 -----------
 
-.. cppkokkos:function:: template<class T> void atomic_store(T* const ptr_to_value, const T new_value);
+.. cppkokkos:function:: template<class T> void atomic_store(T* ptr, std::type_identity_t<T> val);
 
-   Atomically executes ``*ptr_to_value = new_value;``.
+   Atomically writes ``val`` into ``*ptr``.
 
-   - ``ptr_to_value``: address of the to be updated value.
+   ``{ *ptr = val; }``
 
-   - ``new_value``: new value.
+   :param ptr: address of the object whose value is to be replaced
+   :param val: the value to store in the referenced object
+   :returns: (nothing)
+
+
+See also
+--------
+* `atomic_load <atomic_load.html>`_: atomically obtains the value of the referenced object
+* `atomic_exchange <atomic_exchange.html>`_: atomically replaces the value of the referenced object and obtains the value held previously

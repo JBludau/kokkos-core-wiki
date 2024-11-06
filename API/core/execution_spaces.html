@@ -407,7 +407,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../algorithms/std-algorithms/StdPartitioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
@@ -536,9 +536,9 @@ Except in rare instances, it should not be used directly, but instead should be 
 execution on a device supported by HIP. Except in rare instances, it should not be used directly,
 but instead should be used generically as an execution space. For details, see <a class="reference external" href="#kokkos-executionspaceconcept">the documentation on the <code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> concept</a>.</p>
 </section>
-<section id="kokkos-experimental-sycl">
-<h2><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental::SYCL</span></code><a class="headerlink" href="#kokkos-experimental-sycl" title="Permalink to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental::SYCL</span></code> is an <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> type</a> representing execution on a device supported by SYCL.</p>
+<section id="kokkos-sycl">
+<h2><code class="docutils literal notranslate"><span class="pre">Kokkos::SYCL</span></code><a class="headerlink" href="#kokkos-sycl" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Kokkos::SYCL</span></code> <sup>promoted from</sup> <a class="reference external" href="utilities/experimental.html#experimentalnamespace">Experimental</a> <sup>since 4.5</sup> is an <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> type</a> representing execution on a device supported by SYCL.</p>
 </section>
 <section id="kokkos-hpx">
 <h2><code class="docutils literal notranslate"><span class="pre">Kokkos::HPX</span></code><a class="headerlink" href="#kokkos-hpx" title="Permalink to this heading">#</a></h2>
@@ -557,6 +557,12 @@ generically as an execution space. For details, see <a class="reference external
 <p><code class="docutils literal notranslate"><span class="pre">Kokkos::OpenMPTarget</span></code> is an <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> type</a> representing execution using the target offloading
 feature of the OpenMP runtime system. Except in rare instances, it should not be used directly, but instead
 should be used generically as an execution space. For details, see <a class="reference external" href="#kokkos-executionspaceconcept">the documentation on the <code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> concept</a>.</p>
+</section>
+<section id="kokkos-threads">
+<h2><code class="docutils literal notranslate"><span class="pre">Kokkos::Threads</span></code><a class="headerlink" href="#kokkos-threads" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Kokkos::Threads</span></code> is an <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> type</a> representing parallel execution with std::threads.
+Except in rare instances, it should not be used directly, but instead should be used
+generically as an execution space. For details, see <a class="reference external" href="#kokkos-executionspaceconcept">the documentation on the <code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> concept</a>.</p>
 </section>
 <section id="kokkos-serial">
 <h2><code class="docutils literal notranslate"><span class="pre">Kokkos::Serial</span></code><a class="headerlink" href="#kokkos-serial" title="Permalink to this heading">#</a></h2>
@@ -584,7 +590,7 @@ means “what you’re allowed to do with a type that is a template parameter in
 <h2><code class="docutils literal notranslate"><span class="pre">Kokkos::DefaultExecutionSpace</span></code><a class="headerlink" href="#kokkos-defaultexecutionspace" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Kokkos::DefaultExecutionSpace</span></code> is an alias of <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> type</a> pointing to an <code class="docutils literal notranslate"><span class="pre">ExecutionSpace</span></code>
 based on the current configuration of Kokkos. It is set to the highest available in the hierarchy <code class="docutils literal notranslate"><span class="pre">device,host-parallel,host-serial</span></code>.
-It also serves as default for optionally specified template prameters of <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> type</a>.</p>
+It also serves as default for optionally specified template parameters of <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpace()</span></code> type</a>.</p>
 </section>
 <section id="kokkos-defaulthostexecutionspace">
 <h2><code class="docutils literal notranslate"><span class="pre">Kokkos::DefaultHostExecutionSpace</span></code><a class="headerlink" href="#kokkos-defaulthostexecutionspace" title="Permalink to this heading">#</a></h2>
@@ -683,7 +689,7 @@ and an instance of that type <code class="docutils literal notranslate"><span cl
 <em>Note:</em> This <em>cannot</em> be called from within a parallel pattern.</p>
 <p>Additionally, the following type aliases (a.k.a. <code class="docutils literal notranslate"><span class="pre">typedef</span></code> s) will be defined by all execution space types:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Ex::memory_space</span></code>: the default <a class="reference external" href="memory_spaces.html#memoryspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">MemorySpace()</span></code></a> to use when executing with <code class="docutils literal notranslate"><span class="pre">Ex</span></code>. Kokkos guarantees that <code class="docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility&lt;Ex,</span> <span class="pre">Ex::memory_space&gt;::accessible</span></code> will be <code class="docutils literal notranslate"><span class="pre">true</span></code> (see <a class="reference external" href="SpaceAccessibility.html"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility()</span></code></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Ex::memory_space</span></code>: the default <a class="reference external" href="memory_spaces.html#kokkos-memoryspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">MemorySpace()</span></code></a> to use when executing with <code class="docutils literal notranslate"><span class="pre">Ex</span></code>. Kokkos guarantees that <code class="docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility&lt;Ex,</span> <span class="pre">Ex::memory_space&gt;::accessible</span></code> will be <code class="docutils literal notranslate"><span class="pre">true</span></code> (see <a class="reference external" href="SpaceAccessibility.html"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility()</span></code></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Ex::array_layout</span></code>: the default <code class="docutils literal notranslate"><span class="pre">ArrayLayout</span></code> recommended for use with <code class="docutils literal notranslate"><span class="pre">View</span></code> types accessed from <code class="docutils literal notranslate"><span class="pre">Ex</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Ex::scratch_memory_space</span></code>: the <code class="docutils literal notranslate"><span class="pre">ScratchMemorySpace</span></code> that parallel patterns will use for allocation of scratch memory (for instance, as requested by a <a class="reference external" href="policies/TeamPolicy.html"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">Kokkos::TeamPolicy()</span></code></a>).</p></li>
 </ul>
@@ -712,6 +718,7 @@ have the expression <code class="docutils literal notranslate"><span class="pre"
 <span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="n">Device</span><span class="o">&lt;</span><span class="n">execution_space</span><span class="p">,</span><span class="w"> </span><span class="n">memory_space</span><span class="o">&gt;</span><span class="w"> </span><span class="n">device_type</span><span class="p">;</span>
 <span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">scratch_memory_space</span><span class="p">;</span>
 <span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">array_layout</span><span class="p">;</span>
+<span class="w">    </span><span class="k">typedef</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">size_type</span><span class="p">;</span>
 
 <span class="w">    </span><span class="n">ExecutionSpaceConcept</span><span class="p">();</span>
 <span class="w">    </span><span class="n">ExecutionSpaceConcept</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ExecutionSpaceConcept</span><span class="o">&amp;</span><span class="w"> </span><span class="n">src</span><span class="p">);</span>
@@ -744,10 +751,11 @@ have the expression <code class="docutils literal notranslate"><span class="pre"
 <h3>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">execution_space</span></code>: The self type;</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory_space</span></code>: The default <a class="reference external" href="memory_spaces.html#memoryspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">MemorySpace()</span></code></a> to use when executing with <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpaceConcept()</span></code></a>. Kokkos guarantees that <code class="docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility&lt;Ex,</span> <span class="pre">Ex::memory_space&gt;::accessible</span></code> will be <code class="docutils literal notranslate"><span class="pre">true</span></code> (see <a class="reference external" href="SpaceAccessibility.html"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility()</span></code></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory_space</span></code>: The default <a class="reference external" href="memory_spaces.html#kokkos-memoryspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">MemorySpace()</span></code></a> to use when executing with <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpaceConcept()</span></code></a>. Kokkos guarantees that <code class="docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility&lt;Ex,</span> <span class="pre">Ex::memory_space&gt;::accessible</span></code> will be <code class="docutils literal notranslate"><span class="pre">true</span></code> (see <a class="reference external" href="SpaceAccessibility.html"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility()</span></code></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">device_type</span></code>: <code class="docutils literal notranslate"><span class="pre">DeviceType&lt;execution_space,memory_space&gt;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">array_layout</span></code>: The default <code class="docutils literal notranslate"><span class="pre">ArrayLayout</span></code> recommended for use with <code class="docutils literal notranslate"><span class="pre">View</span></code> types accessed from <a class="reference external" href="#kokkos-executionspaceconcept"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">ExecutionSpaceConcept()</span></code></a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scratch_memory_space</span></code>: The <code class="docutils literal notranslate"><span class="pre">ScratchMemorySpace</span></code> that parallel patterns will use for allocation of scratch memory (for instance, as requested by a <a class="reference external" href="policies/TeamPolicy.html"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">Kokkos::TeamPolicy()</span></code></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size_type</span></code>: The default integer type associated with this space. Signed or unsigned, 32 or 64 bit integer type, used as preferred type for indexing.</p></li>
 </ul>
 </section>
 <section id="constructors">
@@ -771,7 +779,7 @@ have the expression <code class="docutils literal notranslate"><span class="pre"
 <h3>Non Member Facilities<a class="headerlink" href="#non-member-facilities" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">template&lt;class</span> <span class="pre">MS&gt;</span> <span class="pre">struct</span> <span class="pre">is_execution_space;</span></code>: typetrait to check whether a class is a execution space.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">template&lt;class</span> <span class="pre">S1,</span> <span class="pre">class</span> <span class="pre">S2&gt;</span> <span class="pre">struct</span> <span class="pre">SpaceAccessibility;</span></code>: typetraits to check whether two spaces are compatible (assignable, deep_copy-able, accessable). (see <a class="reference external" href="SpaceAccessibility.html"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility()</span></code></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">template&lt;class</span> <span class="pre">S1,</span> <span class="pre">class</span> <span class="pre">S2&gt;</span> <span class="pre">struct</span> <span class="pre">SpaceAccessibility;</span></code>: typetraits to check whether two spaces are compatible (assignable, deep_copy-able, accessible). (see <a class="reference external" href="SpaceAccessibility.html"><code class="xref cppkokkos cppkokkos-func docutils literal notranslate"><span class="pre">Kokkos::SpaceAccessibility()</span></code></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span> <span class="pre">operator==(const</span> <span class="pre">execution_space&amp;</span> <span class="pre">lhs,</span> <span class="pre">const</span> <span class="pre">execution_space&amp;</span> <span class="pre">rhs)</span></code>: tests whether the two space instances (of the same type) are identical.</p></li>
 </ul>
 </section>
@@ -807,7 +815,7 @@ have the expression <code class="docutils literal notranslate"><span class="pre"
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2014, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
+                Copyright &#169; 2024, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -838,10 +846,11 @@ have the expression <code class="docutils literal notranslate"><span class="pre"
 <li><a class="reference internal" href="#">Execution Spaces</a><ul>
 <li><a class="reference internal" href="#kokkos-cuda"><code class="docutils literal notranslate"><span class="pre">Kokkos::Cuda</span></code></a></li>
 <li><a class="reference internal" href="#kokkos-hip"><code class="docutils literal notranslate"><span class="pre">Kokkos::HIP</span></code></a></li>
-<li><a class="reference internal" href="#kokkos-experimental-sycl"><code class="docutils literal notranslate"><span class="pre">Kokkos::Experimental::SYCL</span></code></a></li>
+<li><a class="reference internal" href="#kokkos-sycl"><code class="docutils literal notranslate"><span class="pre">Kokkos::SYCL</span></code></a></li>
 <li><a class="reference internal" href="#kokkos-hpx"><code class="docutils literal notranslate"><span class="pre">Kokkos::HPX</span></code></a></li>
 <li><a class="reference internal" href="#kokkos-openmp"><code class="docutils literal notranslate"><span class="pre">Kokkos::OpenMP</span></code></a></li>
 <li><a class="reference internal" href="#kokkos-openmptarget"><code class="docutils literal notranslate"><span class="pre">Kokkos::OpenMPTarget</span></code></a></li>
+<li><a class="reference internal" href="#kokkos-threads"><code class="docutils literal notranslate"><span class="pre">Kokkos::Threads</span></code></a></li>
 <li><a class="reference internal" href="#kokkos-serial"><code class="docutils literal notranslate"><span class="pre">Kokkos::Serial</span></code></a></li>
 <li><a class="reference internal" href="#kokkos-executionspaceconcept"><code class="docutils literal notranslate"><span class="pre">Kokkos::ExecutionSpaceConcept</span></code></a><ul>
 <li><a class="reference internal" href="#aliases-based-on-configuration">Aliases based on configuration</a></li>

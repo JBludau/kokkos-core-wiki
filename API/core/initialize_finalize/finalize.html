@@ -407,7 +407,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdPartitioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
@@ -524,7 +524,7 @@
         </div>
         <article role="main">
           <section id="finalize">
-<h1><code class="docutils literal notranslate"><span class="pre">finalize</span></code><a class="headerlink" href="#finalize" title="Permalink to this heading">#</a></h1>
+<span id="kokkos-finalize"></span><h1><code class="docutils literal notranslate"><span class="pre">finalize</span></code><a class="headerlink" href="#finalize" title="Permalink to this heading">#</a></h1>
 <p>Defined in header <code class="docutils literal notranslate"><span class="pre">&lt;Kokkos_Core.hpp&gt;</span></code></p>
 <p>Usage:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Kokkos</span><span class="o">::</span><span class="n">finalize</span><span class="p">();</span>
@@ -536,7 +536,7 @@ resources.
 Once this function is called, no Kokkos API functions (not even
 <a class="reference external" href="initialize.html">Kokkos::initialize</a>) may be called, except for
 <code class="docutils literal notranslate"><span class="pre">Kokkos::is_initialized</span></code> or <code class="docutils literal notranslate"><span class="pre">Kokkos::is_finalized</span></code>.
-The user must ensure that all Kokkos objects (e.g. <code class="docutils literal notranslate"><span class="pre">Kokkos::View</span></code>) are detroyed
+The user must ensure that all Kokkos objects (e.g. <code class="docutils literal notranslate"><span class="pre">Kokkos::View</span></code>) are destroyed
 before <code class="docutils literal notranslate"><span class="pre">Kokkos::finalize</span></code> gets called.</p>
 <p>Programs are ill-formed if they do not call this function after calling <a class="reference external" href="initialize.html">Kokkos::initialize</a>.</p>
 <section id="interface">
@@ -610,7 +610,7 @@ before <code class="docutils literal notranslate"><span class="pre">Kokkos::fina
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2014, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
+                Copyright &#169; 2024, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             

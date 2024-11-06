@@ -407,7 +407,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../algorithms/std-algorithms/StdPartitioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
@@ -525,28 +525,38 @@
         <article role="main">
           <section id="atomic-load">
 <h1><code class="docutils literal notranslate"><span class="pre">atomic_load</span></code><a class="headerlink" href="#atomic-load" title="Permalink to this heading">#</a></h1>
-<p>Header File: <code class="docutils literal notranslate"><span class="pre">&lt;Kokkos_Core.hpp&gt;</span></code></p>
+<p>Defined in header <code class="docutils literal notranslate"><span class="pre">&lt;Kokkos_Atomic.hpp&gt;</span></code> which is included from <code class="docutils literal notranslate"><span class="pre">&lt;Kokkos_Core.hpp&gt;</span></code></p>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atomic_load</span><span class="p">(</span><span class="n">ptr_to_value</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atomic_load</span><span class="p">(</span><span class="o">&amp;</span><span class="n">obj</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Atomically reads the value at the address given by <code class="docutils literal notranslate"><span class="pre">ptr_to_value</span></code>.</p>
+<p>Atomically obtains the current value of <code class="docutils literal notranslate"><span class="pre">obj</span></code>.</p>
 </section>
 <section id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
 <dl class="cppkokkos function">
-<dt class="sig sig-object cppkokkos" id="_CPPv4I0E11atomic_load1TPC1T">
-<span id="_CPPv3I0E11atomic_loadPC1T"></span><span id="_CPPv2I0E11atomic_loadPC1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><a class="reference internal" href="#_CPPv4I0E11atomic_load1TPC1T" title="atomic_load::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">atomic_load</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0E11atomic_load1TPC1T" title="atomic_load::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ptr_to_value</span></span><span class="sig-paren">)</span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4I0E11atomic_load1TPC1T" title="Permalink to this definition">#</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="simple">
-<dt>Atomically executes <code class="docutils literal notranslate"><span class="pre">value</span> <span class="pre">=</span> <span class="pre">*ptr_to_value;</span> <span class="pre">return</span> <span class="pre">value;</span></code>.</dt><dd><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ptr_to_value</span></code>: address of the to be updated value.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code>: value at address <code class="docutils literal notranslate"><span class="pre">ptr_to_value</span></code>.</p></li>
-</ul>
+<dt class="sig sig-object cppkokkos" id="_CPPv4I0E11atomic_load1TP1T">
+<span id="_CPPv3I0E11atomic_loadP1T"></span><span id="_CPPv2I0E11atomic_loadP1T"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><a class="reference internal" href="#_CPPv4I0E11atomic_load1TP1T" title="atomic_load::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">atomic_load</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0E11atomic_load1TP1T" title="atomic_load::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">ptr</span></span><span class="sig-paren">)</span><span class="p"><span class="pre">;</span></span><a class="headerlink" href="#_CPPv4I0E11atomic_load1TP1T" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Atomically reads the content of <code class="docutils literal notranslate"><span class="pre">*ptr</span></code> and returns it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">T</span> <span class="pre">val</span> <span class="pre">=</span> <span class="pre">*ptr;</span> <span class="pre">return</span> <span class="pre">val;</span> <span class="pre">}</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ptr</strong> – address of the object whose current value is to be returned</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the value that is held by the object pointed to by <code class="docutils literal notranslate"><span class="pre">ptr</span></code></p>
 </dd>
 </dl>
+</dd></dl>
+
+</section>
+<section id="see-also">
+<h2>See also<a class="headerlink" href="#see-also" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="atomic_store.html">atomic_store</a>: atomically replaces the value of the referenced object with a non-atomic argument</p></li>
+<li><p><a class="reference external" href="atomic_exchange.html">atomic_exchange</a>: atomically replaces the value of the referenced object and obtains the value held previously</p></li>
+</ul>
 </section>
 </section>
 
@@ -579,7 +589,7 @@
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2014, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
+                Copyright &#169; 2024, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -610,6 +620,7 @@
 <li><a class="reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">atomic_load</span></code></a><ul>
 <li><a class="reference internal" href="#usage">Usage</a></li>
 <li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#see-also">See also</a></li>
 </ul>
 </li>
 </ul>

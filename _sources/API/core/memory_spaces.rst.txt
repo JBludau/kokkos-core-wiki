@@ -4,11 +4,11 @@ Memory Spaces
 .. role:: cppkokkos(code)
     :language: cppkokkos
 
-.. _MemorySpaceType: #memoryspaceconcept
+.. _MemorySpaceType: #kokkos-memoryspaceconcept
 
 .. |MemorySpaceType| replace:: :cppkokkos:func:`MemorySpace` type
 
-.. _TheDocumentationOnTheMemorySpaceConcept: #memoryspaceconcept
+.. _TheDocumentationOnTheMemorySpaceConcept: #kokkos-memoryspaceconcept
 
 .. |TheDocumentationOnTheMemorySpaceConcept| replace:: the documentation on the :cppkokkos:func:`MemorySpace` concept
 
@@ -16,11 +16,11 @@ Memory Spaces
 
 .. |Experimental| replace:: Experimental
 
-.. _ExecutionSpaceType: ./execution_spaces.html#executionspaceconcept
+.. _ExecutionSpaceType: ./execution_spaces.html#kokkos-executionspaceconcept
 
 .. |ExecutionSpaceType| replace:: :cppkokkos:func:`ExecutionSpace` type
 
-.. _ExecutionSpaceTypes: ./execution_spaces.html#executionspaceconcept
+.. _ExecutionSpaceTypes: ./execution_spaces.html#kokkos-executionspaceconcept
 
 .. |ExecutionSpaceTypes| replace:: :cppkokkos:func:`ExecutionSpace` types
 
@@ -54,20 +54,20 @@ Memory Spaces
 
 ``Kokkos::HIPManagedSpace`` :sup:`promoted from` |Experimental|_ :sup:`since 4.0`  is a |MemorySpaceType|_ representing page-migrating memory on a GPU in the HIP GPU programming environment.  Page-migrating memory is accessible from most host execution spaces. Even though available with all combinations of operating system and HIP-supported hardware, it requires both operating system and hardware to support and enable the ``xnack`` feature. Except in rare instances, it should not be used directly, but instead should be used generically as an memory space.  For details, see |TheDocumentationOnTheMemorySpaceConcept|_.
 
-``Kokkos::Experimental::SYCLDeviceUSMSpace``
+``Kokkos::SYCLDeviceUSMSpace``
 --------------------------------------------
 
-``Kokkos::Experimental::SYCLDeviceUSMSpace`` is a |MemorySpaceType|_ representing device memory on a GPU in the SYCL GPU programming environment. This memory is only accessible from the SYCL execution space.
+``Kokkos::SYCLDeviceUSMSpace`` :sup:`promoted from` |Experimental|_ :sup:`since 4.5` is a |MemorySpaceType|_ representing device memory on a GPU in the SYCL GPU programming environment. This memory is only accessible from the SYCL execution space.
 
-``Kokkos::Experimental::SYCLHostUSMSpace``
+``Kokkos::SYCLHostUSMSpace``
 ------------------------------------------
 
-``Kokkos::Experimental::SYCLHostUSMSpace`` is a |MemorySpaceType|_ representing host-side pinned memory accessible from a GPU in the SYCL GPU programming environment. This memory is accessible from both host and SYCL execution spaces.
+``Kokkos::SYCLHostUSMSpace`` :sup:`promoted from` |Experimental|_ :sup:`since 4.5` is a |MemorySpaceType|_ representing host-side pinned memory accessible from a GPU in the SYCL GPU programming environment. This memory is accessible from both host and SYCL execution spaces.
 
-``Kokkos::Experimental::SYCLSharedUSMSpace``
+``Kokkos::SYCLSharedUSMSpace``
 --------------------------------------------
 
-``Kokkos::Experimental::SYCLSharedUSMSpace`` is a |MemorySpaceType|_ representing page-migrating memory on a GPU in the SYCL GPU programming environment. This memory is accessible from both host and SYCL execution spaces.
+``Kokkos::SYCLSharedUSMSpace`` :sup:`promoted from` |Experimental|_ :sup:`since 4.5` is a |MemorySpaceType|_ representing page-migrating memory on a GPU in the SYCL GPU programming environment. This memory is accessible from both host and SYCL execution spaces.
 
 ``Kokkos::HostSpace``
 ---------------------
@@ -79,7 +79,7 @@ Memory Spaces
 
 ``Kokkos::SharedSpace`` :sup:`since 4.0` is a |MemorySpaceType|_ alias representing memory that can be accessed by any enabled |ExecutionSpaceType|_. To achieve this, the memory can be moved to and from the local memory of the processing units represented by the ``ExecutionSpaces``. The movement is done automatically by the OS and driver at the moment of access. If not currently located in the local memory of the accessing processing unit, the memory is moved in chunks (size is backend dependent). These chunks can be moved independently (e.g. only the part that is accessed on the GPU is moved to the GPU) and are treated like local memory while residing on the processing unit. For details, see |TheDocumentationOnTheMemorySpaceConcept|_.
 Availability can be checked with the preprocessor define ``KOKKOS_HAS_SHARED_SPACE`` or the ``constexpr bool Kokkos::has_shared_space``.
-For the following backends ``Kokkos::SharedSpace`` is pointing to the correspoinding |MemorySpaceType|_:
+For the following backends ``Kokkos::SharedSpace`` is pointing to the corresponding |MemorySpaceType|_:
 
 * Cuda -> ``CudaUVMSpace``
 * HIP -> ``HIPManagedSpace``
@@ -89,9 +89,9 @@ For the following backends ``Kokkos::SharedSpace`` is pointing to the correspoin
 ``Kokkos::SharedHostPinnedSpace``
 ---------------------------------
 
-``Kokkos::SharedHostPinnedSpace`` :sup:`since 4.0` is a |MemorySpaceType|_ alias which is accessible by all enabled |ExecutionSpaceTypes|_. The memory stays pinned on the host and is availabe on the device via zero copy access in small chunks (cache lines, memory pages, etc. depending on the backend). Writes to the memory in one ``ExecutionSpace`` become visible in other ``ExecutionSpaces`` at synchronization events. Which events trigger a synchronization depend on the backend specifics. Nevertheless, fences are synchronization events on all backends.
+``Kokkos::SharedHostPinnedSpace`` :sup:`since 4.0` is a |MemorySpaceType|_ alias which is accessible by all enabled |ExecutionSpaceTypes|_. The memory stays pinned on the host and is available on the device via zero copy access in small chunks (cache lines, memory pages, etc. depending on the backend). Writes to the memory in one ``ExecutionSpace`` become visible in other ``ExecutionSpaces`` at synchronization events. Which events trigger a synchronization depend on the backend specifics. Nevertheless, fences are synchronization events on all backends.
 Availability can be checked with the preprocessor define ``KOKKOS_HAS_SHARED_HOST_PINNED_SPACE`` or the ``constexpr bool Kokkos::has_shared_host_pinned_space``.
-For the following backends ``Kokkos::SharedHostPinnedSpace`` is pointing to the correspoinding |MemorySpaceType|_:
+For the following backends ``Kokkos::SharedHostPinnedSpace`` is pointing to the corresponding |MemorySpaceType|_:
 
 * Cuda -> ``CudaHostPinnedSpace``
 * HIP -> ``HipHostPinnedSpace``

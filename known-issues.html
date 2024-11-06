@@ -407,7 +407,7 @@
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdTransformInclusiveScan.html"><code class="docutils literal notranslate"><span class="pre">transform_inclusive_scan</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdPartioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="API/algorithms/std-algorithms/StdPartitioningOps.html">Partitioning</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdIsPartitioned.html"><code class="docutils literal notranslate"><span class="pre">is_partitioned</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdPartitionPoint.html"><code class="docutils literal notranslate"><span class="pre">partition_point</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="API/algorithms/std-algorithms/all/StdPartitionCopy.html"><code class="docutils literal notranslate"><span class="pre">partition_copy</span></code></a></li>
@@ -525,6 +525,27 @@
         <article role="main">
           <section id="known-issues">
 <h1>Known issues<a class="headerlink" href="#known-issues" title="Permalink to this heading">#</a></h1>
+<section id="cuda">
+<h2>CUDA<a class="headerlink" href="#cuda" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p>With some MPI versions or when using a legacy NVIDIA GPU, the default allocation mechanism of Kokkos (from version 4.2 to 4.4) for
+<cite>CudaSpace</cite> can cause issues. For example, MPI may crash with illegal memory accesses, or Kokkos’ initialization
+can report errors like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">terminate</span> <span class="n">called</span> <span class="n">after</span> <span class="n">throwing</span> <span class="n">an</span> <span class="n">instance</span> <span class="n">of</span> <span class="s1">&#39;Kokkos::Experimental::CudaRawMemoryAllocationFailure&#39;</span>
+</pre></div>
+</div>
+<p>A fix is to disable asynchronous memory allocations by adding the following to CMake arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">DKokkos_ENABLE_IMPL_CUDA_MALLOC_ASYNC</span><span class="o">=</span><span class="n">OFF</span>
+</pre></div>
+</div>
+<p>A technical explanation of why disabling this policy is helpful for making some MPI implementations work, especially in their low-level layers
+like UCX, is partly due to the fact that <cite>cudaMallocAsync</cite> uses <cite>cudaMemPool_t,</cite> and the default memory pool
+does not support interprocess communication (IPC) without tweaking (<a class="reference external" href="https://developer.nvidia.com/blog/using-cuda-stream-ordered-memory-allocator-part-2/#interprocess_communication_support">https://developer.nvidia.com/blog/using-cuda-stream-ordered-memory-allocator-part-2/#interprocess_communication_support</a>).
+The user should set up the default memory pool to properly support IPC (<a class="reference external" href="https://developer.nvidia.com/blog/using-cuda-stream-ordered-memory-allocator-part-2/#library_composability">https://developer.nvidia.com/blog/using-cuda-stream-ordered-memory-allocator-part-2/#library_composability</a>).</p>
+<p>Therefore, from version 4.5, the default behavior for Kokkos is to preventively disable <cite>cudaMallocAsync.</cite></p>
+</li>
+</ul>
+</section>
 <section id="hip">
 <h2>HIP<a class="headerlink" href="#hip" title="Permalink to this heading">#</a></h2>
 <ul>
@@ -597,7 +618,7 @@ sure to use raw pointers instead of Kokkos::Views.</p>
 <section id="mathematical-functions">
 <h2>Mathematical functions<a class="headerlink" href="#mathematical-functions" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Compatibilty issue with using-directives and mathematical functions:</p></li>
+<li><p>Compatibility issue with using-directives and mathematical functions:</p></li>
 </ul>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Kokkos_Core.hpp&gt;</span>
 
@@ -667,7 +688,7 @@ scope.</p>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2014, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
+                Copyright &#169; 2024, National Technology &amp; Engineering Solutions of Sandia, LLC (NTESS)
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -696,6 +717,7 @@ scope.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Known issues</a><ul>
+<li><a class="reference internal" href="#cuda">CUDA</a></li>
 <li><a class="reference internal" href="#hip">HIP</a></li>
 <li><a class="reference internal" href="#sycl">SYCL</a></li>
 <li><a class="reference internal" href="#mathematical-functions">Mathematical functions</a></li>

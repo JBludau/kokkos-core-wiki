@@ -4,6 +4,30 @@ Known issues
 .. role:: cppkokkos(code)
     :language: cppkokkos
 
+CUDA
+====
+
+- With some MPI versions or when using a legacy NVIDIA GPU, the default allocation mechanism of Kokkos (from version 4.2 to 4.4) for
+  `CudaSpace` can cause issues. For example, MPI may crash with illegal memory accesses, or Kokkos' initialization
+  can report errors like:
+
+  .. code-block::
+
+     terminate called after throwing an instance of 'Kokkos::Experimental::CudaRawMemoryAllocationFailure'
+
+  A fix is to disable asynchronous memory allocations by adding the following to CMake arguments:
+
+  .. code-block::
+
+     -DKokkos_ENABLE_IMPL_CUDA_MALLOC_ASYNC=OFF
+
+  A technical explanation of why disabling this policy is helpful for making some MPI implementations work, especially in their low-level layers
+  like UCX, is partly due to the fact that `cudaMallocAsync` uses `cudaMemPool_t,` and the default memory pool
+  does not support interprocess communication (IPC) without tweaking (https://developer.nvidia.com/blog/using-cuda-stream-ordered-memory-allocator-part-2/#interprocess_communication_support).
+  The user should set up the default memory pool to properly support IPC (https://developer.nvidia.com/blog/using-cuda-stream-ordered-memory-allocator-part-2/#library_composability).
+  
+  Therefore, from version 4.5, the default behavior for Kokkos is to preventively disable `cudaMallocAsync.`
+
 
 HIP
 ===
@@ -78,7 +102,7 @@ SYCL
 Mathematical functions
 ======================
 
-- Compatibilty issue with using-directives and mathematical functions:
+- Compatibility issue with using-directives and mathematical functions:
 
 .. code-block:: cpp
 
